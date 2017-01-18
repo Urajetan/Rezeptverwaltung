@@ -207,7 +207,8 @@ namespace Rezeptverwaltung
 
         private void ZutatattributeAktualisieren()
         {
-            
+            if (TBzutName.Text != "" && TBzutMenge.Text != "" && TBzutEinheit.Text != "")
+            {
                 Zutat zutat = new Zutat();
                 zutat.GetSetZName = TBzutName.Text;
                 zutat.GetSetZmenge = TBzutMenge.Text;
@@ -215,6 +216,11 @@ namespace Rezeptverwaltung
 
                 LIBOrezZutaten.Items.Add(zutat);
                 LIBOrezZutaten.Items.Remove(LIBOrezZutaten.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Die Zutat muss einen Namen, eine Menge und eine Einheit haben!");
+            }
             
             
         }
