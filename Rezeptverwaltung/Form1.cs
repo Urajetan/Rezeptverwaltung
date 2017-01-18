@@ -162,25 +162,29 @@ namespace Rezeptverwaltung
             r.GetSetRpersonen = NMRCrezPersonen.Value;
 
             List<Zutat> zutat = new List<Zutat>();
-            try
+            if (LIBOrezZutaten.Items.Count > 0)
             {
                 foreach (Zutat z in LIBOrezZutaten.Items)
                 {
                     zutat.Add(z);
                 }
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Es muss mindestens eine Zutat geben.");
+                MessageBox.Show("Es muss mindesten eine Zutat geben!");
                 return;
             }
+                
+            
+                
+            
             r.GetSetRzutaten = zutat;
 
             r.GetSetRzubereitung = RTBrezZubereitung.Text;
             r.GetSetRdauer = NMRCrezDauer.Value;
 
             List<string> kategorie = new List<string>();
-            try
+            if (CLBrezKategorien.CheckedItems.Count > 0)
             {
                 foreach (string cb in CLBrezKategorien.CheckedItems)
                 {
@@ -188,11 +192,16 @@ namespace Rezeptverwaltung
                     kategorie.Add(cb);
                 }
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Es muss mindestens eine Kategorie angekreutzt sein!");
+                MessageBox.Show("Es muss mindesten eine Kategorie ausgewählt sein!");
                 return;
             }
+                
+            
+            
+                
+            
             r.GetSetRkategorie = kategorie;
 
             r.GetSetRNotiz = RTBrezNotizen.Text;
