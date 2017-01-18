@@ -23,6 +23,7 @@ namespace Rezeptverwaltung
             LIBORezepte.SelectedIndex = -1;
             RezeptelementeLeeren();
             ZutatelementeLeeren();
+            
         }
         private void PNLDetails_Click(object sender, EventArgs e)
         {
@@ -36,9 +37,6 @@ namespace Rezeptverwaltung
 
         private void erstellenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Rezept r = new Rezeptverwaltung.Rezept();
-            LIBORezepte.Items.Add(r);
-            LIBORezepte.SelectedIndex = LIBORezepte.Items.Count - 1;
 
             BTNrezSpeichern.Visible = true;
             BTNrezAbbrechen.Visible = true;
@@ -79,7 +77,6 @@ namespace Rezeptverwaltung
             }
         }
 
-
         private void BTNrezSpeichern_Click(object sender, EventArgs e)
         {
             RezeptattributeAktualisieren();
@@ -90,10 +87,14 @@ namespace Rezeptverwaltung
         private void BTNzutHinzufuegen_Click(object sender, EventArgs e)
         {
             ZutatattributeAktualisieren();
+            ZutatelementeLeeren();
             LIBOrezZutaten.SelectedIndex = -1;
         }
 
         #endregion
+
+
+
 
         #region METHODEN
 
@@ -115,7 +116,7 @@ namespace Rezeptverwaltung
 
                 foreach (string s in r.GetSetRkategorie)
                 {
-                    for (int i = 0; i < CLBrezKategorien.Items.Count - 1; i++)
+                    for (int i = 0; i < CLBrezKategorien.Items.Count; i++)
                     {
                         if (CLBrezKategorien.Items[i].ToString() == s)
                         {
@@ -149,7 +150,7 @@ namespace Rezeptverwaltung
         {
             Rezept r = new Rezept();
 
-            if (TBrezName.Text != "")
+            if (TBrezName.Text != "" && TBrezName.Text != "Neues Rezept")
             {
                 r.GetSetRName = TBrezName.Text;
             }
@@ -174,10 +175,6 @@ namespace Rezeptverwaltung
                 MessageBox.Show("Es muss mindesten eine Zutat geben!");
                 return;
             }
-                
-            
-                
-            
             r.GetSetRzutaten = zutat;
 
             r.GetSetRzubereitung = RTBrezZubereitung.Text;
@@ -188,7 +185,6 @@ namespace Rezeptverwaltung
             {
                 foreach (string cb in CLBrezKategorien.CheckedItems)
                 {
-
                     kategorie.Add(cb);
                 }
             }
@@ -197,17 +193,16 @@ namespace Rezeptverwaltung
                 MessageBox.Show("Es muss mindesten eine Kategorie ausgewählt sein!");
                 return;
             }
-                
-            
-            
-                
-            
             r.GetSetRkategorie = kategorie;
 
             r.GetSetRNotiz = RTBrezNotizen.Text;
 
             LIBORezepte.Items.Add(r);
-            LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
+            if (LIBORezepte.SelectedIndex != -1)
+            {
+                LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
+            }
+            
         }
 
         private void ZutatattributeAktualisieren()
@@ -245,14 +240,8 @@ namespace Rezeptverwaltung
             RTBrezNotizen.Clear();
         }
 
-
-
-
-
-
+        
 
         #endregion
-
-        
     }
 }

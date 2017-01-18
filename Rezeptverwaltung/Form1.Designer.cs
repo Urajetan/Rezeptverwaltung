@@ -144,7 +144,7 @@
             // LABreInMin
             // 
             this.LABreInMin.AutoSize = true;
-            this.LABreInMin.Location = new System.Drawing.Point(334, 82);
+            this.LABreInMin.Location = new System.Drawing.Point(340, 82);
             this.LABreInMin.Name = "LABreInMin";
             this.LABreInMin.Size = new System.Drawing.Size(58, 17);
             this.LABreInMin.TabIndex = 26;
@@ -157,7 +157,7 @@
             0,
             0,
             0});
-            this.NMRCrezDauer.Location = new System.Drawing.Point(208, 80);
+            this.NMRCrezDauer.Location = new System.Drawing.Point(215, 80);
             this.NMRCrezDauer.Name = "NMRCrezDauer";
             this.NMRCrezDauer.Size = new System.Drawing.Size(120, 23);
             this.NMRCrezDauer.TabIndex = 25;
@@ -165,7 +165,7 @@
             // LABrezDauer
             // 
             this.LABrezDauer.AutoSize = true;
-            this.LABrezDauer.Location = new System.Drawing.Point(210, 63);
+            this.LABrezDauer.Location = new System.Drawing.Point(216, 63);
             this.LABrezDauer.Name = "LABrezDauer";
             this.LABrezDauer.Size = new System.Drawing.Size(47, 17);
             this.LABrezDauer.TabIndex = 24;
@@ -342,6 +342,7 @@
             this.LIBOrezZutaten.Location = new System.Drawing.Point(7, 137);
             this.LIBOrezZutaten.Name = "LIBOrezZutaten";
             this.LIBOrezZutaten.Size = new System.Drawing.Size(169, 180);
+            this.LIBOrezZutaten.Sorted = true;
             this.LIBOrezZutaten.TabIndex = 6;
             this.LIBOrezZutaten.SelectedIndexChanged += new System.EventHandler(this.LIBOrezZutaten_SelectedIndexChanged);
             // 
