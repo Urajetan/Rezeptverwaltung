@@ -79,9 +79,13 @@ namespace Rezeptverwaltung
 
         private void BTNrezSpeichern_Click(object sender, EventArgs e)
         {
-            RezeptattributeAktualisieren();
-            RezeptelementeLeeren();
+            bool überprüfung = RezeptattributeAktualisieren();
 
+            if (überprüfung == true)
+            {
+                RezeptelementeLeeren();
+            }
+            
         }
 
         private void BTNzutHinzufuegen_Click(object sender, EventArgs e)
@@ -106,6 +110,7 @@ namespace Rezeptverwaltung
                 TBrezName.Text = r.GetSetRName;
                 NMRCrezPersonen.Value = r.GetSetRpersonen;
 
+                LIBOrezZutaten.Items.Clear();
                 foreach (Zutat z in r.GetSetRzutaten)
                 {
                     LIBOrezZutaten.Items.Add(z);
@@ -146,7 +151,7 @@ namespace Rezeptverwaltung
             TBzutEinheit.Text = z.GetSetZeinheit;
         }
 
-        private void RezeptattributeAktualisieren()
+        private bool RezeptattributeAktualisieren()
         {
             Rezept r = new Rezept();
 
@@ -162,6 +167,7 @@ namespace Rezeptverwaltung
             
             r.GetSetRpersonen = NMRCrezPersonen.Value;
 
+            
             List<Zutat> zutat = new List<Zutat>();
             if (LIBOrezZutaten.Items.Count > 0)
             {
@@ -173,7 +179,7 @@ namespace Rezeptverwaltung
             else
             {
                 MessageBox.Show("Es muss mindesten eine Zutat geben!");
-                return;
+                return false;
             }
             r.GetSetRzutaten = zutat;
 
@@ -191,7 +197,7 @@ namespace Rezeptverwaltung
             else
             {
                 MessageBox.Show("Es muss mindesten eine Kategorie ausgewählt sein!");
-                return;
+                return false;
             }
             r.GetSetRkategorie = kategorie;
 
@@ -202,7 +208,7 @@ namespace Rezeptverwaltung
             {
                 LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
             }
-            
+            return true;
         }
 
         private void ZutatattributeAktualisieren()
@@ -221,7 +227,6 @@ namespace Rezeptverwaltung
             {
                 MessageBox.Show("Die Zutat muss einen Namen, eine Menge und eine Einheit haben!");
             }
-            
             
         }
 
