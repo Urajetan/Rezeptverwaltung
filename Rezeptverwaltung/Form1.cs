@@ -150,7 +150,7 @@ namespace Rezeptverwaltung
         {
             Rezept r = new Rezept();
 
-            if (TBrezName.Text != "" && TBrezName.Text != "Neues Rezept")
+            if (TBrezName.Text != "")
             {
                 r.GetSetRName = TBrezName.Text;
             }
