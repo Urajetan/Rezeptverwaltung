@@ -182,7 +182,7 @@ namespace Rezeptverwaltung
             List<string> kategorie = new List<string>();
             try
             {
-                foreach (string cb in CLBrezKategorien.Items)
+                foreach (string cb in CLBrezKategorien.CheckedItems)
                 {
 
                     kategorie.Add(cb);
