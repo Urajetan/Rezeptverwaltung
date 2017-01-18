@@ -20,9 +20,14 @@ namespace Rezeptverwaltung
         
         private void MasterDetailForm_Click(object sender, EventArgs e)
         {
-            LIBORezepte.SelectedIndex = -1;
-            RezeptelementeLeeren();
-            ZutatelementeLeeren();
+            //Wenn gerade kein Rezept bearbeitet oder erstellt wird
+            if (PNLDetails.Enabled == false)
+            {
+                    LIBORezepte.SelectedIndex = -1;
+                    RezeptelementeLeeren();
+                    ZutatelementeLeeren();
+            }
+            
             
         }
         private void PNLDetails_Click(object sender, EventArgs e)
@@ -35,16 +40,24 @@ namespace Rezeptverwaltung
             
         }
 
+        private void TSBneuesRezept_Click(object sender, EventArgs e)
+        {
+            NeuesRezeptErstellen();
+        }
         private void erstellenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            BTNrezSpeichern.Visible = true;
-            BTNrezAbbrechen.Visible = true;
-
-            PNLDetails.Enabled = true;
-
-            RezeptdetailsAnzeigen();
+            NeuesRezeptErstellen();
         }
+
+        private void TSBrezeptLöschen_Click(object sender, EventArgs e)
+        {
+            RezeptLöschen();
+        }
+        private void löschenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RezeptLöschen();
+        }
+
 
         private void CLBrezKategorien_ItemCheck(object sender, ItemCheckEventArgs e)
         {
@@ -55,6 +68,8 @@ namespace Rezeptverwaltung
         {
             if (LIBORezepte.SelectedIndex == -1)
             {
+                RezeptelementeLeeren();
+                ZutatelementeLeeren();
                 PNLDetails.Enabled = false;
             }
             else
@@ -69,10 +84,12 @@ namespace Rezeptverwaltung
         {
             if (LIBOrezZutaten.SelectedIndex == -1)
             {
+                BTNzutLöschen.Enabled = false;
                 ZutatelementeLeeren();
             }
             else
             {
+                BTNzutLöschen.Enabled = true;
                 ZutatendetailsAnzeigen();
             }
         }
@@ -84,6 +101,8 @@ namespace Rezeptverwaltung
             if (überprüfung == true)
             {
                 RezeptelementeLeeren();
+                ZutatelementeLeeren();
+                PNLDetails.Enabled = false;
             }
             
         }
@@ -93,6 +112,22 @@ namespace Rezeptverwaltung
             ZutatattributeAktualisieren();
             ZutatelementeLeeren();
             LIBOrezZutaten.SelectedIndex = -1;
+        }
+
+        private void BTNzutLöschen_Click(object sender, EventArgs e)
+        {
+            LIBOrezZutaten.Items.Remove(LIBOrezZutaten.SelectedItem);
+        }
+
+        private void BTNrezAbbrechen_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Sind Sie sicher, dass Sie das Rezept nicht speichern möchten?","Achtung!",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                RezeptelementeLeeren();
+                ZutatelementeLeeren();
+                PNLDetails.Enabled = false;
+                LIBORezepte.SelectedIndex = -1;
+            }
         }
 
         #endregion
@@ -251,8 +286,38 @@ namespace Rezeptverwaltung
             RTBrezNotizen.Clear();
         }
 
-        
+        private void NeuesRezeptErstellen()
+        {
+            LIBORezepte.SelectedIndex = -1;
+
+            BTNrezSpeichern.Visible = true;
+            BTNrezAbbrechen.Visible = true;
+
+            PNLDetails.Enabled = true;
+
+            RezeptdetailsAnzeigen();
+        }
+
+        private void RezeptLöschen()
+        {
+            Rezept r = LIBORezepte.SelectedItem as Rezept;
+
+            if (MessageBox.Show("Wollen Sie das Rezept '" + r.GetSetRName + "' wirklich entgültig löschen?", "Wirklich löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
+                LIBORezepte.SelectedIndex = -1;
+            }
+        }
+
+
+
 
         #endregion
+
+
+
+
+
+
     }
 }

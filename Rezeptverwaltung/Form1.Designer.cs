@@ -56,14 +56,17 @@
             this.LABrezPersonen = new System.Windows.Forms.Label();
             this.LABorezName = new System.Windows.Forms.Label();
             this.TBrezName = new System.Windows.Forms.TextBox();
-            this.MSHauptmenue = new System.Windows.Forms.MenuStrip();
-            this.rezeptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.erstellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.druckenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sucheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filternToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.TSBneuesRezept = new System.Windows.Forms.ToolStripButton();
+            this.TSBrezeptLöschen = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.TSBrezeptdateiOeffnen = new System.Windows.Forms.ToolStripButton();
+            this.TSBspeichern = new System.Windows.Forms.ToolStripButton();
+            this.TSBdrucken = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.TSTBnamensuche = new System.Windows.Forms.ToolStripTextBox();
+            this.TSBnamenssuche = new System.Windows.Forms.ToolStripButton();
+            this.TSBfilter = new System.Windows.Forms.ToolStripSplitButton();
             this.vorspeiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suppeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,14 +74,26 @@
             this.beilageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dessertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kuchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.torteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.plätzchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pralinenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tortenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pralienenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.speichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.öffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rezeptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.erstellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.druckenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sucheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filternToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterAufhebenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MSHauptmenue = new System.Windows.Forms.MenuStrip();
             this.GBDetails.SuspendLayout();
             this.PNLDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezDauer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezPersonen)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.MSHauptmenue.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,17 +190,18 @@
             // 
             this.BTNrezAbbrechen.Location = new System.Drawing.Point(385, 627);
             this.BTNrezAbbrechen.Name = "BTNrezAbbrechen";
-            this.BTNrezAbbrechen.Size = new System.Drawing.Size(111, 25);
+            this.BTNrezAbbrechen.Size = new System.Drawing.Size(111, 26);
             this.BTNrezAbbrechen.TabIndex = 23;
             this.BTNrezAbbrechen.Text = "Abbrechen";
             this.BTNrezAbbrechen.UseVisualStyleBackColor = true;
             this.BTNrezAbbrechen.Visible = false;
+            this.BTNrezAbbrechen.Click += new System.EventHandler(this.BTNrezAbbrechen_Click);
             // 
             // BTNrezSpeichern
             // 
             this.BTNrezSpeichern.Location = new System.Drawing.Point(3, 627);
             this.BTNrezSpeichern.Name = "BTNrezSpeichern";
-            this.BTNrezSpeichern.Size = new System.Drawing.Size(111, 25);
+            this.BTNrezSpeichern.Size = new System.Drawing.Size(111, 26);
             this.BTNrezSpeichern.TabIndex = 22;
             this.BTNrezSpeichern.Text = "Speichern";
             this.BTNrezSpeichern.UseVisualStyleBackColor = true;
@@ -266,6 +282,7 @@
             this.BTNzutLöschen.TabIndex = 15;
             this.BTNzutLöschen.Text = "-";
             this.BTNzutLöschen.UseVisualStyleBackColor = true;
+            this.BTNzutLöschen.Click += new System.EventHandler(this.BTNzutLöschen_Click);
             // 
             // BTNzutHinzufuegen
             // 
@@ -378,22 +395,209 @@
             this.TBrezName.Size = new System.Drawing.Size(169, 23);
             this.TBrezName.TabIndex = 1;
             // 
-            // MSHauptmenue
+            // toolStrip1
             // 
-            this.MSHauptmenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rezeptToolStripMenuItem,
-            this.sucheToolStripMenuItem});
-            this.MSHauptmenue.Location = new System.Drawing.Point(0, 0);
-            this.MSHauptmenue.Name = "MSHauptmenue";
-            this.MSHauptmenue.Size = new System.Drawing.Size(1184, 24);
-            this.MSHauptmenue.TabIndex = 3;
-            this.MSHauptmenue.Text = "Hauptmenue";
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSBneuesRezept,
+            this.TSBrezeptLöschen,
+            this.toolStripSeparator1,
+            this.TSBrezeptdateiOeffnen,
+            this.TSBspeichern,
+            this.TSBdrucken,
+            this.toolStripSeparator2,
+            this.TSTBnamensuche,
+            this.TSBnamenssuche,
+            this.TSBfilter,
+            this.toolStripSeparator3});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1184, 25);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "TSHauptmenue";
+            // 
+            // TSBneuesRezept
+            // 
+            this.TSBneuesRezept.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TSBneuesRezept.Image = global::Rezeptverwaltung.Properties.Resources.Dokument;
+            this.TSBneuesRezept.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSBneuesRezept.Name = "TSBneuesRezept";
+            this.TSBneuesRezept.Size = new System.Drawing.Size(23, 22);
+            this.TSBneuesRezept.Text = "Neues Rezept";
+            this.TSBneuesRezept.Click += new System.EventHandler(this.TSBneuesRezept_Click);
+            // 
+            // TSBrezeptLöschen
+            // 
+            this.TSBrezeptLöschen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TSBrezeptLöschen.Image = global::Rezeptverwaltung.Properties.Resources.RotesX;
+            this.TSBrezeptLöschen.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSBrezeptLöschen.Name = "TSBrezeptLöschen";
+            this.TSBrezeptLöschen.Size = new System.Drawing.Size(23, 22);
+            this.TSBrezeptLöschen.Text = "Rezept Löschen";
+            this.TSBrezeptLöschen.Click += new System.EventHandler(this.TSBrezeptLöschen_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // TSBrezeptdateiOeffnen
+            // 
+            this.TSBrezeptdateiOeffnen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TSBrezeptdateiOeffnen.Image = global::Rezeptverwaltung.Properties.Resources.Öffnen;
+            this.TSBrezeptdateiOeffnen.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSBrezeptdateiOeffnen.Name = "TSBrezeptdateiOeffnen";
+            this.TSBrezeptdateiOeffnen.Size = new System.Drawing.Size(23, 22);
+            this.TSBrezeptdateiOeffnen.Text = "Rezeptdatei öffnen";
+            // 
+            // TSBspeichern
+            // 
+            this.TSBspeichern.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TSBspeichern.Image = global::Rezeptverwaltung.Properties.Resources.Speichern;
+            this.TSBspeichern.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSBspeichern.Name = "TSBspeichern";
+            this.TSBspeichern.Size = new System.Drawing.Size(23, 22);
+            this.TSBspeichern.Text = "Speichern";
+            this.TSBspeichern.ToolTipText = "Speichern";
+            // 
+            // TSBdrucken
+            // 
+            this.TSBdrucken.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TSBdrucken.Image = global::Rezeptverwaltung.Properties.Resources.Drucken;
+            this.TSBdrucken.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSBdrucken.Name = "TSBdrucken";
+            this.TSBdrucken.Size = new System.Drawing.Size(23, 22);
+            this.TSBdrucken.Text = "Drucken";
+            this.TSBdrucken.ToolTipText = "Drucken";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // TSTBnamensuche
+            // 
+            this.TSTBnamensuche.Name = "TSTBnamensuche";
+            this.TSTBnamensuche.Size = new System.Drawing.Size(100, 25);
+            // 
+            // TSBnamenssuche
+            // 
+            this.TSBnamenssuche.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TSBnamenssuche.Image = global::Rezeptverwaltung.Properties.Resources.Lupe;
+            this.TSBnamenssuche.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSBnamenssuche.Name = "TSBnamenssuche";
+            this.TSBnamenssuche.Size = new System.Drawing.Size(23, 22);
+            this.TSBnamenssuche.Text = "Suchen";
+            // 
+            // TSBfilter
+            // 
+            this.TSBfilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TSBfilter.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vorspeiseToolStripMenuItem,
+            this.suppeToolStripMenuItem,
+            this.salatToolStripMenuItem,
+            this.hauptgerichtToolStripMenuItem,
+            this.beilageToolStripMenuItem,
+            this.dessertToolStripMenuItem,
+            this.kuchenToolStripMenuItem,
+            this.plätzchenToolStripMenuItem,
+            this.tortenToolStripMenuItem,
+            this.pralienenToolStripMenuItem});
+            this.TSBfilter.Image = global::Rezeptverwaltung.Properties.Resources.Filter;
+            this.TSBfilter.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TSBfilter.Name = "TSBfilter";
+            this.TSBfilter.Size = new System.Drawing.Size(32, 22);
+            this.TSBfilter.Text = "Filter aktivieren";
+            // 
+            // vorspeiseToolStripMenuItem
+            // 
+            this.vorspeiseToolStripMenuItem.Name = "vorspeiseToolStripMenuItem";
+            this.vorspeiseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vorspeiseToolStripMenuItem.Text = "Vorspeise";
+            // 
+            // suppeToolStripMenuItem
+            // 
+            this.suppeToolStripMenuItem.Name = "suppeToolStripMenuItem";
+            this.suppeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.suppeToolStripMenuItem.Text = "Suppe";
+            // 
+            // salatToolStripMenuItem
+            // 
+            this.salatToolStripMenuItem.Name = "salatToolStripMenuItem";
+            this.salatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salatToolStripMenuItem.Text = "Salat";
+            // 
+            // hauptgerichtToolStripMenuItem
+            // 
+            this.hauptgerichtToolStripMenuItem.Name = "hauptgerichtToolStripMenuItem";
+            this.hauptgerichtToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hauptgerichtToolStripMenuItem.Text = "Hauptgericht";
+            // 
+            // beilageToolStripMenuItem
+            // 
+            this.beilageToolStripMenuItem.Name = "beilageToolStripMenuItem";
+            this.beilageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.beilageToolStripMenuItem.Text = "Beilage";
+            // 
+            // dessertToolStripMenuItem
+            // 
+            this.dessertToolStripMenuItem.Name = "dessertToolStripMenuItem";
+            this.dessertToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dessertToolStripMenuItem.Text = "Dessert";
+            // 
+            // kuchenToolStripMenuItem
+            // 
+            this.kuchenToolStripMenuItem.Name = "kuchenToolStripMenuItem";
+            this.kuchenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kuchenToolStripMenuItem.Text = "Kuchen";
+            // 
+            // plätzchenToolStripMenuItem
+            // 
+            this.plätzchenToolStripMenuItem.Name = "plätzchenToolStripMenuItem";
+            this.plätzchenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.plätzchenToolStripMenuItem.Text = "Plätzchen";
+            // 
+            // tortenToolStripMenuItem
+            // 
+            this.tortenToolStripMenuItem.Name = "tortenToolStripMenuItem";
+            this.tortenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tortenToolStripMenuItem.Text = "Torten";
+            // 
+            // pralienenToolStripMenuItem
+            // 
+            this.pralienenToolStripMenuItem.Name = "pralienenToolStripMenuItem";
+            this.pralienenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pralienenToolStripMenuItem.Text = "Pralienen";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // dateiToolStripMenuItem
+            // 
+            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.speichernToolStripMenuItem,
+            this.öffnenToolStripMenuItem});
+            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
+            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.dateiToolStripMenuItem.Text = "Datei";
+            // 
+            // speichernToolStripMenuItem
+            // 
+            this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
+            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.speichernToolStripMenuItem.Text = "Speichern";
+            // 
+            // öffnenToolStripMenuItem
+            // 
+            this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
+            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.öffnenToolStripMenuItem.Text = "Öffnen";
             // 
             // rezeptToolStripMenuItem
             // 
             this.rezeptToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.erstellenToolStripMenuItem,
-            this.bearbeitenToolStripMenuItem,
             this.löschenToolStripMenuItem,
             this.druckenToolStripMenuItem});
             this.rezeptToolStripMenuItem.Name = "rezeptToolStripMenuItem";
@@ -407,22 +611,17 @@
             this.erstellenToolStripMenuItem.Text = "Erstellen";
             this.erstellenToolStripMenuItem.Click += new System.EventHandler(this.erstellenToolStripMenuItem_Click);
             // 
-            // bearbeitenToolStripMenuItem
-            // 
-            this.bearbeitenToolStripMenuItem.Name = "bearbeitenToolStripMenuItem";
-            this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.bearbeitenToolStripMenuItem.Text = "Bearbeiten";
-            // 
             // löschenToolStripMenuItem
             // 
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
             this.löschenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.löschenToolStripMenuItem.Text = "Löschen";
+            this.löschenToolStripMenuItem.Click += new System.EventHandler(this.löschenToolStripMenuItem_Click);
             // 
             // druckenToolStripMenuItem
             // 
             this.druckenToolStripMenuItem.Name = "druckenToolStripMenuItem";
-            this.druckenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.druckenToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.druckenToolStripMenuItem.Text = "Drucken";
             // 
             // sucheToolStripMenuItem
@@ -431,97 +630,39 @@
             this.filternToolStripMenuItem,
             this.filterAufhebenToolStripMenuItem});
             this.sucheToolStripMenuItem.Name = "sucheToolStripMenuItem";
-            this.sucheToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.sucheToolStripMenuItem.Text = "Suche";
+            this.sucheToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.sucheToolStripMenuItem.Text = "Filter";
             // 
             // filternToolStripMenuItem
             // 
-            this.filternToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vorspeiseToolStripMenuItem,
-            this.suppeToolStripMenuItem,
-            this.salatToolStripMenuItem,
-            this.hauptgerichtToolStripMenuItem,
-            this.beilageToolStripMenuItem,
-            this.dessertToolStripMenuItem,
-            this.kuchenToolStripMenuItem,
-            this.torteToolStripMenuItem,
-            this.plätzchenToolStripMenuItem,
-            this.pralinenToolStripMenuItem});
             this.filternToolStripMenuItem.Name = "filternToolStripMenuItem";
-            this.filternToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.filternToolStripMenuItem.Text = "Filtern";
-            // 
-            // vorspeiseToolStripMenuItem
-            // 
-            this.vorspeiseToolStripMenuItem.Name = "vorspeiseToolStripMenuItem";
-            this.vorspeiseToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.vorspeiseToolStripMenuItem.Text = "Vorspeisen";
-            // 
-            // suppeToolStripMenuItem
-            // 
-            this.suppeToolStripMenuItem.Name = "suppeToolStripMenuItem";
-            this.suppeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.suppeToolStripMenuItem.Text = "Suppen";
-            // 
-            // salatToolStripMenuItem
-            // 
-            this.salatToolStripMenuItem.Name = "salatToolStripMenuItem";
-            this.salatToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.salatToolStripMenuItem.Text = "Salate";
-            // 
-            // hauptgerichtToolStripMenuItem
-            // 
-            this.hauptgerichtToolStripMenuItem.Name = "hauptgerichtToolStripMenuItem";
-            this.hauptgerichtToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.hauptgerichtToolStripMenuItem.Text = "Hauptgerichte";
-            // 
-            // beilageToolStripMenuItem
-            // 
-            this.beilageToolStripMenuItem.Name = "beilageToolStripMenuItem";
-            this.beilageToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.beilageToolStripMenuItem.Text = "Beilagen";
-            // 
-            // dessertToolStripMenuItem
-            // 
-            this.dessertToolStripMenuItem.Name = "dessertToolStripMenuItem";
-            this.dessertToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.dessertToolStripMenuItem.Text = "Desserts";
-            // 
-            // kuchenToolStripMenuItem
-            // 
-            this.kuchenToolStripMenuItem.Name = "kuchenToolStripMenuItem";
-            this.kuchenToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.kuchenToolStripMenuItem.Text = "Kuchen";
-            // 
-            // torteToolStripMenuItem
-            // 
-            this.torteToolStripMenuItem.Name = "torteToolStripMenuItem";
-            this.torteToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.torteToolStripMenuItem.Text = "Torten";
-            // 
-            // plätzchenToolStripMenuItem
-            // 
-            this.plätzchenToolStripMenuItem.Name = "plätzchenToolStripMenuItem";
-            this.plätzchenToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.plätzchenToolStripMenuItem.Text = "Plätzchen";
-            // 
-            // pralinenToolStripMenuItem
-            // 
-            this.pralinenToolStripMenuItem.Name = "pralinenToolStripMenuItem";
-            this.pralinenToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.pralinenToolStripMenuItem.Text = "Pralinen";
+            this.filternToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.filternToolStripMenuItem.Text = "Filter aktivieren";
             // 
             // filterAufhebenToolStripMenuItem
             // 
             this.filterAufhebenToolStripMenuItem.Name = "filterAufhebenToolStripMenuItem";
-            this.filterAufhebenToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.filterAufhebenToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.filterAufhebenToolStripMenuItem.Text = "Filter aufheben";
+            // 
+            // MSHauptmenue
+            // 
+            this.MSHauptmenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiToolStripMenuItem,
+            this.rezeptToolStripMenuItem,
+            this.sucheToolStripMenuItem});
+            this.MSHauptmenue.Location = new System.Drawing.Point(0, 0);
+            this.MSHauptmenue.Name = "MSHauptmenue";
+            this.MSHauptmenue.Size = new System.Drawing.Size(1184, 24);
+            this.MSHauptmenue.TabIndex = 3;
+            this.MSHauptmenue.Text = "Hauptmenue";
             // 
             // MasterDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 762);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.GBDetails);
             this.Controls.Add(this.LIBORezepte);
             this.Controls.Add(this.MSHauptmenue);
@@ -534,6 +675,8 @@
             this.PNLDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezDauer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezPersonen)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.MSHauptmenue.ResumeLayout(false);
             this.MSHauptmenue.PerformLayout();
             this.ResumeLayout(false);
@@ -546,25 +689,6 @@
         private System.Windows.Forms.ListBox LIBORezepte;
         private System.Windows.Forms.GroupBox GBDetails;
         private System.Windows.Forms.Panel PNLDetails;
-        private System.Windows.Forms.MenuStrip MSHauptmenue;
-        private System.Windows.Forms.ToolStripMenuItem rezeptToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem erstellenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem druckenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sucheToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filternToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vorspeiseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem suppeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hauptgerichtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem beilageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dessertToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kuchenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem torteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem plätzchenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pralinenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filterAufhebenToolStripMenuItem;
         private System.Windows.Forms.Label LABrezZutaten;
         private System.Windows.Forms.ListBox LIBOrezZutaten;
         private System.Windows.Forms.NumericUpDown NMRCrezPersonen;
@@ -590,6 +714,39 @@
         private System.Windows.Forms.Label LABrezDauer;
         private System.Windows.Forms.NumericUpDown NMRCrezDauer;
         private System.Windows.Forms.Label LABreInMin;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton TSBneuesRezept;
+        private System.Windows.Forms.ToolStripButton TSBrezeptLöschen;
+        private System.Windows.Forms.ToolStripButton TSBrezeptdateiOeffnen;
+        private System.Windows.Forms.ToolStripButton TSBspeichern;
+        private System.Windows.Forms.ToolStripButton TSBnamenssuche;
+        private System.Windows.Forms.ToolStripButton TSBdrucken;
+        private System.Windows.Forms.ToolStripTextBox TSTBnamensuche;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSplitButton TSBfilter;
+        private System.Windows.Forms.ToolStripMenuItem vorspeiseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suppeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hauptgerichtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem beilageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dessertToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kuchenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem plätzchenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tortenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pralienenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem speichernToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rezeptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem erstellenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem druckenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sucheToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filternToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filterAufhebenToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip MSHauptmenue;
     }
 }
 
