@@ -102,10 +102,11 @@
             this.LIBORezepte.DisplayMember = "GetSetRName";
             this.LIBORezepte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LIBORezepte.FormattingEnabled = true;
-            this.LIBORezepte.ItemHeight = 16;
-            this.LIBORezepte.Location = new System.Drawing.Point(12, 66);
+            this.LIBORezepte.ItemHeight = 25;
+            this.LIBORezepte.Location = new System.Drawing.Point(18, 102);
+            this.LIBORezepte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LIBORezepte.Name = "LIBORezepte";
-            this.LIBORezepte.Size = new System.Drawing.Size(600, 676);
+            this.LIBORezepte.Size = new System.Drawing.Size(898, 1029);
             this.LIBORezepte.Sorted = true;
             this.LIBORezepte.TabIndex = 1;
             this.LIBORezepte.SelectedIndexChanged += new System.EventHandler(this.LIBORezepte_SelectedIndexChanged);
@@ -114,9 +115,11 @@
             // 
             this.GBDetails.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GBDetails.Controls.Add(this.PNLDetails);
-            this.GBDetails.Location = new System.Drawing.Point(641, 66);
+            this.GBDetails.Location = new System.Drawing.Point(962, 102);
+            this.GBDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GBDetails.Name = "GBDetails";
-            this.GBDetails.Size = new System.Drawing.Size(531, 680);
+            this.GBDetails.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GBDetails.Size = new System.Drawing.Size(796, 1046);
             this.GBDetails.TabIndex = 2;
             this.GBDetails.TabStop = false;
             this.GBDetails.Text = "Details";
@@ -150,18 +153,20 @@
             this.PNLDetails.Controls.Add(this.TBrezName);
             this.PNLDetails.Enabled = false;
             this.PNLDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PNLDetails.Location = new System.Drawing.Point(6, 19);
+            this.PNLDetails.Location = new System.Drawing.Point(9, 29);
+            this.PNLDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PNLDetails.Name = "PNLDetails";
-            this.PNLDetails.Size = new System.Drawing.Size(509, 655);
+            this.PNLDetails.Size = new System.Drawing.Size(764, 1008);
             this.PNLDetails.TabIndex = 3;
             this.PNLDetails.Click += new System.EventHandler(this.PNLDetails_Click);
             // 
             // LABreInMin
             // 
             this.LABreInMin.AutoSize = true;
-            this.LABreInMin.Location = new System.Drawing.Point(340, 82);
+            this.LABreInMin.Location = new System.Drawing.Point(510, 126);
+            this.LABreInMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABreInMin.Name = "LABreInMin";
-            this.LABreInMin.Size = new System.Drawing.Size(58, 17);
+            this.LABreInMin.Size = new System.Drawing.Size(82, 25);
             this.LABreInMin.TabIndex = 26;
             this.LABreInMin.Text = "Minuten";
             // 
@@ -172,25 +177,28 @@
             0,
             0,
             0});
-            this.NMRCrezDauer.Location = new System.Drawing.Point(215, 80);
+            this.NMRCrezDauer.Location = new System.Drawing.Point(322, 123);
+            this.NMRCrezDauer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NMRCrezDauer.Name = "NMRCrezDauer";
-            this.NMRCrezDauer.Size = new System.Drawing.Size(120, 23);
+            this.NMRCrezDauer.Size = new System.Drawing.Size(180, 30);
             this.NMRCrezDauer.TabIndex = 25;
             // 
             // LABrezDauer
             // 
             this.LABrezDauer.AutoSize = true;
-            this.LABrezDauer.Location = new System.Drawing.Point(216, 63);
+            this.LABrezDauer.Location = new System.Drawing.Point(324, 97);
+            this.LABrezDauer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABrezDauer.Name = "LABrezDauer";
-            this.LABrezDauer.Size = new System.Drawing.Size(47, 17);
+            this.LABrezDauer.Size = new System.Drawing.Size(65, 25);
             this.LABrezDauer.TabIndex = 24;
             this.LABrezDauer.Text = "Dauer";
             // 
             // BTNrezAbbrechen
             // 
-            this.BTNrezAbbrechen.Location = new System.Drawing.Point(385, 627);
+            this.BTNrezAbbrechen.Location = new System.Drawing.Point(578, 965);
+            this.BTNrezAbbrechen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNrezAbbrechen.Name = "BTNrezAbbrechen";
-            this.BTNrezAbbrechen.Size = new System.Drawing.Size(111, 26);
+            this.BTNrezAbbrechen.Size = new System.Drawing.Size(166, 40);
             this.BTNrezAbbrechen.TabIndex = 23;
             this.BTNrezAbbrechen.Text = "Abbrechen";
             this.BTNrezAbbrechen.UseVisualStyleBackColor = true;
@@ -199,9 +207,10 @@
             // 
             // BTNrezSpeichern
             // 
-            this.BTNrezSpeichern.Location = new System.Drawing.Point(3, 627);
+            this.BTNrezSpeichern.Location = new System.Drawing.Point(4, 965);
+            this.BTNrezSpeichern.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNrezSpeichern.Name = "BTNrezSpeichern";
-            this.BTNrezSpeichern.Size = new System.Drawing.Size(111, 26);
+            this.BTNrezSpeichern.Size = new System.Drawing.Size(166, 40);
             this.BTNrezSpeichern.TabIndex = 22;
             this.BTNrezSpeichern.Text = "Speichern";
             this.BTNrezSpeichern.UseVisualStyleBackColor = true;
@@ -211,17 +220,19 @@
             // LABrezNotizen
             // 
             this.LABrezNotizen.AutoSize = true;
-            this.LABrezNotizen.Location = new System.Drawing.Point(227, 480);
+            this.LABrezNotizen.Location = new System.Drawing.Point(340, 738);
+            this.LABrezNotizen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABrezNotizen.Name = "LABrezNotizen";
-            this.LABrezNotizen.Size = new System.Drawing.Size(56, 17);
+            this.LABrezNotizen.Size = new System.Drawing.Size(78, 25);
             this.LABrezNotizen.TabIndex = 21;
             this.LABrezNotizen.Text = "Notizen";
             // 
             // RTBrezNotizen
             // 
-            this.RTBrezNotizen.Location = new System.Drawing.Point(230, 500);
+            this.RTBrezNotizen.Location = new System.Drawing.Point(345, 769);
+            this.RTBrezNotizen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RTBrezNotizen.Name = "RTBrezNotizen";
-            this.RTBrezNotizen.Size = new System.Drawing.Size(266, 108);
+            this.RTBrezNotizen.Size = new System.Drawing.Size(397, 164);
             this.RTBrezNotizen.TabIndex = 20;
             this.RTBrezNotizen.Text = "";
             // 
@@ -241,44 +252,49 @@
             "Torte",
             "Pralienen",
             "Low Carb"});
-            this.CLBrezKategorien.Location = new System.Drawing.Point(6, 499);
+            this.CLBrezKategorien.Location = new System.Drawing.Point(9, 768);
+            this.CLBrezKategorien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CLBrezKategorien.Name = "CLBrezKategorien";
-            this.CLBrezKategorien.Size = new System.Drawing.Size(204, 112);
+            this.CLBrezKategorien.Size = new System.Drawing.Size(304, 154);
             this.CLBrezKategorien.TabIndex = 19;
             this.CLBrezKategorien.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CLBrezKategorien_ItemCheck);
             // 
             // LABrzKategorien
             // 
             this.LABrzKategorien.AutoSize = true;
-            this.LABrzKategorien.Location = new System.Drawing.Point(3, 479);
+            this.LABrzKategorien.Location = new System.Drawing.Point(4, 737);
+            this.LABrzKategorien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABrzKategorien.Name = "LABrzKategorien";
-            this.LABrzKategorien.Size = new System.Drawing.Size(77, 17);
+            this.LABrzKategorien.Size = new System.Drawing.Size(107, 25);
             this.LABrzKategorien.TabIndex = 18;
             this.LABrzKategorien.Text = "Kategorien";
             // 
             // LABrezZubereitung
             // 
             this.LABrezZubereitung.AutoSize = true;
-            this.LABrezZubereitung.Location = new System.Drawing.Point(3, 341);
+            this.LABrezZubereitung.Location = new System.Drawing.Point(4, 525);
+            this.LABrezZubereitung.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABrezZubereitung.Name = "LABrezZubereitung";
-            this.LABrezZubereitung.Size = new System.Drawing.Size(85, 17);
+            this.LABrezZubereitung.Size = new System.Drawing.Size(116, 25);
             this.LABrezZubereitung.TabIndex = 17;
             this.LABrezZubereitung.Text = "Zubereitung";
             // 
             // RTBrezZubereitung
             // 
-            this.RTBrezZubereitung.Location = new System.Drawing.Point(6, 361);
+            this.RTBrezZubereitung.Location = new System.Drawing.Point(9, 555);
+            this.RTBrezZubereitung.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RTBrezZubereitung.Name = "RTBrezZubereitung";
-            this.RTBrezZubereitung.Size = new System.Drawing.Size(490, 108);
+            this.RTBrezZubereitung.Size = new System.Drawing.Size(733, 164);
             this.RTBrezZubereitung.TabIndex = 16;
             this.RTBrezZubereitung.Text = "";
             // 
             // BTNzutLöschen
             // 
             this.BTNzutLöschen.Enabled = false;
-            this.BTNzutLöschen.Location = new System.Drawing.Point(312, 300);
+            this.BTNzutLöschen.Location = new System.Drawing.Point(468, 462);
+            this.BTNzutLöschen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNzutLöschen.Name = "BTNzutLöschen";
-            this.BTNzutLöschen.Size = new System.Drawing.Size(72, 23);
+            this.BTNzutLöschen.Size = new System.Drawing.Size(108, 35);
             this.BTNzutLöschen.TabIndex = 15;
             this.BTNzutLöschen.Text = "-";
             this.BTNzutLöschen.UseVisualStyleBackColor = true;
@@ -286,9 +302,10 @@
             // 
             // BTNzutHinzufuegen
             // 
-            this.BTNzutHinzufuegen.Location = new System.Drawing.Point(216, 300);
+            this.BTNzutHinzufuegen.Location = new System.Drawing.Point(324, 462);
+            this.BTNzutHinzufuegen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNzutHinzufuegen.Name = "BTNzutHinzufuegen";
-            this.BTNzutHinzufuegen.Size = new System.Drawing.Size(72, 23);
+            this.BTNzutHinzufuegen.Size = new System.Drawing.Size(108, 35);
             this.BTNzutHinzufuegen.TabIndex = 14;
             this.BTNzutHinzufuegen.Text = "+";
             this.BTNzutHinzufuegen.UseVisualStyleBackColor = true;
@@ -297,57 +314,64 @@
             // LABzutEinheit
             // 
             this.LABzutEinheit.AutoSize = true;
-            this.LABzutEinheit.Location = new System.Drawing.Point(213, 246);
+            this.LABzutEinheit.Location = new System.Drawing.Point(320, 378);
+            this.LABzutEinheit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABzutEinheit.Name = "LABzutEinheit";
-            this.LABzutEinheit.Size = new System.Drawing.Size(51, 17);
+            this.LABzutEinheit.Size = new System.Drawing.Size(71, 25);
             this.LABzutEinheit.TabIndex = 13;
             this.LABzutEinheit.Text = "Einheit";
             // 
             // TBzutEinheit
             // 
-            this.TBzutEinheit.Location = new System.Drawing.Point(215, 266);
+            this.TBzutEinheit.Location = new System.Drawing.Point(322, 409);
+            this.TBzutEinheit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBzutEinheit.Name = "TBzutEinheit";
-            this.TBzutEinheit.Size = new System.Drawing.Size(169, 23);
+            this.TBzutEinheit.Size = new System.Drawing.Size(252, 30);
             this.TBzutEinheit.TabIndex = 12;
             // 
             // LABzutMenge
             // 
             this.LABzutMenge.AutoSize = true;
-            this.LABzutMenge.Location = new System.Drawing.Point(212, 194);
+            this.LABzutMenge.Location = new System.Drawing.Point(318, 298);
+            this.LABzutMenge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABzutMenge.Name = "LABzutMenge";
-            this.LABzutMenge.Size = new System.Drawing.Size(51, 17);
+            this.LABzutMenge.Size = new System.Drawing.Size(73, 25);
             this.LABzutMenge.TabIndex = 11;
             this.LABzutMenge.Text = "Menge";
             // 
             // TBzutMenge
             // 
-            this.TBzutMenge.Location = new System.Drawing.Point(215, 214);
+            this.TBzutMenge.Location = new System.Drawing.Point(322, 329);
+            this.TBzutMenge.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBzutMenge.Name = "TBzutMenge";
-            this.TBzutMenge.Size = new System.Drawing.Size(169, 23);
+            this.TBzutMenge.Size = new System.Drawing.Size(252, 30);
             this.TBzutMenge.TabIndex = 10;
             // 
             // LABzutName
             // 
             this.LABzutName.AutoSize = true;
-            this.LABzutName.Location = new System.Drawing.Point(212, 137);
+            this.LABzutName.Location = new System.Drawing.Point(318, 211);
+            this.LABzutName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABzutName.Name = "LABzutName";
-            this.LABzutName.Size = new System.Drawing.Size(45, 17);
+            this.LABzutName.Size = new System.Drawing.Size(64, 25);
             this.LABzutName.TabIndex = 9;
             this.LABzutName.Text = "Name";
             // 
             // TBzutName
             // 
-            this.TBzutName.Location = new System.Drawing.Point(215, 157);
+            this.TBzutName.Location = new System.Drawing.Point(322, 242);
+            this.TBzutName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBzutName.Name = "TBzutName";
-            this.TBzutName.Size = new System.Drawing.Size(169, 23);
+            this.TBzutName.Size = new System.Drawing.Size(252, 30);
             this.TBzutName.TabIndex = 8;
             // 
             // LABrezZutaten
             // 
             this.LABrezZutaten.AutoSize = true;
-            this.LABrezZutaten.Location = new System.Drawing.Point(6, 117);
+            this.LABrezZutaten.Location = new System.Drawing.Point(9, 180);
+            this.LABrezZutaten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABrezZutaten.Name = "LABrezZutaten";
-            this.LABrezZutaten.Size = new System.Drawing.Size(57, 17);
+            this.LABrezZutaten.Size = new System.Drawing.Size(78, 25);
             this.LABrezZutaten.TabIndex = 7;
             this.LABrezZutaten.Text = "Zutaten";
             // 
@@ -355,48 +379,54 @@
             // 
             this.LIBOrezZutaten.DisplayMember = "GetSetZName";
             this.LIBOrezZutaten.FormattingEnabled = true;
-            this.LIBOrezZutaten.ItemHeight = 16;
-            this.LIBOrezZutaten.Location = new System.Drawing.Point(7, 137);
+            this.LIBOrezZutaten.ItemHeight = 25;
+            this.LIBOrezZutaten.Location = new System.Drawing.Point(10, 211);
+            this.LIBOrezZutaten.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LIBOrezZutaten.Name = "LIBOrezZutaten";
-            this.LIBOrezZutaten.Size = new System.Drawing.Size(169, 180);
+            this.LIBOrezZutaten.Size = new System.Drawing.Size(252, 254);
             this.LIBOrezZutaten.Sorted = true;
             this.LIBOrezZutaten.TabIndex = 6;
             this.LIBOrezZutaten.SelectedIndexChanged += new System.EventHandler(this.LIBOrezZutaten_SelectedIndexChanged);
             // 
             // NMRCrezPersonen
             // 
-            this.NMRCrezPersonen.Location = new System.Drawing.Point(7, 80);
+            this.NMRCrezPersonen.Location = new System.Drawing.Point(10, 123);
+            this.NMRCrezPersonen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NMRCrezPersonen.Name = "NMRCrezPersonen";
-            this.NMRCrezPersonen.Size = new System.Drawing.Size(56, 23);
+            this.NMRCrezPersonen.Size = new System.Drawing.Size(84, 30);
             this.NMRCrezPersonen.TabIndex = 5;
             // 
             // LABrezPersonen
             // 
             this.LABrezPersonen.AutoSize = true;
-            this.LABrezPersonen.Location = new System.Drawing.Point(4, 63);
+            this.LABrezPersonen.Location = new System.Drawing.Point(6, 97);
+            this.LABrezPersonen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABrezPersonen.Name = "LABrezPersonen";
-            this.LABrezPersonen.Size = new System.Drawing.Size(151, 17);
+            this.LABrezPersonen.Size = new System.Drawing.Size(209, 25);
             this.LABrezPersonen.TabIndex = 4;
             this.LABrezPersonen.Text = "Für wie viele Personen";
             // 
             // LABorezName
             // 
             this.LABorezName.AutoSize = true;
-            this.LABorezName.Location = new System.Drawing.Point(4, 12);
+            this.LABorezName.Location = new System.Drawing.Point(6, 18);
+            this.LABorezName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LABorezName.Name = "LABorezName";
-            this.LABorezName.Size = new System.Drawing.Size(45, 17);
+            this.LABorezName.Size = new System.Drawing.Size(64, 25);
             this.LABorezName.TabIndex = 2;
             this.LABorezName.Text = "Name";
             // 
             // TBrezName
             // 
-            this.TBrezName.Location = new System.Drawing.Point(7, 32);
+            this.TBrezName.Location = new System.Drawing.Point(10, 49);
+            this.TBrezName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TBrezName.Name = "TBrezName";
-            this.TBrezName.Size = new System.Drawing.Size(169, 23);
+            this.TBrezName.Size = new System.Drawing.Size(252, 30);
             this.TBrezName.TabIndex = 1;
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSBneuesRezept,
             this.TSBrezeptLöschen,
@@ -409,9 +439,10 @@
             this.TSBnamenssuche,
             this.TSBfilter,
             this.toolStripSeparator3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 35);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1184, 25);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1776, 31);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "TSHauptmenue";
             // 
@@ -421,7 +452,7 @@
             this.TSBneuesRezept.Image = global::Rezeptverwaltung.Properties.Resources.Dokument;
             this.TSBneuesRezept.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBneuesRezept.Name = "TSBneuesRezept";
-            this.TSBneuesRezept.Size = new System.Drawing.Size(23, 22);
+            this.TSBneuesRezept.Size = new System.Drawing.Size(28, 28);
             this.TSBneuesRezept.Text = "Neues Rezept";
             this.TSBneuesRezept.Click += new System.EventHandler(this.TSBneuesRezept_Click);
             // 
@@ -431,14 +462,14 @@
             this.TSBrezeptLöschen.Image = global::Rezeptverwaltung.Properties.Resources.RotesX;
             this.TSBrezeptLöschen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBrezeptLöschen.Name = "TSBrezeptLöschen";
-            this.TSBrezeptLöschen.Size = new System.Drawing.Size(23, 22);
+            this.TSBrezeptLöschen.Size = new System.Drawing.Size(28, 28);
             this.TSBrezeptLöschen.Text = "Rezept Löschen";
             this.TSBrezeptLöschen.Click += new System.EventHandler(this.TSBrezeptLöschen_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // TSBrezeptdateiOeffnen
             // 
@@ -446,7 +477,7 @@
             this.TSBrezeptdateiOeffnen.Image = global::Rezeptverwaltung.Properties.Resources.Öffnen;
             this.TSBrezeptdateiOeffnen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBrezeptdateiOeffnen.Name = "TSBrezeptdateiOeffnen";
-            this.TSBrezeptdateiOeffnen.Size = new System.Drawing.Size(23, 22);
+            this.TSBrezeptdateiOeffnen.Size = new System.Drawing.Size(28, 28);
             this.TSBrezeptdateiOeffnen.Text = "Rezeptdatei öffnen";
             // 
             // TSBspeichern
@@ -455,7 +486,7 @@
             this.TSBspeichern.Image = global::Rezeptverwaltung.Properties.Resources.Speichern;
             this.TSBspeichern.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBspeichern.Name = "TSBspeichern";
-            this.TSBspeichern.Size = new System.Drawing.Size(23, 22);
+            this.TSBspeichern.Size = new System.Drawing.Size(28, 28);
             this.TSBspeichern.Text = "Speichern";
             this.TSBspeichern.ToolTipText = "Speichern";
             // 
@@ -465,19 +496,19 @@
             this.TSBdrucken.Image = global::Rezeptverwaltung.Properties.Resources.Drucken;
             this.TSBdrucken.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBdrucken.Name = "TSBdrucken";
-            this.TSBdrucken.Size = new System.Drawing.Size(23, 22);
+            this.TSBdrucken.Size = new System.Drawing.Size(28, 28);
             this.TSBdrucken.Text = "Drucken";
             this.TSBdrucken.ToolTipText = "Drucken";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // TSTBnamensuche
             // 
             this.TSTBnamensuche.Name = "TSTBnamensuche";
-            this.TSTBnamensuche.Size = new System.Drawing.Size(100, 25);
+            this.TSTBnamensuche.Size = new System.Drawing.Size(148, 31);
             // 
             // TSBnamenssuche
             // 
@@ -485,7 +516,7 @@
             this.TSBnamenssuche.Image = global::Rezeptverwaltung.Properties.Resources.Lupe;
             this.TSBnamenssuche.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBnamenssuche.Name = "TSBnamenssuche";
-            this.TSBnamenssuche.Size = new System.Drawing.Size(23, 22);
+            this.TSBnamenssuche.Size = new System.Drawing.Size(28, 28);
             this.TSBnamenssuche.Text = "Suchen";
             // 
             // TSBfilter
@@ -505,73 +536,73 @@
             this.TSBfilter.Image = global::Rezeptverwaltung.Properties.Resources.Filter;
             this.TSBfilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBfilter.Name = "TSBfilter";
-            this.TSBfilter.Size = new System.Drawing.Size(32, 22);
+            this.TSBfilter.Size = new System.Drawing.Size(45, 28);
             this.TSBfilter.Text = "Filter aktivieren";
             // 
             // vorspeiseToolStripMenuItem
             // 
             this.vorspeiseToolStripMenuItem.Name = "vorspeiseToolStripMenuItem";
-            this.vorspeiseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vorspeiseToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.vorspeiseToolStripMenuItem.Text = "Vorspeise";
             // 
             // suppeToolStripMenuItem
             // 
             this.suppeToolStripMenuItem.Name = "suppeToolStripMenuItem";
-            this.suppeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.suppeToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.suppeToolStripMenuItem.Text = "Suppe";
             // 
             // salatToolStripMenuItem
             // 
             this.salatToolStripMenuItem.Name = "salatToolStripMenuItem";
-            this.salatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salatToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.salatToolStripMenuItem.Text = "Salat";
             // 
             // hauptgerichtToolStripMenuItem
             // 
             this.hauptgerichtToolStripMenuItem.Name = "hauptgerichtToolStripMenuItem";
-            this.hauptgerichtToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hauptgerichtToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.hauptgerichtToolStripMenuItem.Text = "Hauptgericht";
             // 
             // beilageToolStripMenuItem
             // 
             this.beilageToolStripMenuItem.Name = "beilageToolStripMenuItem";
-            this.beilageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.beilageToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.beilageToolStripMenuItem.Text = "Beilage";
             // 
             // dessertToolStripMenuItem
             // 
             this.dessertToolStripMenuItem.Name = "dessertToolStripMenuItem";
-            this.dessertToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dessertToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.dessertToolStripMenuItem.Text = "Dessert";
             // 
             // kuchenToolStripMenuItem
             // 
             this.kuchenToolStripMenuItem.Name = "kuchenToolStripMenuItem";
-            this.kuchenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kuchenToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.kuchenToolStripMenuItem.Text = "Kuchen";
             // 
             // plätzchenToolStripMenuItem
             // 
             this.plätzchenToolStripMenuItem.Name = "plätzchenToolStripMenuItem";
-            this.plätzchenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.plätzchenToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.plätzchenToolStripMenuItem.Text = "Plätzchen";
             // 
             // tortenToolStripMenuItem
             // 
             this.tortenToolStripMenuItem.Name = "tortenToolStripMenuItem";
-            this.tortenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tortenToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.tortenToolStripMenuItem.Text = "Torten";
             // 
             // pralienenToolStripMenuItem
             // 
             this.pralienenToolStripMenuItem.Name = "pralienenToolStripMenuItem";
-            this.pralienenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pralienenToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
             this.pralienenToolStripMenuItem.Text = "Pralienen";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // dateiToolStripMenuItem
             // 
@@ -579,19 +610,19 @@
             this.speichernToolStripMenuItem,
             this.öffnenToolStripMenuItem});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.dateiToolStripMenuItem.Text = "Datei";
             // 
             // speichernToolStripMenuItem
             // 
             this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
-            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(174, 30);
             this.speichernToolStripMenuItem.Text = "Speichern";
             // 
             // öffnenToolStripMenuItem
             // 
             this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
-            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(174, 30);
             this.öffnenToolStripMenuItem.Text = "Öffnen";
             // 
             // rezeptToolStripMenuItem
@@ -601,27 +632,27 @@
             this.löschenToolStripMenuItem,
             this.druckenToolStripMenuItem});
             this.rezeptToolStripMenuItem.Name = "rezeptToolStripMenuItem";
-            this.rezeptToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.rezeptToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.rezeptToolStripMenuItem.Text = "Rezept";
             // 
             // erstellenToolStripMenuItem
             // 
             this.erstellenToolStripMenuItem.Name = "erstellenToolStripMenuItem";
-            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(162, 30);
             this.erstellenToolStripMenuItem.Text = "Erstellen";
             this.erstellenToolStripMenuItem.Click += new System.EventHandler(this.erstellenToolStripMenuItem_Click);
             // 
             // löschenToolStripMenuItem
             // 
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(162, 30);
             this.löschenToolStripMenuItem.Text = "Löschen";
             this.löschenToolStripMenuItem.Click += new System.EventHandler(this.löschenToolStripMenuItem_Click);
             // 
             // druckenToolStripMenuItem
             // 
             this.druckenToolStripMenuItem.Name = "druckenToolStripMenuItem";
-            this.druckenToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.druckenToolStripMenuItem.Size = new System.Drawing.Size(162, 30);
             this.druckenToolStripMenuItem.Text = "Drucken";
             // 
             // sucheToolStripMenuItem
@@ -630,43 +661,46 @@
             this.filternToolStripMenuItem,
             this.filterAufhebenToolStripMenuItem});
             this.sucheToolStripMenuItem.Name = "sucheToolStripMenuItem";
-            this.sucheToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.sucheToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
             this.sucheToolStripMenuItem.Text = "Filter";
             // 
             // filternToolStripMenuItem
             // 
             this.filternToolStripMenuItem.Name = "filternToolStripMenuItem";
-            this.filternToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.filternToolStripMenuItem.Size = new System.Drawing.Size(215, 30);
             this.filternToolStripMenuItem.Text = "Filter aktivieren";
             // 
             // filterAufhebenToolStripMenuItem
             // 
             this.filterAufhebenToolStripMenuItem.Name = "filterAufhebenToolStripMenuItem";
-            this.filterAufhebenToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.filterAufhebenToolStripMenuItem.Size = new System.Drawing.Size(215, 30);
             this.filterAufhebenToolStripMenuItem.Text = "Filter aufheben";
             // 
             // MSHauptmenue
             // 
+            this.MSHauptmenue.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MSHauptmenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
             this.rezeptToolStripMenuItem,
             this.sucheToolStripMenuItem});
             this.MSHauptmenue.Location = new System.Drawing.Point(0, 0);
             this.MSHauptmenue.Name = "MSHauptmenue";
-            this.MSHauptmenue.Size = new System.Drawing.Size(1184, 24);
+            this.MSHauptmenue.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.MSHauptmenue.Size = new System.Drawing.Size(1776, 35);
             this.MSHauptmenue.TabIndex = 3;
             this.MSHauptmenue.Text = "Hauptmenue";
             // 
             // MasterDetailForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 762);
+            this.ClientSize = new System.Drawing.Size(1776, 1038);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.GBDetails);
             this.Controls.Add(this.LIBORezepte);
             this.Controls.Add(this.MSHauptmenue);
             this.MainMenuStrip = this.MSHauptmenue;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MasterDetailForm";
             this.Text = "Rezeptverwaltung";
             this.Click += new System.EventHandler(this.MasterDetailForm_Click);
