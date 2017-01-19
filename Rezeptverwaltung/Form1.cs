@@ -310,7 +310,13 @@ namespace Rezeptverwaltung
         }
 
 
-
+        public void neuesDoc()
+        {
+            LIBORezepte.Items.Clear();
+            ZutatelementeLeeren();
+            RezeptelementeLeeren();
+            PNLDetails.Enabled = false;
+        }
 
         #endregion
 

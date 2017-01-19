@@ -101,7 +101,7 @@ namespace Rezeptverwaltung
             }
         }
 
-        private void XMLladen(object sender, EventArgs e)
+        private Rezept XMLladen(MasterDetailForm Form1)
         {
             //Benutzer gibt die zu ladende Datei an
             OpenFileDialog ofd = new OpenFileDialog();
@@ -117,7 +117,7 @@ namespace Rezeptverwaltung
                 try
                 {
                     //löscht alle Einträge
-                    neuesDoc();
+                    Form1.neuesDoc();
 
                     //Quellpfad der Datei
                     string path = ofd.FileName;
@@ -128,54 +128,64 @@ namespace Rezeptverwaltung
                     doc.Load(path);
 
 
-                    XmlNodeList allCDs = doc.SelectNodes("//CDListe/CD");
+                    XmlNodeList alleRezeptes = doc.SelectNodes("//RezeptListe/Rezept");
 
-                    //erstellt alle CDs
-                    foreach (XmlNode cdNode in allCDs)
+                    //erstellt alle Rezepte
+                    foreach (XmlNode RezeptNode in alleRezeptes)
                     {
                         //Liste aller Titel dieser CD
 
                         //Um
-                        //./Titel
+                        //./Zutat
                         //zu verstehen
                         //schau auf Moodle XPath an
-                        XmlNodeList allTitel = cdNode.SelectNodes("./Titel");
+                        XmlNodeList alleZutaten = RezeptNode.SelectNodes("./Zutat");
+                        XmlNodeList alleKategorien = RezeptNode.SelectNodes("./Kategorie");
 
-                        //Der CD muss eine List aller Titel übergeben werden
-                        //Siehe CD Konstruktor
-                        List<Titel> titelList = new List<Titel>();
+                        //Dem Rezept muss eine List aller Zutaten übergeben werden
+                        //Siehe Rezept Konstruktor
+                        List<Zutat> ZutatList = new List<Zutat>();
+                        
 
-                        //läd den Albumname aus Datei
-                        XmlElement albumname = cdNode.SelectSingleNode("Albumname") as XmlElement;
-
-                        //erstellt alle Titel für die CD und speichert diese
-                        foreach (XmlNode titelNode in allTitel)
+                        //erstellt alle Zutaten für das Rezept und speichert diese
+                        foreach (XmlNode ZutatNode in alleZutaten)
                         {
                             //läd die Titelatribute
                             //siehe Titelkonstruktor
-                            XmlElement titelname = titelNode.SelectSingleNode("Titelname") as XmlElement;
-                            XmlElement interpret = titelNode.SelectSingleNode("Interpret") as XmlElement;
-                            XmlElement titellaenge = titelNode.SelectSingleNode("Titellaenge") as XmlElement;
-                            XmlElement titelnummer = titelNode.SelectSingleNode("Titelnummer") as XmlElement;
-                            XmlElement titelbewertung = titelNode.SelectSingleNode("Titelbewertung") as XmlElement;
+                            XmlElement Zutatname = ZutatNode.SelectSingleNode("Zutatname") as XmlElement;
+                            XmlElement Zutatmenge = ZutatNode.SelectSingleNode("Zutatmenge") as XmlElement;
+                            XmlElement Zutateinheit = ZutatNode.SelectSingleNode("Zutateinheit") as XmlElement;
 
                             //erstellt einen Titel mit geladenen Attributen
-                            Titel x = new Titel(titelname.InnerText, interpret.InnerText, TimeSpan.Parse(Convert.ToString(titellaenge.InnerText)), Convert.ToInt32(titelnummer.InnerText), Convert.ToInt32(titelbewertung.InnerText));
+                            Zutat z = new Zutat(Zutatname.InnerText, Zutatmenge.InnerText, Zutateinheit.InnerText);
 
                             //Fügt alle Titel der zu Liste für die CD hinzu
-                            titelList.Add(x);
+                            ZutatList.Add(z);
                         }
 
-                        //läd restlichen CD-Attribute
-                        XmlElement albumbewertung = cdNode.SelectSingleNode("Albumbewertung") as XmlElement;
-                        XmlElement erscheinungsjahr = cdNode.SelectSingleNode("Erscheinungsjahr") as XmlElement;
-                        XmlElement genre = cdNode.SelectSingleNode("Genre") as XmlElement;
+                        //läd restlichen Rezept-Attribute
+                        XmlElement Rezeptname = RezeptNode.SelectSingleNode("Rezeptname") as XmlElement;
+                        XmlElement Rezeptpersonen = RezeptNode.SelectSingleNode("Rezeptpersonen") as XmlElement;
+                        XmlElement Rezeptzubereitung = RezeptNode.SelectSingleNode("Rezeptzubereitung") as XmlElement;
+                        XmlElement Rezeptdauer = RezeptNode.SelectSingleNode("Rezeptdauer") as XmlElement;
 
-                        //erstellt CD
-                        CD loadedCD = new CD(albumname.InnerText, titelList, genre.InnerText, erscheinungsjahr.InnerText, Convert.ToInt32(albumbewertung.InnerText));
+                        List<string> KategorieList = new List<string>();
+
+                        foreach (XmlNode KategorieNode in alleKategorien)
+                        {
+                            XmlElement Kategoriename = KategorieNode.SelectSingleNode("Kategoriename") as XmlElement;
+
+                            KategorieList.Add(KategorieList.ToString());
+                        }
+
+                        XmlElement Rezeptnotiz = RezeptNode.SelectSingleNode("Rezeptnotiz") as XmlElement;
+
+
+                        //erstellt Rezept
+                        Rezept loadedRezept = new Rezept(Rezeptname.InnerText, Convert.ToDecimal(Rezeptpersonen.InnerText), ZutatList, Rezeptzubereitung.InnerText,Convert.ToDecimal(Rezeptdauer.InnerText), KategorieList, Rezeptnotiz.InnerText);
 
                         //Fügt der Listbox die CD hinzu
-                        CDListbox.Items.Add(loadedCD);
+                        return loadedRezept;
                     }
                 }
 
@@ -183,10 +193,15 @@ namespace Rezeptverwaltung
                 catch (Exception)
                 {
                     MessageBox.Show("Die Datei ist keine XML Datei oder die Datei ist beschädigt.");
+                    return null;
                 }
             }
+            return null;
         }
 
         #endregion
+        
+
+
     }
 }

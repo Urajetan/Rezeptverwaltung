@@ -16,7 +16,7 @@ namespace Rezeptverwaltung
         private List<string> Rkategorie;
         private string Rnotiz;
 
-        public Rezept(string n, int p, List<Zutat> zut, string zub, int d, List<string> hk, string no)
+        public Rezept(string n, decimal p, List<Zutat> zut, string zub, decimal d, List<string> hk, string no)
         {
             Rname = n;
             Rpersonen = p;
