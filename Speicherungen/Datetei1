@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<RezeptListe>
+  <Rezept>
+    <Rezeptname>ert</Rezeptname>
+    <Rezeptpersonen>0</Rezeptpersonen>
+    <Zutat>
+      <Zutatname>wert</Zutatname>
+      <Zutatmenge>ewrt</Zutatmenge>
+      <Zutateinheit>ewrt</Zutateinheit>
+    </Zutat>
+    <Rezeptzubereitung>ewrt</Rezeptzubereitung>
+    <Rezeptdauer>0</Rezeptdauer>
+    <Kategorie>
+      <Kategoriename>Dessert</Kategoriename>
+    </Kategorie>
+    <Kategorie>
+      <Kategoriename>Torte</Kategoriename>
+    </Kategorie>
+    <Rezeptnotiz>ert</Rezeptnotiz>
+  </Rezept>
+</RezeptListe>

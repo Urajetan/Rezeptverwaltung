@@ -16,9 +16,9 @@ namespace Rezeptverwaltung
     class DatenController
     {
 
-        #region Persistenz
+        #region XML
 
-        private void XMLspeichern(List<Rezept> Lrezept)
+        public void XMLspeichern(List<Rezept> Lrezept)
         {
             //erstellt XMLDocument im Speicher
             XmlDocument xmlDoc = new XmlDocument();
@@ -61,7 +61,7 @@ namespace Rezeptverwaltung
                     Zutatnode.AppendChild(Zutatmengenode);
 
                     XmlNode Zutateinheitnode = xmlDoc.CreateElement("Zutateinheit");
-                    Zutateinheitnode.InnerText = zut.GetSetZmenge;
+                    Zutateinheitnode.InnerText = zut.GetSetZeinheit;
                     Zutatnode.AppendChild(Zutateinheitnode);
                 }
 
@@ -101,7 +101,7 @@ namespace Rezeptverwaltung
             }
         }
 
-        private Rezept XMLladen(MasterDetailForm Form1)
+        public List<Rezept> XMLladen(MasterDetailForm Form1)
         {
             //Benutzer gibt die zu ladende Datei an
             OpenFileDialog ofd = new OpenFileDialog();
@@ -128,10 +128,10 @@ namespace Rezeptverwaltung
                     doc.Load(path);
 
 
-                    XmlNodeList alleRezeptes = doc.SelectNodes("//RezeptListe/Rezept");
-
+                    XmlNodeList alleRezepte = doc.SelectNodes("//RezeptListe/Rezept");
+                    List<Rezept> ListGeoeffneteRezept = new List<Rezept>();
                     //erstellt alle Rezepte
-                    foreach (XmlNode RezeptNode in alleRezeptes)
+                    foreach (XmlNode RezeptNode in alleRezepte)
                     {
                         //Liste aller Titel dieser CD
 
@@ -185,8 +185,9 @@ namespace Rezeptverwaltung
                         Rezept loadedRezept = new Rezept(Rezeptname.InnerText, Convert.ToDecimal(Rezeptpersonen.InnerText), ZutatList, Rezeptzubereitung.InnerText,Convert.ToDecimal(Rezeptdauer.InnerText), KategorieList, Rezeptnotiz.InnerText);
 
                         //Fügt der Listbox die CD hinzu
-                        return loadedRezept;
+                        ListGeoeffneteRezept.Add(loadedRezept);
                     }
+                    return ListGeoeffneteRezept;
                 }
 
                 //falls die Datei manipulliert war, erscheint eine Fehlermeldung 

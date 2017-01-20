@@ -16,6 +16,7 @@ namespace Rezeptverwaltung
         {
             InitializeComponent();
         }
+
         #region EVENTS
         
         private void MasterDetailForm_Click(object sender, EventArgs e)
@@ -57,6 +58,16 @@ namespace Rezeptverwaltung
         {
             RezeptLöschen();
         }
+
+        private void TSBspeichern_Click(object sender, EventArgs e)
+        {
+            InXMLSpeichern();
+        }
+        private void speichernToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InXMLSpeichern();
+        }
+
 
 
         private void CLBrezKategorien_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -130,9 +141,16 @@ namespace Rezeptverwaltung
             }
         }
 
+        private void TSBrezeptdateiOeffnen_Click(object sender, EventArgs e)
+        {
+            XMLOeffnen();
+        }
+        private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XMLOeffnen();
+        }
+
         #endregion
-
-
 
 
         #region METHODEN
@@ -309,7 +327,26 @@ namespace Rezeptverwaltung
             }
         }
 
+        private void InXMLSpeichern()
+        {
+            if (LIBORezepte.Items.Count > 0)
+            {
+                DatenController dc = new Rezeptverwaltung.DatenController();
+                List<Rezept> SaveRezepte = new List<Rezept>();
 
+                foreach (var item in LIBORezepte.Items)
+                {
+                    SaveRezepte.Add(item as Rezept);
+                }
+
+                dc.XMLspeichern(SaveRezepte);
+            }
+            else
+            {
+                MessageBox.Show("Es gibt keine Rezepte die zu speichern sind!");
+            }
+        }
+        
         public void neuesDoc()
         {
             LIBORezepte.Items.Clear();
@@ -318,12 +355,60 @@ namespace Rezeptverwaltung
             PNLDetails.Enabled = false;
         }
 
+        private void XMLOeffnen()
+        {
+            if (LIBORezepte.Items.Count > 0)
+            {
+                List<Rezept> openRezepte = XMLOeffnungsprotokoll();
+            }
+            else
+            {
+
+                if (MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    bool überprüfung = RezeptattributeAktualisieren();
+
+                    if (überprüfung == true)
+                    {
+                        RezeptelementeLeeren();
+                        ZutatelementeLeeren();
+                        PNLDetails.Enabled = false;
+
+                        List<Rezept> openRezepte = XMLOeffnungsprotokoll();
+                    }
+
+                }
+                else if (MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    List<Rezept> openRezepte = XMLOeffnungsprotokoll();
+                }
+                else if (MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+        }
+        private List<Rezept> XMLOeffnungsprotokoll()
+        {
+            DatenController dc = new DatenController();
+            try
+            {
+                List<Rezept> openRezepte = dc.XMLladen(this);
+                return openRezepte;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Die Datei ist beschädigt und kann nicht geladen werden!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return null;
+        }
+
+
+
         #endregion
 
 
 
-
-
-
+        
     }
 }
