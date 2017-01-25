@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Rezeptverwaltung
 {
@@ -68,6 +69,16 @@ namespace Rezeptverwaltung
             InXMLSpeichern();
         }
 
+        private void TSBrezeptdateiOeffnen_Click(object sender, EventArgs e)
+        {
+            XMLOeffnen();
+        }
+        private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XMLOeffnen();
+        }
+
+        
 
 
         private void CLBrezKategorien_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -141,14 +152,8 @@ namespace Rezeptverwaltung
             }
         }
 
-        private void TSBrezeptdateiOeffnen_Click(object sender, EventArgs e)
-        {
-            XMLOeffnen();
-        }
-        private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            XMLOeffnen();
-        }
+
+
 
         #endregion
 
@@ -318,12 +323,15 @@ namespace Rezeptverwaltung
 
         private void RezeptLöschen()
         {
-            Rezept r = LIBORezepte.SelectedItem as Rezept;
-
-            if (MessageBox.Show("Wollen Sie das Rezept '" + r.GetSetRName + "' wirklich entgültig löschen?", "Wirklich löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (LIBORezepte.SelectedIndex >=0)
             {
-                LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
-                LIBORezepte.SelectedIndex = -1;
+                Rezept r = LIBORezepte.SelectedItem as Rezept;
+
+                if (MessageBox.Show("Wollen Sie das Rezept '" + r.GetSetRName + "' wirklich entgültig löschen?", "Wirklich löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
+                    LIBORezepte.SelectedIndex = -1;
+                }
             }
         }
 
@@ -357,12 +365,15 @@ namespace Rezeptverwaltung
 
         private void XMLOeffnen()
         {
-            if (LIBORezepte.Items.Count > 0)
+            if (LIBORezepte.Items.Count == 0)
             {
                 List<Rezept> openRezepte = XMLOeffnungsprotokoll();
             }
             else
             {
+                //DialogResult x = MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes;
+                
+                //MessageBox.
 
                 if (MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -403,12 +414,76 @@ namespace Rezeptverwaltung
             return null;
         }
 
+        private string Bildverschieben()
+        {
+            OpenFileDialog path = new OpenFileDialog();
+            path.Title = "Bild einfügen";
+            
+            string destinationPath = "";
 
+            try
+            {
+                if (path.ShowDialog() == DialogResult.OK)
+                {
+                    #region DestinationPath erstellen
+
+                    //Der Pfad der .exe Datei um die Gesammte Ordnerhirachie einzulesen
+                    string lokalPath = Directory.GetCurrentDirectory();
+
+                    string[] splitedLocalPath = lokalPath.Split('\\');
+                    //nehme \Rezeptverwaltung\bin\debug weg und hänge \Speicherungen\Bilder an
+                    //Bilddatei soll in \Speicherungen\Bilder kopiert werden um von dort aus genutzt zu werden
+                    string[] splitedTargetPath = new string[splitedLocalPath.Length - 1];
+
+                    //füllt den destinationPath mit der Vorrausgehenden Ordnerhirachie
+                    for (int i = 0; i < splitedLocalPath.Length - 3; i++)
+                    {
+                        splitedTargetPath[i] = splitedLocalPath[i];
+                    }
+
+                    // ergänzt \Speicherungen\Bilder\
+                    splitedTargetPath[splitedTargetPath.Length - 2] = "Speicherungen";
+                    splitedTargetPath[splitedTargetPath.Length - 1] = "Bilder";
+
+                    //Bildet aus dem Array einen string
+                    foreach (string s in splitedTargetPath)
+                    {
+                        destinationPath = destinationPath + s + "\\";
+                    }
+                    //Dateinamen Anhängen
+                    destinationPath = destinationPath + path.SafeFileName;
+
+
+                    #endregion
+                }
+
+                else
+                {
+                    //Nichts passiert
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return null;
+            }
+
+            //Bilddatei kopieren
+            File.Copy(path.FileName, destinationPath);
+            
+            return destinationPath;
+        }
+        
 
         #endregion
 
 
 
-        
+        private void PBrezBild_DoubleClick(object sender, EventArgs e)
+        {
+            string bildPfand = Bildverschieben();
+        }
+
+
     }
 }

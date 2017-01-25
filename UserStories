@@ -1,0 +1,47 @@
+Userstorys Rezeptverwaltung:
+
+
+2) Der Benutzer kann sich die Details eines Rezepts anzeigen lassen
+	- wenn ein Rezept angeklickt wird werden die Details angezeigt
+	- die Werte lassen sich nicht ändern
+	
+3) Dem Benutzer soll es möglich kein Rezept angezeigt zu haben
+	- Form.Click LB.SelectedItem = -1
+	- Die Detail-Steuerelemente werden gecleart
+	
+4) Der Benutzer kann gespeicherte Rezepte bearbeiten, um Fehleinträge oder Änderungen zu speichern
+	- Wenn ein Rezept angezeigt wird kann man im Menü ändern klicken
+	- die Werte lassen sich ändern
+	- geänderte Werte lassen sich speichern
+	
+5) Der Benutzer kann Rezepte löschen, um ungewollte nichtmehr angezeigt zu bekommen
+	- wenn ein Rezept ausgewählt ist kann der Benutzer im Menü den Punkt löschen anklicken
+	- das gewählte Rezept wird aus der Listbox entfernt
+	- die Detail-Steuerelemente werden gecleart
+	
+6) Der Benutzer kann durch Kategorien nach Rezepten suche, um Ideen zu bekommen
+	- Benutzer kann im Menü einen Suchfilter einstellen
+	- nur die Rezepte nach denen gesucht wird werden in der listbox angezeigt
+	- die anderen werden Invisible
+	
+7) Der Benutzer kann per Namen nach Rezepten suchen, um ein Rezept schneller zu finden
+	- Benutzer kann test in eine TB eingeben
+	- nur die Rezepte nach denen gesucht wird werden in der listbox angezeigt
+	- die anderen werden Invisible
+	
+8) Der Benutzer kann seine Eingaben ein ein Dokument formatieren, um es zu drucken
+	- dem Benutzer wird eine Druckvorlage angezeigt
+	- wenn der Benutzer bestätigt wird das Rezept gedruckt
+	
+9) der Benutzer soll die Daten permanent speichern können, damit er das Programm schließen kann
+	- Rezepte werden in DB, CSV-Datei oder XML-Datei gespeichert
+	- beim schließen des Programms werden die Daten gesichert
+	- beim öffnen des Programms werden die Daten geladen
+	
+10) Wenn der Benutzer ein Rezept bearbeit und dann ein anderes anklickt soll überprüft werden ob er etwas geändert hat, 
+	um Ihm eine Warnung geben zu können falls Änderungen noch nicht gespeichert sind
+	- Warnungsfenster bei nicht gespeicherten Änderungen
+	
+11) Der Benutzer kann einzelne Rezepte oder Rezept Datensätze austauschen
+	- Rezeptdatei die Rezept + Bild speichert wird erstellt
+	- Benutzer kann Rezeptdatei einlesen lassen und das Rezept wird angezeigt

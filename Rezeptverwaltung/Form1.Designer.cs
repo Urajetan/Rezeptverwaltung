@@ -89,12 +89,14 @@
             this.filternToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterAufhebenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MSHauptmenue = new System.Windows.Forms.MenuStrip();
+            this.PBrezBild = new System.Windows.Forms.PictureBox();
             this.GBDetails.SuspendLayout();
             this.PNLDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezDauer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezPersonen)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.MSHauptmenue.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBrezBild)).BeginInit();
             this.SuspendLayout();
             // 
             // LIBORezepte
@@ -123,6 +125,7 @@
             // 
             // PNLDetails
             // 
+            this.PNLDetails.Controls.Add(this.PBrezBild);
             this.PNLDetails.Controls.Add(this.LABreInMin);
             this.PNLDetails.Controls.Add(this.NMRCrezDauer);
             this.PNLDetails.Controls.Add(this.LABrezDauer);
@@ -159,7 +162,7 @@
             // LABreInMin
             // 
             this.LABreInMin.AutoSize = true;
-            this.LABreInMin.Location = new System.Drawing.Point(340, 82);
+            this.LABreInMin.Location = new System.Drawing.Point(130, 111);
             this.LABreInMin.Name = "LABreInMin";
             this.LABreInMin.Size = new System.Drawing.Size(58, 17);
             this.LABreInMin.TabIndex = 26;
@@ -172,7 +175,7 @@
             0,
             0,
             0});
-            this.NMRCrezDauer.Location = new System.Drawing.Point(215, 80);
+            this.NMRCrezDauer.Location = new System.Drawing.Point(9, 109);
             this.NMRCrezDauer.Name = "NMRCrezDauer";
             this.NMRCrezDauer.Size = new System.Drawing.Size(120, 23);
             this.NMRCrezDauer.TabIndex = 25;
@@ -180,7 +183,7 @@
             // LABrezDauer
             // 
             this.LABrezDauer.AutoSize = true;
-            this.LABrezDauer.Location = new System.Drawing.Point(216, 63);
+            this.LABrezDauer.Location = new System.Drawing.Point(6, 92);
             this.LABrezDauer.Name = "LABrezDauer";
             this.LABrezDauer.Size = new System.Drawing.Size(47, 17);
             this.LABrezDauer.TabIndex = 24;
@@ -276,7 +279,7 @@
             // BTNzutLöschen
             // 
             this.BTNzutLöschen.Enabled = false;
-            this.BTNzutLöschen.Location = new System.Drawing.Point(312, 300);
+            this.BTNzutLöschen.Location = new System.Drawing.Point(312, 322);
             this.BTNzutLöschen.Name = "BTNzutLöschen";
             this.BTNzutLöschen.Size = new System.Drawing.Size(72, 23);
             this.BTNzutLöschen.TabIndex = 15;
@@ -286,7 +289,7 @@
             // 
             // BTNzutHinzufuegen
             // 
-            this.BTNzutHinzufuegen.Location = new System.Drawing.Point(216, 300);
+            this.BTNzutHinzufuegen.Location = new System.Drawing.Point(216, 322);
             this.BTNzutHinzufuegen.Name = "BTNzutHinzufuegen";
             this.BTNzutHinzufuegen.Size = new System.Drawing.Size(72, 23);
             this.BTNzutHinzufuegen.TabIndex = 14;
@@ -297,7 +300,7 @@
             // LABzutEinheit
             // 
             this.LABzutEinheit.AutoSize = true;
-            this.LABzutEinheit.Location = new System.Drawing.Point(213, 246);
+            this.LABzutEinheit.Location = new System.Drawing.Point(213, 268);
             this.LABzutEinheit.Name = "LABzutEinheit";
             this.LABzutEinheit.Size = new System.Drawing.Size(51, 17);
             this.LABzutEinheit.TabIndex = 13;
@@ -305,7 +308,7 @@
             // 
             // TBzutEinheit
             // 
-            this.TBzutEinheit.Location = new System.Drawing.Point(215, 266);
+            this.TBzutEinheit.Location = new System.Drawing.Point(215, 288);
             this.TBzutEinheit.Name = "TBzutEinheit";
             this.TBzutEinheit.Size = new System.Drawing.Size(169, 23);
             this.TBzutEinheit.TabIndex = 12;
@@ -313,7 +316,7 @@
             // LABzutMenge
             // 
             this.LABzutMenge.AutoSize = true;
-            this.LABzutMenge.Location = new System.Drawing.Point(212, 194);
+            this.LABzutMenge.Location = new System.Drawing.Point(212, 216);
             this.LABzutMenge.Name = "LABzutMenge";
             this.LABzutMenge.Size = new System.Drawing.Size(51, 17);
             this.LABzutMenge.TabIndex = 11;
@@ -321,7 +324,7 @@
             // 
             // TBzutMenge
             // 
-            this.TBzutMenge.Location = new System.Drawing.Point(215, 214);
+            this.TBzutMenge.Location = new System.Drawing.Point(215, 236);
             this.TBzutMenge.Name = "TBzutMenge";
             this.TBzutMenge.Size = new System.Drawing.Size(169, 23);
             this.TBzutMenge.TabIndex = 10;
@@ -329,7 +332,7 @@
             // LABzutName
             // 
             this.LABzutName.AutoSize = true;
-            this.LABzutName.Location = new System.Drawing.Point(212, 137);
+            this.LABzutName.Location = new System.Drawing.Point(212, 159);
             this.LABzutName.Name = "LABzutName";
             this.LABzutName.Size = new System.Drawing.Size(45, 17);
             this.LABzutName.TabIndex = 9;
@@ -337,7 +340,7 @@
             // 
             // TBzutName
             // 
-            this.TBzutName.Location = new System.Drawing.Point(215, 157);
+            this.TBzutName.Location = new System.Drawing.Point(215, 179);
             this.TBzutName.Name = "TBzutName";
             this.TBzutName.Size = new System.Drawing.Size(169, 23);
             this.TBzutName.TabIndex = 8;
@@ -345,7 +348,7 @@
             // LABrezZutaten
             // 
             this.LABrezZutaten.AutoSize = true;
-            this.LABrezZutaten.Location = new System.Drawing.Point(6, 117);
+            this.LABrezZutaten.Location = new System.Drawing.Point(6, 139);
             this.LABrezZutaten.Name = "LABrezZutaten";
             this.LABrezZutaten.Size = new System.Drawing.Size(57, 17);
             this.LABrezZutaten.TabIndex = 7;
@@ -356,7 +359,7 @@
             this.LIBOrezZutaten.DisplayMember = "GetSetZName";
             this.LIBOrezZutaten.FormattingEnabled = true;
             this.LIBOrezZutaten.ItemHeight = 16;
-            this.LIBOrezZutaten.Location = new System.Drawing.Point(7, 137);
+            this.LIBOrezZutaten.Location = new System.Drawing.Point(7, 159);
             this.LIBOrezZutaten.Name = "LIBOrezZutaten";
             this.LIBOrezZutaten.Size = new System.Drawing.Size(169, 164);
             this.LIBOrezZutaten.Sorted = true;
@@ -365,7 +368,7 @@
             // 
             // NMRCrezPersonen
             // 
-            this.NMRCrezPersonen.Location = new System.Drawing.Point(7, 80);
+            this.NMRCrezPersonen.Location = new System.Drawing.Point(9, 66);
             this.NMRCrezPersonen.Name = "NMRCrezPersonen";
             this.NMRCrezPersonen.Size = new System.Drawing.Size(56, 23);
             this.NMRCrezPersonen.TabIndex = 5;
@@ -373,7 +376,7 @@
             // LABrezPersonen
             // 
             this.LABrezPersonen.AutoSize = true;
-            this.LABrezPersonen.Location = new System.Drawing.Point(4, 63);
+            this.LABrezPersonen.Location = new System.Drawing.Point(6, 49);
             this.LABrezPersonen.Name = "LABrezPersonen";
             this.LABrezPersonen.Size = new System.Drawing.Size(151, 17);
             this.LABrezPersonen.TabIndex = 4;
@@ -382,7 +385,7 @@
             // LABorezName
             // 
             this.LABorezName.AutoSize = true;
-            this.LABorezName.Location = new System.Drawing.Point(4, 12);
+            this.LABorezName.Location = new System.Drawing.Point(3, 3);
             this.LABorezName.Name = "LABorezName";
             this.LABorezName.Size = new System.Drawing.Size(45, 17);
             this.LABorezName.TabIndex = 2;
@@ -390,7 +393,7 @@
             // 
             // TBrezName
             // 
-            this.TBrezName.Location = new System.Drawing.Point(7, 32);
+            this.TBrezName.Location = new System.Drawing.Point(6, 23);
             this.TBrezName.Name = "TBrezName";
             this.TBrezName.Size = new System.Drawing.Size(169, 23);
             this.TBrezName.TabIndex = 1;
@@ -588,14 +591,14 @@
             // speichernToolStripMenuItem
             // 
             this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
-            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.speichernToolStripMenuItem.Text = "Speichern";
             this.speichernToolStripMenuItem.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click);
             // 
             // öffnenToolStripMenuItem
             // 
             this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
-            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.öffnenToolStripMenuItem.Text = "Öffnen";
             this.öffnenToolStripMenuItem.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
             // 
@@ -663,6 +666,17 @@
             this.MSHauptmenue.TabIndex = 3;
             this.MSHauptmenue.Text = "Hauptmenue";
             // 
+            // PBrezBild
+            // 
+            this.PBrezBild.BackColor = System.Drawing.Color.White;
+            this.PBrezBild.Location = new System.Drawing.Point(215, 23);
+            this.PBrezBild.Name = "PBrezBild";
+            this.PBrezBild.Size = new System.Drawing.Size(169, 109);
+            this.PBrezBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBrezBild.TabIndex = 27;
+            this.PBrezBild.TabStop = false;
+            this.PBrezBild.DoubleClick += new System.EventHandler(this.PBrezBild_DoubleClick);
+            // 
             // MasterDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -685,6 +699,7 @@
             this.toolStrip1.PerformLayout();
             this.MSHauptmenue.ResumeLayout(false);
             this.MSHauptmenue.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBrezBild)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,6 +768,7 @@
         private System.Windows.Forms.ToolStripMenuItem filternToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filterAufhebenToolStripMenuItem;
         private System.Windows.Forms.MenuStrip MSHauptmenue;
+        private System.Windows.Forms.PictureBox PBrezBild;
     }
 }
 
