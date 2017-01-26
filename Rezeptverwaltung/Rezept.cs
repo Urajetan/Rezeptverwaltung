@@ -15,8 +15,9 @@ namespace Rezeptverwaltung
         private decimal Rdauer;
         private List<string> Rkategorie;
         private string Rnotiz;
+        private string RBildPfad;
 
-        public Rezept(string n, decimal p, List<Zutat> zut, string zub, decimal d, List<string> hk, string no)
+        public Rezept(string n, decimal p, List<Zutat> zut, string zub, decimal d, List<string> hk, string no, string path)
         {
             Rname = n;
             Rpersonen = p;
@@ -24,7 +25,9 @@ namespace Rezeptverwaltung
             Rdauer = d;
             Rkategorie = hk;
             Rnotiz = no;
+            RBildPfad = path;
         }
+
         public Rezept()
         {
             Rname = "Neues Rezept";
@@ -33,6 +36,7 @@ namespace Rezeptverwaltung
             Rdauer = 0;
             Rkategorie = null;
             Rnotiz = "";
+            RBildPfad = "";
         }
 
 
@@ -79,6 +83,11 @@ namespace Rezeptverwaltung
             set { Rnotiz = value; }
         }
 
+        public string GetSetRBildPath
+        {
+            get { return RBildPfad; }
+            set { RBildPfad = value; }
+        }
 
     }
 }

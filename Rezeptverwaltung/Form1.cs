@@ -266,6 +266,17 @@ namespace Rezeptverwaltung
             {
                 LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
             }
+
+            //
+            //
+            //
+            r.GetSetRBildPath = PBrezBild.Image.Tag.ToString();
+            //
+            //
+            //
+
+            //Muss den Pfad noch als Tag hinzufügen
+
             return true;
         }
 
@@ -481,7 +492,8 @@ namespace Rezeptverwaltung
 
         private void PBrezBild_DoubleClick(object sender, EventArgs e)
         {
-            string bildPfand = Bildverschieben();
+            string bildPfad = Bildverschieben();
+            PBrezBild.Image = Image.FromFile(bildPfad)
         }
 
 
