@@ -18,15 +18,21 @@ namespace Rezeptverwaltung
             InitializeComponent();
         }
 
-        #region EVENTS
-
-        private void MasterDetailForm_Click(object sender, EventArgs e)
+        #region EVENST
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MasterDetailForm_DoubleClick(object sender, EventArgs e)
         {
 
             if (LIBORezepte.SelectedIndex > -1)
             {
                 DialogResult res = MessageBox.Show("Wollen Sie das Rezept erst speichern?", "Änderungen speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
+                //Rezept welches derzeit bearbeitet wird, wird gespeichert
+                //Steuerelemente für Rezepte und Zutaten werden geleert
                 if (res == DialogResult.Yes)
                 {
                     RezeptattributeAktualisieren();
@@ -35,6 +41,7 @@ namespace Rezeptverwaltung
                     RezeptelementeLeeren();
                     ZutatelementeLeeren();
                 }
+                //Steuerelemente für Rezepte und Zutaten werden geleert
                 else if (res == DialogResult.No)
                 {
                     LIBORezepte.SelectedIndex = -1;
@@ -46,13 +53,42 @@ namespace Rezeptverwaltung
                     //nichts passiert
                 }
 
+                
             }
 
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PNLDetails_Click(object sender, EventArgs e)
         {
-            if (LIBOrezZutaten.SelectedIndex != -1)
+
+            Zutat z = LIBOrezZutaten.SelectedItem as Zutat;
+
+
+            if (z != null && (!z.GetSetZName.Equals(TBzutName.Text) | !z.GetSetZmenge.Equals(TBzutMenge.Text) | !z.GetSetZeinheit.Equals(TBzutEinheit.Text)))
+            {
+                DialogResult res = MessageBox.Show("Wollen Sie die Zutat speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                if (res == DialogResult.Yes)
+                {
+                    ZutatattributeAktualisieren();
+                }
+                else if (res == DialogResult.No)
+                {
+                    LIBOrezZutaten.SelectedIndex = -1;
+                    ZutatelementeLeeren();
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    // nix
+                }
+
+            }
+            else if (z != null && (z.GetSetZName.Equals(TBzutName.Text) && z.GetSetZmenge.Equals(TBzutMenge.Text) && z.GetSetZeinheit.Equals(TBzutEinheit.Text)))
             {
                 LIBOrezZutaten.SelectedIndex = -1;
                 ZutatelementeLeeren();
@@ -383,7 +419,6 @@ namespace Rezeptverwaltung
             if (PBrezBild.Image != null)
             {
                 PBrezBild.Image.Dispose();
-                Thread.Sleep(1000);
                 PBrezBild.Image = null;
             }
 
@@ -448,13 +483,18 @@ namespace Rezeptverwaltung
             if (LIBORezepte.Items.Count == 0)
             {
                 List<Rezept> openRezepte = XMLOeffnungsprotokoll();
-                //löscht alle Einträge
-                this.neuesDoc();
 
-                foreach (Rezept rez in openRezepte)
+                if (openRezepte != null)
                 {
-                    LIBORezepte.Items.Add(rez);
+                    //löscht alle Einträge
+                    this.neuesDoc();
+
+                    foreach (Rezept rez in openRezepte)
+                    {
+                        LIBORezepte.Items.Add(rez);
+                    }
                 }
+                
             }
             else
             {
@@ -475,12 +515,16 @@ namespace Rezeptverwaltung
                     
                     List<Rezept> openRezepte = XMLOeffnungsprotokoll();
 
-                    //löscht alle Einträge
-                    this.neuesDoc();
 
-                    foreach (Rezept rez in openRezepte)
+                    if (openRezepte != null)
                     {
-                        LIBORezepte.Items.Add(rez);
+                        //löscht alle Einträge
+                        this.neuesDoc();
+
+                        foreach (Rezept rez in openRezepte)
+                        {
+                            LIBORezepte.Items.Add(rez);
+                        }
                     }
 
 
@@ -488,12 +532,16 @@ namespace Rezeptverwaltung
                 else if (res == DialogResult.No)
                 {
                     List<Rezept> openRezepte = XMLOeffnungsprotokoll();
-                    //löscht alle Einträge
-                    this.neuesDoc();
 
-                    foreach (Rezept rez in openRezepte)
+                    if (openRezepte != null)
                     {
-                        LIBORezepte.Items.Add(rez);
+                        //löscht alle Einträge
+                        this.neuesDoc();
+
+                        foreach (Rezept rez in openRezepte)
+                        {
+                            LIBORezepte.Items.Add(rez);
+                        }
                     }
 
                 }
@@ -524,7 +572,6 @@ namespace Rezeptverwaltung
             {
                 FileInfo fi = new FileInfo(BildPfad);
                 string dateiendung = fi.Extension;
-                MessageBox.Show(dateiendung);
                 if (dateiendung == ".png" || dateiendung == ".jpg")
                 {
                     return true;

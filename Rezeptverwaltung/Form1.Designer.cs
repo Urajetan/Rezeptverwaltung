@@ -687,9 +687,11 @@
             this.Controls.Add(this.LIBORezepte);
             this.Controls.Add(this.MSHauptmenue);
             this.MainMenuStrip = this.MSHauptmenue;
+            this.MaximumSize = new System.Drawing.Size(1200, 790);
+            this.MinimumSize = new System.Drawing.Size(1200, 790);
             this.Name = "MasterDetailForm";
             this.Text = "Rezeptverwaltung";
-            this.Click += new System.EventHandler(this.MasterDetailForm_Click);
+            this.DoubleClick += new System.EventHandler(this.MasterDetailForm_DoubleClick);
             this.GBDetails.ResumeLayout(false);
             this.PNLDetails.ResumeLayout(false);
             this.PNLDetails.PerformLayout();

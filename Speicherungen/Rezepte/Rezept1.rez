@@ -19,13 +19,7 @@
     <Kategorie>
       <Kategoriename>Vorspeise</Kategoriename>
     </Kategorie>
-    <Kategorie>
-      <Kategoriename>Suppe</Kategoriename>
-    </Kategorie>
-    <Kategorie>
-      <Kategoriename>Salat</Kategoriename>
-    </Kategorie>
     <Rezeptnotiz>123</Rezeptnotiz>
-    <Bildpfad>C:\Users\Robin\Documents\Visual Studio 2015\Projects\Rezeptverwaltung\Speicherungen\Bilder\mama1.jpg</Bildpfad>
+    <Bildpfad>C:\Users\Robin\Documents\Visual Studio 2015\Projects\Rezeptverwaltung\Speicherungen\Bilder\essen 1.jpg</Bildpfad>
   </Rezept>
 </RezeptListe>
