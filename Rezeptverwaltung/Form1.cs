@@ -112,12 +112,16 @@ namespace Rezeptverwaltung
                 ZutatelementeLeeren();
                 PNLDetails.Enabled = false;
                 LIBORezepte.Enabled = true;
+                TSHauptmenue.Enabled = true;
+                MSHauptmenue.Enabled = true;
             }
             else
             {
                 PNLDetails.Enabled = true;
                 RezeptdetailsAnzeigen();
                 LIBORezepte.Enabled = false;
+                TSHauptmenue.Enabled = false;
+                MSHauptmenue.Enabled = false;
             }
 
         }

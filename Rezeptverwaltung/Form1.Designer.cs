@@ -57,7 +57,7 @@
             this.LABrezPersonen = new System.Windows.Forms.Label();
             this.LABorezName = new System.Windows.Forms.Label();
             this.TBrezName = new System.Windows.Forms.TextBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.TSHauptmenue = new System.Windows.Forms.ToolStrip();
             this.TSBneuesRezept = new System.Windows.Forms.ToolStripButton();
             this.TSBrezeptLöschen = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -95,7 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBrezBild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezDauer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezPersonen)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.TSHauptmenue.SuspendLayout();
             this.MSHauptmenue.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -409,10 +409,10 @@
             this.TBrezName.Size = new System.Drawing.Size(169, 23);
             this.TBrezName.TabIndex = 1;
             // 
-            // toolStrip1
+            // TSHauptmenue
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSHauptmenue.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.TSHauptmenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSBneuesRezept,
             this.TSBrezeptLöschen,
             this.toolStripSeparator1,
@@ -424,11 +424,11 @@
             this.TSBnamenssuche,
             this.TSBfilter,
             this.toolStripSeparator3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1184, 31);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "TSHauptmenue";
+            this.TSHauptmenue.Location = new System.Drawing.Point(0, 24);
+            this.TSHauptmenue.Name = "TSHauptmenue";
+            this.TSHauptmenue.Size = new System.Drawing.Size(1184, 31);
+            this.TSHauptmenue.TabIndex = 4;
+            this.TSHauptmenue.Text = "TSHauptmenue";
             // 
             // TSBneuesRezept
             // 
@@ -682,7 +682,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 752);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.TSHauptmenue);
             this.Controls.Add(this.GBDetails);
             this.Controls.Add(this.LIBORezepte);
             this.Controls.Add(this.MSHauptmenue);
@@ -696,8 +696,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBrezBild)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezDauer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezPersonen)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.TSHauptmenue.ResumeLayout(false);
+            this.TSHauptmenue.PerformLayout();
             this.MSHauptmenue.ResumeLayout(false);
             this.MSHauptmenue.PerformLayout();
             this.ResumeLayout(false);
@@ -735,7 +735,7 @@
         private System.Windows.Forms.Label LABrezDauer;
         private System.Windows.Forms.NumericUpDown NMRCrezDauer;
         private System.Windows.Forms.Label LABreInMin;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip TSHauptmenue;
         private System.Windows.Forms.ToolStripButton TSBneuesRezept;
         private System.Windows.Forms.ToolStripButton TSBrezeptLöschen;
         private System.Windows.Forms.ToolStripButton TSBrezeptdateiOeffnen;
