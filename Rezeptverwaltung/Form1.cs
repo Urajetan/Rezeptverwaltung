@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 
@@ -22,12 +22,30 @@ namespace Rezeptverwaltung
 
         private void MasterDetailForm_Click(object sender, EventArgs e)
         {
-            //Wenn gerade kein Rezept bearbeitet oder erstellt wird
-            if (PNLDetails.Enabled == false)
+
+            if (LIBORezepte.SelectedIndex > -1)
             {
-                LIBORezepte.SelectedIndex = -1;
-                RezeptelementeLeeren();
-                ZutatelementeLeeren();
+                DialogResult res = MessageBox.Show("Wollen Sie das Rezept erst speichern?", "Änderungen speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                if (res == DialogResult.Yes)
+                {
+                    RezeptattributeAktualisieren();
+
+                    LIBORezepte.SelectedIndex = -1;
+                    RezeptelementeLeeren();
+                    ZutatelementeLeeren();
+                }
+                else if (res == DialogResult.No)
+                {
+                    LIBORezepte.SelectedIndex = -1;
+                    RezeptelementeLeeren();
+                    ZutatelementeLeeren();
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    //nichts passiert
+                }
+
             }
 
 
@@ -93,11 +111,13 @@ namespace Rezeptverwaltung
                 RezeptelementeLeeren();
                 ZutatelementeLeeren();
                 PNLDetails.Enabled = false;
+                LIBORezepte.Enabled = true;
             }
             else
             {
                 PNLDetails.Enabled = true;
                 RezeptdetailsAnzeigen();
+                LIBORezepte.Enabled = false;
             }
 
         }
@@ -154,17 +174,17 @@ namespace Rezeptverwaltung
 
         private void PBrezBild_DoubleClick(object sender, EventArgs e)
         {
-            OpenFileDialog path = new OpenFileDialog();
-            path.Title = "Bild einfügen";
+            OpenFileDialog OrginalPfad = new OpenFileDialog();
+            OrginalPfad.Title = "Bild einfügen";
 
-            if (path.ShowDialog() == DialogResult.OK)
+            if (OrginalPfad.ShowDialog() == DialogResult.OK)
             {
-                string Zielpfad = ZielpfadErstellen(path.FileName, path.SafeFileName);
+                string Zielpfad = ZielpfadErstellen(OrginalPfad.FileName, OrginalPfad.SafeFileName);
 
-                //wenn die Datei .png oder .jpg ist
-                if (Bildvalidierung(path.FileName))
+                //wenn die Datei .png oder .jpg ist aber der Opfad nicht der ZPfad ist
+                if (Bildvalidierung(OrginalPfad.FileName) && OrginalPfad.FileName != Zielpfad)
                 {
-                    Bildverschieben(Zielpfad, path.FileName);
+                    Bildverschieben(Zielpfad, OrginalPfad.FileName);
                 }
 
                 if (File.Exists(Zielpfad))
@@ -201,6 +221,7 @@ namespace Rezeptverwaltung
                 RTBrezZubereitung.Text = r.GetSetRzubereitung;
                 NMRCrezDauer.Value = r.GetSetRdauer;
 
+                //kategorien auswählen
                 foreach (string s in r.GetSetRkategorie)
                 {
                     for (int i = 0; i < CLBrezKategorien.Items.Count; i++)
@@ -215,6 +236,22 @@ namespace Rezeptverwaltung
                 }
 
                 RTBrezNotizen.Text = r.GetSetRNotiz;
+
+                //Bild laden falls vorhanden
+                if (File.Exists(r.GetSetRBildPath))
+                {
+                    PBrezBild.Image = Image.FromFile(r.GetSetRBildPath);
+                    PBrezBild.Image.Tag = r.GetSetRBildPath;
+                }
+                else if (r.GetSetRBildPath == null)
+                {
+                    //Wurde kein Bild eingefügt
+                }
+                else
+                {
+                    MessageBox.Show("Das Bild muss neu eingebunden werden!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             catch (Exception)
             {
@@ -285,14 +322,19 @@ namespace Rezeptverwaltung
 
             r.GetSetRNotiz = RTBrezNotizen.Text;
 
+            //Der speicherpfad ist als string im Tag gespeichert
+            if (PBrezBild.Image != null)
+            {
+                r.GetSetRBildPath = PBrezBild.Image.Tag.ToString();
+            }
+
+
+
             LIBORezepte.Items.Add(r);
             if (LIBORezepte.SelectedIndex != -1)
             {
                 LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
             }
-            //Der speicherpfad ist als string im Tag gespeichert
-            r.GetSetRBildPath = PBrezBild.Image.Tag.ToString();
-
             return true;
         }
 
@@ -334,6 +376,13 @@ namespace Rezeptverwaltung
                 CLBrezKategorien.SetItemChecked(i, false);
             }
             RTBrezNotizen.Clear();
+            if (PBrezBild.Image != null)
+            {
+                PBrezBild.Image.Dispose();
+                Thread.Sleep(1000);
+                PBrezBild.Image = null;
+            }
+
         }
 
         private void NeuesRezeptErstellen()
@@ -395,32 +444,56 @@ namespace Rezeptverwaltung
             if (LIBORezepte.Items.Count == 0)
             {
                 List<Rezept> openRezepte = XMLOeffnungsprotokoll();
+                //löscht alle Einträge
+                this.neuesDoc();
+
+                foreach (Rezept rez in openRezepte)
+                {
+                    LIBORezepte.Items.Add(rez);
+                }
             }
             else
             {
-                //DialogResult x = MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes;
+                DialogResult res = MessageBox.Show("Sollen Sie die Rezepte vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 
-                //MessageBox.
 
-                if (MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (res == DialogResult.Yes)
                 {
-                    bool überprüfung = RezeptattributeAktualisieren();
-
-                    if (überprüfung == true)
+                    try
                     {
-                        RezeptelementeLeeren();
-                        ZutatelementeLeeren();
-                        PNLDetails.Enabled = false;
+                        InXMLSpeichern();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Die rezepte konnten nicht gespeichert werden. Schließen Sie das Programm nicht sondern kontaktieren Sie den Programmierer!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    
+                    List<Rezept> openRezepte = XMLOeffnungsprotokoll();
 
-                        List<Rezept> openRezepte = XMLOeffnungsprotokoll();
+                    //löscht alle Einträge
+                    this.neuesDoc();
+
+                    foreach (Rezept rez in openRezepte)
+                    {
+                        LIBORezepte.Items.Add(rez);
+                    }
+
+
+                }
+                else if (res == DialogResult.No)
+                {
+                    List<Rezept> openRezepte = XMLOeffnungsprotokoll();
+                    //löscht alle Einträge
+                    this.neuesDoc();
+
+                    foreach (Rezept rez in openRezepte)
+                    {
+                        LIBORezepte.Items.Add(rez);
                     }
 
                 }
-                else if (MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.No)
-                {
-                    List<Rezept> openRezepte = XMLOeffnungsprotokoll();
-                }
-                else if (MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                else if (res == DialogResult.Cancel)
                 {
                     return;
                 }
@@ -431,7 +504,7 @@ namespace Rezeptverwaltung
             DatenController dc = new DatenController();
             try
             {
-                List<Rezept> openRezepte = dc.XMLladen(this);
+                List<Rezept> openRezepte = dc.XMLladen();
                 return openRezepte;
             }
             catch (Exception)
@@ -440,7 +513,7 @@ namespace Rezeptverwaltung
             }
             return null;
         }
-        
+
         private bool Bildvalidierung(string BildPfad)
         {
             if (File.Exists(BildPfad))
@@ -501,6 +574,8 @@ namespace Rezeptverwaltung
 
 
                 #endregion
+
+                return destinationPath;
             }
             catch (Exception e)
             {
@@ -528,13 +603,13 @@ namespace Rezeptverwaltung
 
         }
 
+
+
+
+
+
+
         #endregion
 
-
-
-        
-
-
-        
     }
 }

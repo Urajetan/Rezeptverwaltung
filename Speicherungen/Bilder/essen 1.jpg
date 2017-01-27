@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<RezeptListe>
+  <Rezept>
+    <Rezeptname>Rezept1</Rezeptname>
+    <Rezeptpersonen>2</Rezeptpersonen>
+    <Zutat>
+      <Zutatname>Kräuter</Zutatname>
+      <Zutatmenge>8</Zutatmenge>
+      <Zutateinheit>Stück</Zutateinheit>
+    </Zutat>
+    <Zutat>
+      <Zutatname>Nudeln </Zutatname>
+      <Zutatmenge>100</Zutatmenge>
+      <Zutateinheit>Gramm</Zutateinheit>
+    </Zutat>
+    <Zutat>
+      <Zutatname>Tomaten</Zutatname>
+      <Zutatmenge>5</Zutatmenge>
+      <Zutateinheit>Stück</Zutateinheit>
+    </Zutat>
+    <Rezeptzubereitung>ert</Rezeptzubereitung>
+    <Rezeptdauer>100</Rezeptdauer>
+    <Kategorie>
+      <Kategoriename>Salat</Kategoriename>
+    </Kategorie>
+    <Kategorie>
+      <Kategoriename>Torte</Kategoriename>
+    </Kategorie>
+    <Rezeptnotiz>D.E.L.I.D.E.W</Rezeptnotiz>
+  </Rezept>
+</RezeptListe>

@@ -31,6 +31,7 @@
             this.LIBORezepte = new System.Windows.Forms.ListBox();
             this.GBDetails = new System.Windows.Forms.GroupBox();
             this.PNLDetails = new System.Windows.Forms.Panel();
+            this.PBrezBild = new System.Windows.Forms.PictureBox();
             this.LABreInMin = new System.Windows.Forms.Label();
             this.NMRCrezDauer = new System.Windows.Forms.NumericUpDown();
             this.LABrezDauer = new System.Windows.Forms.Label();
@@ -89,14 +90,13 @@
             this.filternToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterAufhebenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MSHauptmenue = new System.Windows.Forms.MenuStrip();
-            this.PBrezBild = new System.Windows.Forms.PictureBox();
             this.GBDetails.SuspendLayout();
             this.PNLDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBrezBild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezDauer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezPersonen)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.MSHauptmenue.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBrezBild)).BeginInit();
             this.SuspendLayout();
             // 
             // LIBORezepte
@@ -107,7 +107,7 @@
             this.LIBORezepte.ItemHeight = 16;
             this.LIBORezepte.Location = new System.Drawing.Point(12, 66);
             this.LIBORezepte.Name = "LIBORezepte";
-            this.LIBORezepte.Size = new System.Drawing.Size(600, 660);
+            this.LIBORezepte.Size = new System.Drawing.Size(600, 676);
             this.LIBORezepte.Sorted = true;
             this.LIBORezepte.TabIndex = 1;
             this.LIBORezepte.SelectedIndexChanged += new System.EventHandler(this.LIBORezepte_SelectedIndexChanged);
@@ -159,6 +159,19 @@
             this.PNLDetails.TabIndex = 3;
             this.PNLDetails.Click += new System.EventHandler(this.PNLDetails_Click);
             // 
+            // PBrezBild
+            // 
+            this.PBrezBild.BackColor = System.Drawing.Color.White;
+            this.PBrezBild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PBrezBild.Location = new System.Drawing.Point(216, 23);
+            this.PBrezBild.Name = "PBrezBild";
+            this.PBrezBild.Size = new System.Drawing.Size(280, 109);
+            this.PBrezBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBrezBild.TabIndex = 27;
+            this.PBrezBild.TabStop = false;
+            this.PBrezBild.WaitOnLoad = true;
+            this.PBrezBild.DoubleClick += new System.EventHandler(this.PBrezBild_DoubleClick);
+            // 
             // LABreInMin
             // 
             this.LABreInMin.AutoSize = true;
@@ -197,7 +210,6 @@
             this.BTNrezAbbrechen.TabIndex = 23;
             this.BTNrezAbbrechen.Text = "Abbrechen";
             this.BTNrezAbbrechen.UseVisualStyleBackColor = true;
-            this.BTNrezAbbrechen.Visible = false;
             this.BTNrezAbbrechen.Click += new System.EventHandler(this.BTNrezAbbrechen_Click);
             // 
             // BTNrezSpeichern
@@ -208,7 +220,6 @@
             this.BTNrezSpeichern.TabIndex = 22;
             this.BTNrezSpeichern.Text = "Speichern";
             this.BTNrezSpeichern.UseVisualStyleBackColor = true;
-            this.BTNrezSpeichern.Visible = false;
             this.BTNrezSpeichern.Click += new System.EventHandler(this.BTNrezSpeichern_Click);
             // 
             // LABrezNotizen
@@ -224,7 +235,7 @@
             // 
             this.RTBrezNotizen.Location = new System.Drawing.Point(230, 500);
             this.RTBrezNotizen.Name = "RTBrezNotizen";
-            this.RTBrezNotizen.Size = new System.Drawing.Size(266, 108);
+            this.RTBrezNotizen.Size = new System.Drawing.Size(266, 111);
             this.RTBrezNotizen.TabIndex = 20;
             this.RTBrezNotizen.Text = "";
             // 
@@ -666,17 +677,6 @@
             this.MSHauptmenue.TabIndex = 3;
             this.MSHauptmenue.Text = "Hauptmenue";
             // 
-            // PBrezBild
-            // 
-            this.PBrezBild.BackColor = System.Drawing.Color.White;
-            this.PBrezBild.Location = new System.Drawing.Point(215, 23);
-            this.PBrezBild.Name = "PBrezBild";
-            this.PBrezBild.Size = new System.Drawing.Size(169, 109);
-            this.PBrezBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBrezBild.TabIndex = 27;
-            this.PBrezBild.TabStop = false;
-            this.PBrezBild.DoubleClick += new System.EventHandler(this.PBrezBild_DoubleClick);
-            // 
             // MasterDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -693,13 +693,13 @@
             this.GBDetails.ResumeLayout(false);
             this.PNLDetails.ResumeLayout(false);
             this.PNLDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBrezBild)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezDauer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMRCrezPersonen)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.MSHauptmenue.ResumeLayout(false);
             this.MSHauptmenue.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PBrezBild)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

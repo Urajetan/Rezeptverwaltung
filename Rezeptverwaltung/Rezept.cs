@@ -22,6 +22,7 @@ namespace Rezeptverwaltung
             Rname = n;
             Rpersonen = p;
             Rzutaten = zut;
+            Rzubereitung = zub;
             Rdauer = d;
             Rkategorie = hk;
             Rnotiz = no;
@@ -33,6 +34,7 @@ namespace Rezeptverwaltung
             Rname = "Neues Rezept";
             Rpersonen = 0;
             Rzutaten = null;
+            Rzubereitung = "";
             Rdauer = 0;
             Rkategorie = null;
             Rnotiz = "";

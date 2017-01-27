@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<RezeptListe>
+  <Rezept>
+    <Rezeptname>Rezept1</Rezeptname>
+    <Rezeptpersonen>1</Rezeptpersonen>
+    <Zutat>
+      <Zutatname>1</Zutatname>
+      <Zutatmenge>1</Zutatmenge>
+      <Zutateinheit>1</Zutateinheit>
+    </Zutat>
+    <Zutat>
+      <Zutatname>2</Zutatname>
+      <Zutatmenge>2</Zutatmenge>
+      <Zutateinheit>2</Zutateinheit>
+    </Zutat>
+    <Rezeptzubereitung>1+2=3
+2+2=4</Rezeptzubereitung>
+    <Rezeptdauer>1</Rezeptdauer>
+    <Kategorie>
+      <Kategoriename>Vorspeise</Kategoriename>
+    </Kategorie>
+    <Kategorie>
+      <Kategoriename>Suppe</Kategoriename>
+    </Kategorie>
+    <Kategorie>
+      <Kategoriename>Salat</Kategoriename>
+    </Kategorie>
+    <Rezeptnotiz>123</Rezeptnotiz>
+    <Bildpfad>C:\Users\Robin\Documents\Visual Studio 2015\Projects\Rezeptverwaltung\Speicherungen\Bilder\mama1.jpg</Bildpfad>
+  </Rezept>
+</RezeptListe>

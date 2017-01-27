@@ -88,6 +88,11 @@ namespace Rezeptverwaltung
                 Rezeptnotiznode.InnerText = rez.GetSetRNotiz;
                 Rezeptnode.AppendChild(Rezeptnotiznode);
 
+
+
+                XmlNode Bildpfad = xmlDoc.CreateElement("Bildpfad");
+                Bildpfad.InnerText = rez.GetSetRBildPath;
+                Rezeptnode.AppendChild(Bildpfad);
             }
 
 
@@ -101,7 +106,7 @@ namespace Rezeptverwaltung
             }
         }
 
-        public List<Rezept> XMLladen(MasterDetailForm Form1)
+        public List<Rezept> XMLladen()
         {
             //Benutzer gibt die zu ladende Datei an
             OpenFileDialog ofd = new OpenFileDialog();
@@ -116,8 +121,7 @@ namespace Rezeptverwaltung
                 //Try Catch damit das Programm an einer manipulierten Datei nicht abstürzt
                 try
                 {
-                    //löscht alle Einträge
-                    Form1.neuesDoc();
+                   
 
                     //Quellpfad der Datei
                     string path = ofd.FileName;
@@ -133,7 +137,7 @@ namespace Rezeptverwaltung
                     //erstellt alle Rezepte
                     foreach (XmlNode RezeptNode in alleRezepte)
                     {
-                        //Liste aller Titel dieser CD
+                        //Liste alle Zutaten dieses Rezepts
 
                         //Um
                         //./Zutat
@@ -175,7 +179,7 @@ namespace Rezeptverwaltung
                         {
                             XmlElement Kategoriename = KategorieNode.SelectSingleNode("Kategoriename") as XmlElement;
 
-                            KategorieList.Add(KategorieList.ToString());
+                            KategorieList.Add(Kategoriename.InnerText);
                         }
 
                         XmlElement Rezeptnotiz = RezeptNode.SelectSingleNode("Rezeptnotiz") as XmlElement;
@@ -186,7 +190,7 @@ namespace Rezeptverwaltung
                         //erstellt Rezept
                         Rezept loadedRezept = new Rezept(Rezeptname.InnerText, Convert.ToDecimal(Rezeptpersonen.InnerText), ZutatList, Rezeptzubereitung.InnerText, Convert.ToDecimal(Rezeptdauer.InnerText), KategorieList, Rezeptnotiz.InnerText, Bildpfad.InnerText);
 
-                        //Fügt der Listbox die CD hinzu
+                        //Fügt der Listbox das Rezept hinzu
                         ListGeoeffneteRezept.Add(loadedRezept);
                     }
                     return ListGeoeffneteRezept;
