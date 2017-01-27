@@ -19,18 +19,18 @@ namespace Rezeptverwaltung
         }
 
         #region EVENTS
-        
+
         private void MasterDetailForm_Click(object sender, EventArgs e)
         {
             //Wenn gerade kein Rezept bearbeitet oder erstellt wird
             if (PNLDetails.Enabled == false)
             {
-                    LIBORezepte.SelectedIndex = -1;
-                    RezeptelementeLeeren();
-                    ZutatelementeLeeren();
+                LIBORezepte.SelectedIndex = -1;
+                RezeptelementeLeeren();
+                ZutatelementeLeeren();
             }
-            
-            
+
+
         }
         private void PNLDetails_Click(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace Rezeptverwaltung
                 LIBOrezZutaten.SelectedIndex = -1;
                 ZutatelementeLeeren();
             }
-            
+
         }
 
         private void TSBneuesRezept_Click(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace Rezeptverwaltung
             XMLOeffnen();
         }
 
-        
+
 
 
         private void CLBrezKategorien_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -126,7 +126,7 @@ namespace Rezeptverwaltung
                 ZutatelementeLeeren();
                 PNLDetails.Enabled = false;
             }
-            
+
         }
 
         private void BTNzutHinzufuegen_Click(object sender, EventArgs e)
@@ -143,7 +143,7 @@ namespace Rezeptverwaltung
 
         private void BTNrezAbbrechen_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Sind Sie sicher, dass Sie das Rezept nicht speichern möchten?","Achtung!",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Sind Sie sicher, dass Sie das Rezept nicht speichern möchten?", "Achtung!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 RezeptelementeLeeren();
                 ZutatelementeLeeren();
@@ -152,6 +152,30 @@ namespace Rezeptverwaltung
             }
         }
 
+        private void PBrezBild_DoubleClick(object sender, EventArgs e)
+        {
+            OpenFileDialog path = new OpenFileDialog();
+            path.Title = "Bild einfügen";
+
+            if (path.ShowDialog() == DialogResult.OK)
+            {
+                string Zielpfad = ZielpfadErstellen(path.FileName, path.SafeFileName);
+
+                //wenn die Datei .png oder .jpg ist
+                if (Bildvalidierung(path.FileName))
+                {
+                    Bildverschieben(Zielpfad, path.FileName);
+                }
+
+                if (File.Exists(Zielpfad))
+                {
+                    PBrezBild.Image = Image.FromFile(Zielpfad);
+                    PBrezBild.Image.Tag = Zielpfad;
+                }
+
+            }
+
+        }
 
 
 
@@ -197,7 +221,7 @@ namespace Rezeptverwaltung
 
                 return;
             }
-            
+
 
         }
 
@@ -221,11 +245,11 @@ namespace Rezeptverwaltung
             {
                 MessageBox.Show("Es muss ein Name Eingetragen sein!");
             }
-            
-            
+
+
             r.GetSetRpersonen = NMRCrezPersonen.Value;
 
-            
+
             List<Zutat> zutat = new List<Zutat>();
             if (LIBOrezZutaten.Items.Count > 0)
             {
@@ -266,16 +290,8 @@ namespace Rezeptverwaltung
             {
                 LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
             }
-
-            //
-            //
-            //
+            //Der speicherpfad ist als string im Tag gespeichert
             r.GetSetRBildPath = PBrezBild.Image.Tag.ToString();
-            //
-            //
-            //
-
-            //Muss den Pfad noch als Tag hinzufügen
 
             return true;
         }
@@ -296,7 +312,7 @@ namespace Rezeptverwaltung
             {
                 MessageBox.Show("Die Zutat muss einen Namen, eine Menge und eine Einheit haben!");
             }
-            
+
         }
 
         private void ZutatelementeLeeren()
@@ -334,7 +350,7 @@ namespace Rezeptverwaltung
 
         private void RezeptLöschen()
         {
-            if (LIBORezepte.SelectedIndex >=0)
+            if (LIBORezepte.SelectedIndex >= 0)
             {
                 Rezept r = LIBORezepte.SelectedItem as Rezept;
 
@@ -365,7 +381,7 @@ namespace Rezeptverwaltung
                 MessageBox.Show("Es gibt keine Rezepte die zu speichern sind!");
             }
         }
-        
+
         public void neuesDoc()
         {
             LIBORezepte.Items.Clear();
@@ -383,7 +399,7 @@ namespace Rezeptverwaltung
             else
             {
                 //DialogResult x = MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes;
-                
+
                 //MessageBox.
 
                 if (MessageBox.Show("Sollen Sie das Rezept vorher noch speichern?", "Speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -424,78 +440,101 @@ namespace Rezeptverwaltung
             }
             return null;
         }
-
-        private string Bildverschieben()
+        
+        private bool Bildvalidierung(string BildPfad)
         {
-            OpenFileDialog path = new OpenFileDialog();
-            path.Title = "Bild einfügen";
-            
+            if (File.Exists(BildPfad))
+            {
+                FileInfo fi = new FileInfo(BildPfad);
+                string dateiendung = fi.Extension;
+                MessageBox.Show(dateiendung);
+                if (dateiendung == ".png" || dateiendung == ".jpg")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Es gibt die Bilddatei nicht!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+        }
+        private string ZielpfadErstellen(string Orginalbildpfad, string Bildname)
+        {
             string destinationPath = "";
 
             try
             {
-                if (path.ShowDialog() == DialogResult.OK)
+                #region DestinationPath erstellen
+
+                //Der Pfad der .exe Datei um die Gesammte Ordnerhirachie einzulesen
+                string lokalPath = Directory.GetCurrentDirectory();
+
+                string[] splitedLocalPath = lokalPath.Split('\\');
+                //nehme \Rezeptverwaltung\bin\debug weg und hänge \Speicherungen\Bilder an
+                //Bilddatei soll in \Speicherungen\Bilder kopiert werden um von dort aus genutzt zu werden
+                string[] splitedTargetPath = new string[splitedLocalPath.Length - 1];
+
+                //füllt den destinationPath mit der Vorrausgehenden Ordnerhirachie
+                for (int i = 0; i < splitedLocalPath.Length - 3; i++)
                 {
-                    #region DestinationPath erstellen
-
-                    //Der Pfad der .exe Datei um die Gesammte Ordnerhirachie einzulesen
-                    string lokalPath = Directory.GetCurrentDirectory();
-
-                    string[] splitedLocalPath = lokalPath.Split('\\');
-                    //nehme \Rezeptverwaltung\bin\debug weg und hänge \Speicherungen\Bilder an
-                    //Bilddatei soll in \Speicherungen\Bilder kopiert werden um von dort aus genutzt zu werden
-                    string[] splitedTargetPath = new string[splitedLocalPath.Length - 1];
-
-                    //füllt den destinationPath mit der Vorrausgehenden Ordnerhirachie
-                    for (int i = 0; i < splitedLocalPath.Length - 3; i++)
-                    {
-                        splitedTargetPath[i] = splitedLocalPath[i];
-                    }
-
-                    // ergänzt \Speicherungen\Bilder\
-                    splitedTargetPath[splitedTargetPath.Length - 2] = "Speicherungen";
-                    splitedTargetPath[splitedTargetPath.Length - 1] = "Bilder";
-
-                    //Bildet aus dem Array einen string
-                    foreach (string s in splitedTargetPath)
-                    {
-                        destinationPath = destinationPath + s + "\\";
-                    }
-                    //Dateinamen Anhängen
-                    destinationPath = destinationPath + path.SafeFileName;
-
-
-                    #endregion
+                    splitedTargetPath[i] = splitedLocalPath[i];
                 }
 
-                else
+                // ergänzt \Speicherungen\Bilder\
+                splitedTargetPath[splitedTargetPath.Length - 2] = "Speicherungen";
+                splitedTargetPath[splitedTargetPath.Length - 1] = "Bilder";
+
+                //Bildet aus dem Array einen string
+                foreach (string s in splitedTargetPath)
                 {
-                    //Nichts passiert
+                    destinationPath = destinationPath + s + "\\";
                 }
+                //Dateinamen Anhängen
+                destinationPath = destinationPath + Bildname;
+
+
+                #endregion
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
-                return null;
             }
 
-            //Bilddatei kopieren
-            File.Copy(path.FileName, destinationPath);
-            
-            return destinationPath;
+            return null;
         }
-        
+        private void Bildverschieben(string BildZielpfad, string Orginalbildpfad)
+        {
+            try
+            {
+                if (File.Exists(BildZielpfad))
+                {
+                    File.Delete(BildZielpfad);
+                }
+
+                //Bilddatei kopieren
+                File.Copy(Orginalbildpfad, BildZielpfad);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
 
         #endregion
 
 
 
-        private void PBrezBild_DoubleClick(object sender, EventArgs e)
-        {
-            string bildPfad = Bildverschieben();
-            PBrezBild.Image = Image.FromFile(bildPfad)
-        }
+        
 
 
+        
     }
 }

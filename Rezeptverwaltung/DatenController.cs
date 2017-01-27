@@ -145,7 +145,7 @@ namespace Rezeptverwaltung
                         //Dem Rezept muss eine List aller Zutaten übergeben werden
                         //Siehe Rezept Konstruktor
                         List<Zutat> ZutatList = new List<Zutat>();
-                        
+
 
                         //erstellt alle Zutaten für das Rezept und speichert diese
                         foreach (XmlNode ZutatNode in alleZutaten)
@@ -180,9 +180,11 @@ namespace Rezeptverwaltung
 
                         XmlElement Rezeptnotiz = RezeptNode.SelectSingleNode("Rezeptnotiz") as XmlElement;
 
+                        XmlElement Bildpfad = RezeptNode.SelectSingleNode("Bildpfad") as XmlElement;
+
 
                         //erstellt Rezept
-                        Rezept loadedRezept = new Rezept(Rezeptname.InnerText, Convert.ToDecimal(Rezeptpersonen.InnerText), ZutatList, Rezeptzubereitung.InnerText,Convert.ToDecimal(Rezeptdauer.InnerText), KategorieList, Rezeptnotiz.InnerText);
+                        Rezept loadedRezept = new Rezept(Rezeptname.InnerText, Convert.ToDecimal(Rezeptpersonen.InnerText), ZutatList, Rezeptzubereitung.InnerText, Convert.ToDecimal(Rezeptdauer.InnerText), KategorieList, Rezeptnotiz.InnerText, Bildpfad.InnerText);
 
                         //Fügt der Listbox die CD hinzu
                         ListGeoeffneteRezept.Add(loadedRezept);
@@ -201,7 +203,7 @@ namespace Rezeptverwaltung
         }
 
         #endregion
-        
+
 
 
     }
