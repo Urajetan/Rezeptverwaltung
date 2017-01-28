@@ -20,7 +20,7 @@ namespace Rezeptverwaltung
 
         #region EVENST
         /// <summary>
-        /// 
+        /// Setzt den Selected Index der RezeptListbox = -1 wenn keine Änderungen vorgenommen werden
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -677,13 +677,6 @@ namespace Rezeptverwaltung
 
         }
 
-
-
-
-
-        #endregion
-
-
         private bool RezeptpanelAenderungsüberprüfung()
         {
             try
@@ -724,7 +717,7 @@ namespace Rezeptverwaltung
                     return true;
                 }
 
-                
+
             }
             catch (Exception e)
             {
@@ -733,6 +726,13 @@ namespace Rezeptverwaltung
 
             return false;
         }
+
+
+
+        #endregion
+
+
+
 
 
 
