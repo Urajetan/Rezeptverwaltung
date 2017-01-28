@@ -157,6 +157,7 @@
             this.PNLDetails.Name = "PNLDetails";
             this.PNLDetails.Size = new System.Drawing.Size(509, 655);
             this.PNLDetails.TabIndex = 3;
+            this.PNLDetails.EnabledChanged += new System.EventHandler(this.PNLDetails_EnabledChanged);
             this.PNLDetails.Click += new System.EventHandler(this.PNLDetails_Click);
             // 
             // PBrezBild
