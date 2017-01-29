@@ -16,6 +16,12 @@ namespace Rezeptverwaltung
         public MasterDetailForm()
         {
             InitializeComponent();
+            DateTime birthday = new DateTime(2000,3,12);
+            DateTime dt = System.DateTime.Now;
+            if (dt.Month == birthday.Month && dt.Day == birthday.Day)
+            {
+                this.Text = "Herzlichen Glückwunsch zum Geburtstag!";
+            }
         }
 
         // Um Änderungen überprüfen zu können auch wenn sich der Index der LIBORezepte schon geändert hat
