@@ -18,6 +18,9 @@ namespace Rezeptverwaltung
             InitializeComponent();
         }
 
+        // Um Änderungen überprüfen zu können auch wenn sich der Index der LIBORezepte schon geändert hat
+        Rezept PreChangeItem = null;
+
         #region EVENST
         /// <summary>
         /// Setzt den Selected Index der RezeptListbox = -1 wenn keine Änderungen vorgenommen werden
@@ -31,7 +34,7 @@ namespace Rezeptverwaltung
             {
 
                 //True heißt es ist alles gleich geblieben
-                if (RezeptpanelAenderungsüberprüfung())
+                if (RezeptpanelAenderungsüberprüfung(false))
                 {
                     LIBORezepte.SelectedIndex = -1;
                     RezeptelementeLeeren();
@@ -46,7 +49,8 @@ namespace Rezeptverwaltung
                     //Steuerelemente für Rezepte und Zutaten werden geleert
                     if (res == DialogResult.Yes)
                     {
-                        RezeptattributeAktualisieren();
+                        //Das derzeitige Element muss geändert werden
+                        RezeptattributeAktualisieren(false);
 
                         LIBORezepte.SelectedIndex = -1;
                         RezeptelementeLeeren();
@@ -144,8 +148,7 @@ namespace Rezeptverwaltung
             XMLOeffnen();
         }
 
-
-
+        
 
         private void CLBrezKategorien_ItemCheck(object sender, ItemCheckEventArgs e)
         {
@@ -154,19 +157,73 @@ namespace Rezeptverwaltung
 
         private void LIBORezepte_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (LIBORezepte.SelectedIndex == -1)
             {
                 RezeptelementeLeeren();
                 ZutatelementeLeeren();
                 PNLDetails.Enabled = false;
             }
-            else
+            else if (PreChangeItem == null)
             {
                 PNLDetails.Enabled = true;
+                RezeptelementeLeeren();
+                ZutatelementeLeeren();
                 RezeptdetailsAnzeigen();
+            }
+            else if (PreChangeItem == LIBORezepte.SelectedItem)
+            {
+                //passiert nichts da das nur passiert wenn der Benutzer auf Abbrechen gedrückt hat
+            }
+            //wenn ein Rezept ausgewählt war
+            else
+            {
+                //True heißt es ist alles gleich geblieben, es gab keine Änderung
+                //Da bei sich der SelectedIndex zum Zeitpunkt dieses Methodenaufrufs schon geändert hat muss der vorherige Index überprüft werden
+                if (RezeptpanelAenderungsüberprüfung(true))
+                {
+                    PNLDetails.Enabled = true;
+                    RezeptelementeLeeren();
+                    ZutatelementeLeeren();
+                    RezeptdetailsAnzeigen();
+                }
+                else
+                {
+                    DialogResult res = MessageBox.Show("Wollen Sie das Rezept erst speichern?", "Änderungen speichern?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                    
+                    if (res == DialogResult.Yes)
+                    {
+                        //Da bei sich der SelectedIndex zum Zeitpunkt dieses Methodenaufrufs schon geändert hat müssen die Attribute des vorherigen Indices geändert werden
+                        RezeptattributeAktualisieren(true);
+
+                        RezeptelementeLeeren();
+                        ZutatelementeLeeren();
+                        RezeptdetailsAnzeigen();
+                    }
+                    else if (res == DialogResult.No)
+                    {
+                        RezeptelementeLeeren();
+                        ZutatelementeLeeren();
+                        RezeptdetailsAnzeigen();
+                    }
+                    else if (res == DialogResult.Cancel)
+                    {
+                        LIBORezepte.SelectedItem = PreChangeItem;
+                    }
+
+                }
 
             }
 
+            if (LIBORezepte.SelectedIndex == -1)
+            {
+                PreChangeItem = null;
+            }
+            else
+            {
+                PreChangeItem = LIBORezepte.SelectedItem as Rezept;
+            }
         }
 
         private void LIBOrezZutaten_SelectedIndexChanged(object sender, EventArgs e)
@@ -185,7 +242,8 @@ namespace Rezeptverwaltung
 
         private void BTNrezSpeichern_Click(object sender, EventArgs e)
         {
-            bool überprüfung = RezeptattributeAktualisieren();
+            //Es müssen die Attribute des derzeitigen Indices gespeichert werden
+            bool überprüfung = RezeptattributeAktualisieren(false);
 
             if (überprüfung == true)
             {
@@ -210,13 +268,24 @@ namespace Rezeptverwaltung
 
         private void BTNrezAbbrechen_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Sind Sie sicher, dass Sie das Rezept nicht speichern möchten?", "Achtung!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (RezeptpanelAenderungsüberprüfung(false))
             {
                 RezeptelementeLeeren();
                 ZutatelementeLeeren();
                 PNLDetails.Enabled = false;
                 LIBORezepte.SelectedIndex = -1;
             }
+            else
+            {
+                if (MessageBox.Show("Sind Sie sicher, dass Sie das Rezept nicht speichern möchten?", "Achtung!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    RezeptelementeLeeren();
+                    ZutatelementeLeeren();
+                    PNLDetails.Enabled = false;
+                    LIBORezepte.SelectedIndex = -1;
+                }
+            }
+            
         }
 
         private void PBrezBild_DoubleClick(object sender, EventArgs e)
@@ -248,13 +317,11 @@ namespace Rezeptverwaltung
         {
             if (PNLDetails.Enabled == true)
             {
-                LIBORezepte.Enabled = false;
                 TSHauptmenue.Enabled = false;
                 MSHauptmenue.Enabled = false;
             }
             else if (PNLDetails.Enabled == false)
             {
-                LIBORezepte.Enabled = true;
                 TSHauptmenue.Enabled = true;
                 MSHauptmenue.Enabled = true;
             }
@@ -333,7 +400,7 @@ namespace Rezeptverwaltung
             TBzutEinheit.Text = z.GetSetZeinheit;
         }
 
-        private bool RezeptattributeAktualisieren()
+        private bool RezeptattributeAktualisieren(bool UsePreSelectedIndex)
         {
             Rezept r = new Rezept();
 
@@ -396,7 +463,17 @@ namespace Rezeptverwaltung
             LIBORezepte.Items.Add(r);
             if (LIBORezepte.SelectedIndex != -1)
             {
-                LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
+                //Falls das vorherige Item gelöscht werden soll
+                if (UsePreSelectedIndex)
+                {
+                    LIBORezepte.Items.Remove(PreChangeItem);
+                }
+                //Falls das aktuelle Item gelöscht werden soll
+                else
+                {
+                    LIBORezepte.Items.Remove(LIBORezepte.SelectedItem);
+                }
+                
             }
             return true;
         }
@@ -677,11 +754,24 @@ namespace Rezeptverwaltung
 
         }
 
-        private bool RezeptpanelAenderungsüberprüfung()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>true wenn nichts zu ändern ist</returns>
+        private bool RezeptpanelAenderungsüberprüfung(bool UsePreChangedIndex)
         {
             try
             {
-                Rezept r = LIBORezepte.SelectedItem as Rezept;
+                Rezept r = null;
+                if (UsePreChangedIndex)
+                {
+                    r = PreChangeItem;
+                }
+                else
+                {
+                    r = LIBORezepte.SelectedItem as Rezept;
+                }
+                
 
                 #region konvertirungen
                 List<Zutat> zList = new List<Zutat>();
@@ -721,7 +811,7 @@ namespace Rezeptverwaltung
             }
             catch (Exception e)
             {
-                MessageBox.Show("Konvertierungsfehler in RezeptpanelAenderungsüberprüfung()\n" + e.Message);
+                MessageBox.Show("In der RezeptpanelAenderungsüberprüfung-Methode" + "Konvertierungsfehler in RezeptpanelAenderungsüberprüfung()\n" + e.Message);
             }
 
             return false;

@@ -117,13 +117,1234 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;LABrezPersonen.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="LABrezZubereitung.Text" xml:space="preserve">
+    <value>Zubereitung</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LABrezPersonen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 17</value>
+  </data>
+  <data name="LABzutEinheit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 17</value>
+  </data>
+  <data name="suppeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Suppe</value>
+  </data>
+  <data name="&gt;&gt;TSBnamenssuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CLBrezKategorien.Items9" xml:space="preserve">
+    <value>Pralienen</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;vorspeiseToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBzutMenge.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;löschenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LABrzKategorien.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LABzutMenge.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;LABrezZutaten.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="LABrezDauer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RTBrezZubereitung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 361</value>
+  </data>
+  <data name="&gt;&gt;filternToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LABorezName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="salatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="&gt;&gt;pralienenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NMRCrezPersonen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GBDetails.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="BTNzutLöschen.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PNLDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="beilageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Beilage</value>
+  </data>
+  <data name="TSBspeichern.ToolTipText" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="&gt;&gt;LABreInMin.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="MSHauptmenue.Text" xml:space="preserve">
+    <value>Hauptmenue</value>
+  </data>
+  <data name="sucheToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="&gt;&gt;LABrzKategorien.Name" xml:space="preserve">
+    <value>LABrzKategorien</value>
+  </data>
+  <data name="LABrezZutaten.Text" xml:space="preserve">
+    <value>Zutaten</value>
+  </data>
+  <data name="PBrezBild.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="LABzutName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BTNrezAbbrechen.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;TSBrezeptLöschen.Name" xml:space="preserve">
+    <value>TSBrezeptLöschen</value>
+  </data>
+  <data name="BTNzutHinzufuegen.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="LABzutName.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;TSHauptmenue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;beilageToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tortenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="erstellenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="öffnenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Öffnen</value>
+  </data>
+  <data name="&gt;&gt;GBDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;LABrezDauer.Name" xml:space="preserve">
+    <value>LABrezDauer</value>
+  </data>
+  <data name="BTNrezAbbrechen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 26</value>
+  </data>
+  <data name="rezeptToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="&gt;&gt;RTBrezNotizen.Name" xml:space="preserve">
+    <value>RTBrezNotizen</value>
+  </data>
+  <data name="&gt;&gt;LABorezName.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;LABzutName.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;LIBOrezZutaten.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="TSBspeichern.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="löschenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="RTBrezNotizen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 111</value>
+  </data>
+  <data name="TSHauptmenue.Text" xml:space="preserve">
+    <value>TSHauptmenue</value>
+  </data>
+  <data name="&gt;&gt;LIBORezepte.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MSHauptmenue.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dessertToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TBrezName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 23</value>
+  </data>
+  <data name="&gt;&gt;LABzutMenge.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="salatToolStripMenuItem.Text" xml:space="preserve">
+    <value>Salat</value>
+  </data>
+  <data name="PNLDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>509, 655</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Rezeptverwaltung</value>
+  </data>
+  <data name="NMRCrezDauer.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="LABrezZutaten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 17</value>
+  </data>
+  <data name="&gt;&gt;LABzutEinheit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;TSBrezeptLöschen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LABreInMin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;BTNzutHinzufuegen.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="TSBfilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 28</value>
+  </data>
+  <data name="LABzutName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 159</value>
+  </data>
+  <data name="MSHauptmenue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="NMRCrezDauer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 109</value>
+  </data>
+  <data name="&gt;&gt;BTNzutLöschen.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="LABzutEinheit.Text" xml:space="preserve">
+    <value>Einheit</value>
+  </data>
+  <data name="BTNrezAbbrechen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 627</value>
+  </data>
+  <data name="PNLDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LABrezPersonen.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="LABrezZubereitung.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="filternToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filter aktivieren</value>
+  </data>
+  <data name="&gt;&gt;erstellenToolStripMenuItem.Name" xml:space="preserve">
+    <value>erstellenToolStripMenuItem</value>
+  </data>
+  <data name="RTBrezNotizen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 500</value>
+  </data>
+  <data name="&gt;&gt;BTNrezSpeichern.Name" xml:space="preserve">
+    <value>BTNrezSpeichern</value>
+  </data>
+  <data name="kuchenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kuchen</value>
+  </data>
+  <data name="TSTBnamensuche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 31</value>
+  </data>
+  <data name="&gt;&gt;RTBrezNotizen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LABzutMenge.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="LABzutMenge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 216</value>
+  </data>
+  <data name="&gt;&gt;LABrezDauer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TSBrezeptdateiOeffnen.Text" xml:space="preserve">
+    <value>Rezeptdatei öffnen</value>
+  </data>
+  <data name="&gt;&gt;TBzutMenge.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="CLBrezKategorien.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="TBrezName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 23</value>
+  </data>
+  <data name="&gt;&gt;LABzutName.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="TSBspeichern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 28</value>
+  </data>
+  <data name="pralienenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="&gt;&gt;druckenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LABrezDauer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 17</value>
+  </data>
+  <data name="TSBspeichern.Text" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="CLBrezKategorien.Items6" xml:space="preserve">
+    <value>Kuchen</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="vorspeiseToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vorspeise</value>
+  </data>
+  <data name="&gt;&gt;LIBORezepte.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;PNLDetails.Name" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="TSBfilter.Text" xml:space="preserve">
+    <value>Filter aktivieren</value>
+  </data>
+  <data name="&gt;&gt;RTBrezNotizen.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="LABrzKategorien.Text" xml:space="preserve">
+    <value>Kategorien</value>
+  </data>
+  <data name="TSBneuesRezept.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;TSHauptmenue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LABrezZutaten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CLBrezKategorien.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 499</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;NMRCrezDauer.Name" xml:space="preserve">
+    <value>NMRCrezDauer</value>
+  </data>
+  <data name="LABrezPersonen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 49</value>
+  </data>
+  <data name="LABrzKategorien.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GBDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>531, 680</value>
+  </data>
+  <data name="RTBrezNotizen.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;plätzchenToolStripMenuItem.Name" xml:space="preserve">
+    <value>plätzchenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;beilageToolStripMenuItem.Name" xml:space="preserve">
+    <value>beilageToolStripMenuItem</value>
+  </data>
+  <data name="LABzutName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;TBrezName.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="sucheToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="tortenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Torten</value>
+  </data>
+  <data name="&gt;&gt;NMRCrezPersonen.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;BTNrezAbbrechen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hauptgerichtToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LABzutEinheit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LABrezPersonen.Text" xml:space="preserve">
+    <value>Für wie viele Personen</value>
+  </data>
+  <data name="PBrezBild.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;löschenToolStripMenuItem.Name" xml:space="preserve">
+    <value>löschenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;BTNzutHinzufuegen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rezeptToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rezept</value>
+  </data>
+  <data name="RTBrezZubereitung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>490, 108</value>
+  </data>
+  <data name="speichernToolStripMenuItem.Text" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="PBrezBild.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 23</value>
+  </data>
+  <data name="LIBORezepte.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="LABzutMenge.Text" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="BTNzutHinzufuegen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 322</value>
+  </data>
+  <data name="LABorezName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="druckenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Drucken</value>
+  </data>
+  <data name="&gt;&gt;sucheToolStripMenuItem.Name" xml:space="preserve">
+    <value>sucheToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;rezeptToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LABrezZutaten.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dateiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="&gt;&gt;CLBrezKategorien.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;TBrezName.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;PNLDetails.Parent" xml:space="preserve">
+    <value>GBDetails</value>
+  </data>
+  <data name="PNLDetails.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 31</value>
+  </data>
+  <data name="&gt;&gt;RTBrezZubereitung.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;NMRCrezDauer.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="LABzutMenge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 17</value>
+  </data>
+  <data name="LABrezPersonen.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 790</value>
+  </data>
+  <data name="filterAufhebenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 22</value>
+  </data>
+  <data name="LABrezNotizen.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="CLBrezKategorien.Items7" xml:space="preserve">
+    <value>Plätzchen</value>
+  </data>
+  <data name="NMRCrezDauer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="druckenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LABrezNotizen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 480</value>
+  </data>
+  <data name="&gt;&gt;speichernToolStripMenuItem.Name" xml:space="preserve">
+    <value>speichernToolStripMenuItem</value>
+  </data>
+  <data name="CLBrezKategorien.Items8" xml:space="preserve">
+    <value>Torte</value>
+  </data>
+  <data name="&gt;&gt;kuchenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LABrezDauer.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;TSTBnamensuche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MSHauptmenue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LABrezZutaten.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="TSBrezeptdateiOeffnen.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;BTNzutHinzufuegen.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;suppeToolStripMenuItem.Name" xml:space="preserve">
+    <value>suppeToolStripMenuItem</value>
+  </data>
+  <data name="BTNrezSpeichern.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="TSBdrucken.Text" xml:space="preserve">
+    <value>Drucken</value>
+  </data>
+  <data name="&gt;&gt;LABzutEinheit.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="TSBneuesRezept.Text" xml:space="preserve">
+    <value>Neues Rezept</value>
+  </data>
+  <data name="&gt;&gt;TSBfilter.Name" xml:space="preserve">
+    <value>TSBfilter</value>
+  </data>
+  <data name="&gt;&gt;vorspeiseToolStripMenuItem.Name" xml:space="preserve">
+    <value>vorspeiseToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;LABrezZubereitung.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LABrezNotizen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 17</value>
+  </data>
+  <data name="&gt;&gt;hauptgerichtToolStripMenuItem.Name" xml:space="preserve">
+    <value>hauptgerichtToolStripMenuItem</value>
+  </data>
+  <data name="PBrezBild.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 109</value>
+  </data>
+  <data name="TSBrezeptLöschen.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="TBzutMenge.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="TBzutName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 23</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 31</value>
+  </data>
+  <data name="LABrzKategorien.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="&gt;&gt;LABreInMin.Name" xml:space="preserve">
+    <value>LABreInMin</value>
+  </data>
+  <data name="BTNzutHinzufuegen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 23</value>
+  </data>
+  <data name="GBDetails.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="&gt;&gt;TBzutEinheit.Name" xml:space="preserve">
+    <value>TBzutEinheit</value>
+  </data>
+  <data name="&gt;&gt;TBzutName.Name" xml:space="preserve">
+    <value>TBzutName</value>
+  </data>
+  <data name="speichernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="&gt;&gt;plätzchenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NMRCrezPersonen.Name" xml:space="preserve">
+    <value>NMRCrezPersonen</value>
+  </data>
+  <data name="TBzutEinheit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 23</value>
+  </data>
+  <data name="TBzutName.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="BTNzutLöschen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 23</value>
+  </data>
+  <data name="TBzutName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 179</value>
+  </data>
+  <data name="CLBrezKategorien.Items3" xml:space="preserve">
+    <value>Hauptgericht</value>
+  </data>
+  <data name="&gt;&gt;GBDetails.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LABrezDauer.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PBrezBild.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="MSHauptmenue.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="MSHauptmenue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 24</value>
+  </data>
+  <data name="LABrezNotizen.Text" xml:space="preserve">
+    <value>Notizen</value>
+  </data>
+  <data name="TSBfilter.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="RTBrezNotizen.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CLBrezKategorien.Items4" xml:space="preserve">
+    <value>Beilage</value>
+  </data>
+  <data name="dessertToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dessert</value>
+  </data>
+  <data name="&gt;&gt;NMRCrezDauer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LABrezZubereitung.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;TBzutEinheit.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;MSHauptmenue.Name" xml:space="preserve">
+    <value>MSHauptmenue</value>
+  </data>
+  <data name="&gt;&gt;BTNzutHinzufuegen.Name" xml:space="preserve">
+    <value>BTNzutHinzufuegen</value>
+  </data>
+  <data name="&gt;&gt;sucheToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TSBneuesRezept.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 28</value>
+  </data>
+  <data name="&gt;&gt;LABorezName.Name" xml:space="preserve">
+    <value>LABorezName</value>
+  </data>
+  <data name="plätzchenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="pralienenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pralienen</value>
+  </data>
+  <data name="&gt;&gt;BTNrezSpeichern.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="PBrezBild.WaitOnLoad" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TBzutEinheit.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="BTNrezSpeichern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 26</value>
+  </data>
+  <data name="&gt;&gt;BTNrezAbbrechen.Name" xml:space="preserve">
+    <value>BTNrezAbbrechen</value>
+  </data>
+  <data name="&gt;&gt;BTNrezSpeichern.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TSBrezeptdateiOeffnen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 28</value>
+  </data>
+  <data name="TBrezName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PBrezBild.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TSHauptmenue.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;speichernToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LABrzKategorien.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="TSHauptmenue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="TSBdrucken.ToolTipText" xml:space="preserve">
+    <value>Drucken</value>
+  </data>
+  <data name="&gt;&gt;LABrezNotizen.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;filterAufhebenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LABrzKategorien.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LIBORezepte.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LABorezName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RTBrezZubereitung.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;BTNrezAbbrechen.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;LABrezPersonen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rezeptToolStripMenuItem.Name" xml:space="preserve">
+    <value>rezeptToolStripMenuItem</value>
+  </data>
+  <data name="LABorezName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="LABrezZubereitung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 341</value>
+  </data>
+  <data name="&gt;&gt;BTNzutLöschen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CLBrezKategorien.Items" xml:space="preserve">
+    <value>Vorspeise</value>
+  </data>
+  <data name="LABzutEinheit.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="LABorezName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="CLBrezKategorien.Items2" xml:space="preserve">
+    <value>Salat</value>
+  </data>
+  <data name="&gt;&gt;LABzutEinheit.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;PNLDetails.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;salatToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="hauptgerichtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="&gt;&gt;LIBOrezZutaten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LIBOrezZutaten.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;LIBORezepte.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TSBrezeptdateiOeffnen.Name" xml:space="preserve">
+    <value>TSBrezeptdateiOeffnen</value>
+  </data>
+  <data name="&gt;&gt;TBzutMenge.Name" xml:space="preserve">
+    <value>TBzutMenge</value>
+  </data>
+  <data name="suppeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="&gt;&gt;LABrezZubereitung.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;TBrezName.Name" xml:space="preserve">
+    <value>TBrezName</value>
+  </data>
+  <data name="&gt;&gt;LABrzKategorien.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="vorspeiseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="&gt;&gt;LABzutName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TSBneuesRezept.Name" xml:space="preserve">
+    <value>TSBneuesRezept</value>
+  </data>
+  <data name="&gt;&gt;LIBORezepte.Name" xml:space="preserve">
+    <value>LIBORezepte</value>
+  </data>
+  <data name="BTNzutLöschen.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="erstellenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Erstellen</value>
+  </data>
+  <data name="filterAufhebenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Filter aufheben</value>
+  </data>
+  <data name="LABreInMin.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;TSBdrucken.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LABrezZutaten.Name" xml:space="preserve">
+    <value>LABrezZutaten</value>
+  </data>
+  <data name="LABzutMenge.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LABreInMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 17</value>
+  </data>
+  <data name="&gt;&gt;salatToolStripMenuItem.Name" xml:space="preserve">
+    <value>salatToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;filterAufhebenToolStripMenuItem.Name" xml:space="preserve">
+    <value>filterAufhebenToolStripMenuItem</value>
+  </data>
+  <data name="löschenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LABreInMin.Text" xml:space="preserve">
+    <value>Minuten</value>
+  </data>
+  <data name="&gt;&gt;LABrezPersonen.Name" xml:space="preserve">
+    <value>LABrezPersonen</value>
+  </data>
+  <data name="CLBrezKategorien.Items10" xml:space="preserve">
+    <value>Low Carb</value>
+  </data>
+  <data name="TBzutMenge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 23</value>
+  </data>
+  <data name="NMRCrezPersonen.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="LIBOrezZutaten.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="LIBOrezZutaten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 159</value>
+  </data>
+  <data name="GBDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;CLBrezKategorien.Name" xml:space="preserve">
+    <value>CLBrezKategorien</value>
+  </data>
+  <data name="&gt;&gt;TSBrezeptdateiOeffnen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBzutEinheit.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="NMRCrezPersonen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 23</value>
+  </data>
+  <data name="&gt;&gt;TSHauptmenue.Name" xml:space="preserve">
+    <value>TSHauptmenue</value>
+  </data>
+  <data name="kuchenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="LABzutName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TSHauptmenue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 31</value>
+  </data>
+  <data name="&gt;&gt;filternToolStripMenuItem.Name" xml:space="preserve">
+    <value>filternToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;erstellenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="filternToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 22</value>
+  </data>
+  <data name="&gt;&gt;suppeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NMRCrezPersonen.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="LABreInMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 111</value>
+  </data>
+  <data name="&gt;&gt;LABrezZutaten.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="LABrzKategorien.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 479</value>
+  </data>
+  <data name="BTNrezSpeichern.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 627</value>
+  </data>
+  <data name="&gt;&gt;TSBspeichern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CLBrezKategorien.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 112</value>
+  </data>
+  <data name="LIBOrezZutaten.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BTNrezAbbrechen.Text" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="TBzutMenge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 236</value>
+  </data>
+  <data name="&gt;&gt;PBrezBild.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LABzutEinheit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 268</value>
+  </data>
+  <data name="TSBrezeptLöschen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 28</value>
+  </data>
+  <data name="&gt;&gt;LIBOrezZutaten.Name" xml:space="preserve">
+    <value>LIBOrezZutaten</value>
+  </data>
+  <data name="TSBdrucken.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;TSTBnamensuche.Name" xml:space="preserve">
+    <value>TSTBnamensuche</value>
+  </data>
+  <data name="&gt;&gt;LABrezZubereitung.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="GBDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>641, 66</value>
+  </data>
+  <data name="LABrezDauer.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;LABorezName.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;TBzutMenge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LABrezPersonen.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TSBnamenssuche.Text" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
+  <data name="&gt;&gt;dessertToolStripMenuItem.Name" xml:space="preserve">
+    <value>dessertToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tortenToolStripMenuItem.Name" xml:space="preserve">
+    <value>tortenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;TBzutEinheit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kuchenToolStripMenuItem.Name" xml:space="preserve">
+    <value>kuchenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;TSBnamenssuche.Name" xml:space="preserve">
+    <value>TSBnamenssuche</value>
+  </data>
+  <data name="&gt;&gt;TSBdrucken.Name" xml:space="preserve">
+    <value>TSBdrucken</value>
+  </data>
+  <data name="&gt;&gt;BTNrezAbbrechen.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BTNrezSpeichern.Text" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="&gt;&gt;CLBrezKategorien.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LABzutMenge.Name" xml:space="preserve">
+    <value>LABzutMenge</value>
+  </data>
+  <data name="PNLDetails.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MasterDetailForm</value>
+  </data>
+  <data name="dateiToolStripMenuItem.Text" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="&gt;&gt;BTNzutLöschen.Name" xml:space="preserve">
+    <value>BTNzutLöschen</value>
+  </data>
+  <data name="&gt;&gt;LABzutEinheit.Name" xml:space="preserve">
+    <value>LABzutEinheit</value>
+  </data>
+  <data name="CLBrezKategorien.Items1" xml:space="preserve">
+    <value>Suppe</value>
+  </data>
+  <data name="&gt;&gt;RTBrezZubereitung.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 31</value>
+  </data>
+  <data name="&gt;&gt;NMRCrezDauer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BTNzutHinzufuegen.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;RTBrezZubereitung.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TSBdrucken.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 28</value>
+  </data>
+  <data name="TSBnamenssuche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 28</value>
+  </data>
+  <data name="beilageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="hauptgerichtToolStripMenuItem.Text" xml:space="preserve">
+    <value>Hauptgericht</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 752</value>
+  </data>
+  <data name="LIBORezepte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 66</value>
+  </data>
+  <data name="dessertToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="&gt;&gt;RTBrezNotizen.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="BTNzutLöschen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 322</value>
+  </data>
+  <data name="&gt;&gt;TSBneuesRezept.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateiToolStripMenuItem.Name" xml:space="preserve">
+    <value>dateiToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;öffnenToolStripMenuItem.Name" xml:space="preserve">
+    <value>öffnenToolStripMenuItem</value>
+  </data>
+  <data name="LABorezName.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="öffnenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="&gt;&gt;dateiToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TSBnamenssuche.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;TBrezName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBzutName.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;MSHauptmenue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PNLDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="&gt;&gt;TSBspeichern.Name" xml:space="preserve">
+    <value>TSBspeichern</value>
+  </data>
+  <data name="&gt;&gt;LABrezNotizen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LABrezNotizen.Name" xml:space="preserve">
+    <value>LABrezNotizen</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTNrezSpeichern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBzutName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LIBORezepte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 676</value>
+  </data>
+  <data name="NMRCrezPersonen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 66</value>
+  </data>
+  <data name="BTNzutLöschen.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;LABzutMenge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LABrezDauer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 92</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 790</value>
+  </data>
+  <data name="&gt;&gt;LABreInMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LABrezZubereitung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 17</value>
+  </data>
+  <data name="&gt;&gt;RTBrezZubereitung.Name" xml:space="preserve">
+    <value>RTBrezZubereitung</value>
+  </data>
+  <data name="&gt;&gt;pralienenToolStripMenuItem.Name" xml:space="preserve">
+    <value>pralienenToolStripMenuItem</value>
+  </data>
+  <data name="LIBOrezZutaten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 164</value>
+  </data>
+  <data name="LABrezDauer.Text" xml:space="preserve">
+    <value>Dauer</value>
+  </data>
+  <data name="RTBrezZubereitung.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LABrezNotizen.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;öffnenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TSBrezeptLöschen.Text" xml:space="preserve">
+    <value>Rezept Löschen</value>
+  </data>
+  <data name="&gt;&gt;LABreInMin.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="plätzchenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Plätzchen</value>
+  </data>
+  <data name="TBzutEinheit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 288</value>
+  </data>
+  <data name="&gt;&gt;TSBfilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LABrezNotizen.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;LABzutName.Name" xml:space="preserve">
+    <value>LABzutName</value>
+  </data>
+  <data name="&gt;&gt;LABrezZubereitung.Name" xml:space="preserve">
+    <value>LABrezZubereitung</value>
+  </data>
+  <data name="CLBrezKategorien.Items5" xml:space="preserve">
+    <value>Dessert</value>
+  </data>
+  <data name="LABrezZutaten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 139</value>
+  </data>
+  <data name="&gt;&gt;GBDetails.Name" xml:space="preserve">
+    <value>GBDetails</value>
+  </data>
+  <data name="&gt;&gt;TBzutName.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;PBrezBild.Name" xml:space="preserve">
+    <value>PBrezBild</value>
+  </data>
+  <data name="&gt;&gt;BTNzutLöschen.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;CLBrezKategorien.Parent" xml:space="preserve">
+    <value>PNLDetails</value>
+  </data>
+  <data name="&gt;&gt;tortenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LIBORezepte.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;druckenToolStripMenuItem.Name" xml:space="preserve">
+    <value>druckenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;TSHauptmenue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <metadata name="TSHauptmenue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>157, 17</value>
   </metadata>
-  <metadata name="MSHauptmenue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>de-DE</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>53</value>
+  </metadata>
+  <metadata name="MSHauptmenue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

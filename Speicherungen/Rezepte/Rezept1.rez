@@ -19,7 +19,40 @@
     <Kategorie>
       <Kategoriename>Vorspeise</Kategoriename>
     </Kategorie>
+    <Kategorie>
+      <Kategoriename>Suppe</Kategoriename>
+    </Kategorie>
+    <Kategorie>
+      <Kategoriename>Salat</Kategoriename>
+    </Kategorie>
+    <Kategorie>
+      <Kategoriename>Hauptgericht</Kategoriename>
+    </Kategorie>
     <Rezeptnotiz>123</Rezeptnotiz>
+    <Bildpfad>C:\Users\Robin\Documents\Visual Studio 2015\Projects\Rezeptverwaltung\Speicherungen\Bilder\essen 1.jpg</Bildpfad>
+  </Rezept>
+  <Rezept>
+    <Rezeptname>Rezept2</Rezeptname>
+    <Rezeptpersonen>2</Rezeptpersonen>
+    <Zutat>
+      <Zutatname>1</Zutatname>
+      <Zutatmenge>1</Zutatmenge>
+      <Zutateinheit>1</Zutateinheit>
+    </Zutat>
+    <Zutat>
+      <Zutatname>2</Zutatname>
+      <Zutatmenge>22</Zutatmenge>
+      <Zutateinheit>222</Zutateinheit>
+    </Zutat>
+    <Rezeptzubereitung>121212</Rezeptzubereitung>
+    <Rezeptdauer>10</Rezeptdauer>
+    <Kategorie>
+      <Kategoriename>Vorspeise</Kategoriename>
+    </Kategorie>
+    <Kategorie>
+      <Kategoriename>Suppe</Kategoriename>
+    </Kategorie>
+    <Rezeptnotiz>121212</Rezeptnotiz>
     <Bildpfad>C:\Users\Robin\Documents\Visual Studio 2015\Projects\Rezeptverwaltung\Speicherungen\Bilder\essen 1.jpg</Bildpfad>
   </Rezept>
 </RezeptListe>

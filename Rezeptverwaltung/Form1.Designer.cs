@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterDetailForm));
             this.LIBORezepte = new System.Windows.Forms.ListBox();
             this.GBDetails = new System.Windows.Forms.GroupBox();
             this.PNLDetails = new System.Windows.Forms.Panel();
@@ -101,30 +102,23 @@
             // 
             // LIBORezepte
             // 
+            resources.ApplyResources(this.LIBORezepte, "LIBORezepte");
             this.LIBORezepte.DisplayMember = "GetSetRName";
-            this.LIBORezepte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LIBORezepte.FormattingEnabled = true;
-            this.LIBORezepte.ItemHeight = 16;
-            this.LIBORezepte.Location = new System.Drawing.Point(12, 66);
             this.LIBORezepte.Name = "LIBORezepte";
-            this.LIBORezepte.Size = new System.Drawing.Size(600, 676);
             this.LIBORezepte.Sorted = true;
-            this.LIBORezepte.TabIndex = 1;
             this.LIBORezepte.SelectedIndexChanged += new System.EventHandler(this.LIBORezepte_SelectedIndexChanged);
             // 
             // GBDetails
             // 
-            this.GBDetails.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.GBDetails, "GBDetails");
             this.GBDetails.Controls.Add(this.PNLDetails);
-            this.GBDetails.Location = new System.Drawing.Point(641, 66);
             this.GBDetails.Name = "GBDetails";
-            this.GBDetails.Size = new System.Drawing.Size(531, 680);
-            this.GBDetails.TabIndex = 2;
             this.GBDetails.TabStop = false;
-            this.GBDetails.Text = "Details";
             // 
             // PNLDetails
             // 
+            resources.ApplyResources(this.PNLDetails, "PNLDetails");
             this.PNLDetails.Controls.Add(this.PBrezBild);
             this.PNLDetails.Controls.Add(this.LABreInMin);
             this.PNLDetails.Controls.Add(this.NMRCrezDauer);
@@ -151,267 +145,179 @@
             this.PNLDetails.Controls.Add(this.LABrezPersonen);
             this.PNLDetails.Controls.Add(this.LABorezName);
             this.PNLDetails.Controls.Add(this.TBrezName);
-            this.PNLDetails.Enabled = false;
-            this.PNLDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PNLDetails.Location = new System.Drawing.Point(6, 19);
             this.PNLDetails.Name = "PNLDetails";
-            this.PNLDetails.Size = new System.Drawing.Size(509, 655);
-            this.PNLDetails.TabIndex = 3;
             this.PNLDetails.EnabledChanged += new System.EventHandler(this.PNLDetails_EnabledChanged);
             this.PNLDetails.Click += new System.EventHandler(this.PNLDetails_Click);
             // 
             // PBrezBild
             // 
+            resources.ApplyResources(this.PBrezBild, "PBrezBild");
             this.PBrezBild.BackColor = System.Drawing.Color.White;
             this.PBrezBild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PBrezBild.Location = new System.Drawing.Point(216, 23);
             this.PBrezBild.Name = "PBrezBild";
-            this.PBrezBild.Size = new System.Drawing.Size(280, 109);
-            this.PBrezBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBrezBild.TabIndex = 27;
             this.PBrezBild.TabStop = false;
-            this.PBrezBild.WaitOnLoad = true;
             this.PBrezBild.DoubleClick += new System.EventHandler(this.PBrezBild_DoubleClick);
             // 
             // LABreInMin
             // 
-            this.LABreInMin.AutoSize = true;
-            this.LABreInMin.Location = new System.Drawing.Point(130, 111);
+            resources.ApplyResources(this.LABreInMin, "LABreInMin");
             this.LABreInMin.Name = "LABreInMin";
-            this.LABreInMin.Size = new System.Drawing.Size(58, 17);
-            this.LABreInMin.TabIndex = 26;
-            this.LABreInMin.Text = "Minuten";
             // 
             // NMRCrezDauer
             // 
+            resources.ApplyResources(this.NMRCrezDauer, "NMRCrezDauer");
             this.NMRCrezDauer.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.NMRCrezDauer.Location = new System.Drawing.Point(9, 109);
             this.NMRCrezDauer.Name = "NMRCrezDauer";
-            this.NMRCrezDauer.Size = new System.Drawing.Size(120, 23);
-            this.NMRCrezDauer.TabIndex = 25;
             // 
             // LABrezDauer
             // 
-            this.LABrezDauer.AutoSize = true;
-            this.LABrezDauer.Location = new System.Drawing.Point(6, 92);
+            resources.ApplyResources(this.LABrezDauer, "LABrezDauer");
             this.LABrezDauer.Name = "LABrezDauer";
-            this.LABrezDauer.Size = new System.Drawing.Size(47, 17);
-            this.LABrezDauer.TabIndex = 24;
-            this.LABrezDauer.Text = "Dauer";
             // 
             // BTNrezAbbrechen
             // 
-            this.BTNrezAbbrechen.Location = new System.Drawing.Point(385, 627);
+            resources.ApplyResources(this.BTNrezAbbrechen, "BTNrezAbbrechen");
             this.BTNrezAbbrechen.Name = "BTNrezAbbrechen";
-            this.BTNrezAbbrechen.Size = new System.Drawing.Size(111, 26);
-            this.BTNrezAbbrechen.TabIndex = 23;
-            this.BTNrezAbbrechen.Text = "Abbrechen";
             this.BTNrezAbbrechen.UseVisualStyleBackColor = true;
             this.BTNrezAbbrechen.Click += new System.EventHandler(this.BTNrezAbbrechen_Click);
             // 
             // BTNrezSpeichern
             // 
-            this.BTNrezSpeichern.Location = new System.Drawing.Point(3, 627);
+            resources.ApplyResources(this.BTNrezSpeichern, "BTNrezSpeichern");
             this.BTNrezSpeichern.Name = "BTNrezSpeichern";
-            this.BTNrezSpeichern.Size = new System.Drawing.Size(111, 26);
-            this.BTNrezSpeichern.TabIndex = 22;
-            this.BTNrezSpeichern.Text = "Speichern";
             this.BTNrezSpeichern.UseVisualStyleBackColor = true;
             this.BTNrezSpeichern.Click += new System.EventHandler(this.BTNrezSpeichern_Click);
             // 
             // LABrezNotizen
             // 
-            this.LABrezNotizen.AutoSize = true;
-            this.LABrezNotizen.Location = new System.Drawing.Point(227, 480);
+            resources.ApplyResources(this.LABrezNotizen, "LABrezNotizen");
             this.LABrezNotizen.Name = "LABrezNotizen";
-            this.LABrezNotizen.Size = new System.Drawing.Size(56, 17);
-            this.LABrezNotizen.TabIndex = 21;
-            this.LABrezNotizen.Text = "Notizen";
             // 
             // RTBrezNotizen
             // 
-            this.RTBrezNotizen.Location = new System.Drawing.Point(230, 500);
+            resources.ApplyResources(this.RTBrezNotizen, "RTBrezNotizen");
             this.RTBrezNotizen.Name = "RTBrezNotizen";
-            this.RTBrezNotizen.Size = new System.Drawing.Size(266, 111);
-            this.RTBrezNotizen.TabIndex = 20;
-            this.RTBrezNotizen.Text = "";
             // 
             // CLBrezKategorien
             // 
+            resources.ApplyResources(this.CLBrezKategorien, "CLBrezKategorien");
             this.CLBrezKategorien.CheckOnClick = true;
             this.CLBrezKategorien.FormattingEnabled = true;
             this.CLBrezKategorien.Items.AddRange(new object[] {
-            "Vorspeise",
-            "Suppe",
-            "Salat",
-            "Hauptgericht",
-            "Beilage",
-            "Dessert",
-            "Kuchen",
-            "Plätzchen",
-            "Torte",
-            "Pralienen",
-            "Low Carb"});
-            this.CLBrezKategorien.Location = new System.Drawing.Point(6, 499);
+            resources.GetString("CLBrezKategorien.Items"),
+            resources.GetString("CLBrezKategorien.Items1"),
+            resources.GetString("CLBrezKategorien.Items2"),
+            resources.GetString("CLBrezKategorien.Items3"),
+            resources.GetString("CLBrezKategorien.Items4"),
+            resources.GetString("CLBrezKategorien.Items5"),
+            resources.GetString("CLBrezKategorien.Items6"),
+            resources.GetString("CLBrezKategorien.Items7"),
+            resources.GetString("CLBrezKategorien.Items8"),
+            resources.GetString("CLBrezKategorien.Items9"),
+            resources.GetString("CLBrezKategorien.Items10")});
             this.CLBrezKategorien.Name = "CLBrezKategorien";
-            this.CLBrezKategorien.Size = new System.Drawing.Size(204, 112);
-            this.CLBrezKategorien.TabIndex = 19;
             this.CLBrezKategorien.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CLBrezKategorien_ItemCheck);
             // 
             // LABrzKategorien
             // 
-            this.LABrzKategorien.AutoSize = true;
-            this.LABrzKategorien.Location = new System.Drawing.Point(3, 479);
+            resources.ApplyResources(this.LABrzKategorien, "LABrzKategorien");
             this.LABrzKategorien.Name = "LABrzKategorien";
-            this.LABrzKategorien.Size = new System.Drawing.Size(77, 17);
-            this.LABrzKategorien.TabIndex = 18;
-            this.LABrzKategorien.Text = "Kategorien";
             // 
             // LABrezZubereitung
             // 
-            this.LABrezZubereitung.AutoSize = true;
-            this.LABrezZubereitung.Location = new System.Drawing.Point(3, 341);
+            resources.ApplyResources(this.LABrezZubereitung, "LABrezZubereitung");
             this.LABrezZubereitung.Name = "LABrezZubereitung";
-            this.LABrezZubereitung.Size = new System.Drawing.Size(85, 17);
-            this.LABrezZubereitung.TabIndex = 17;
-            this.LABrezZubereitung.Text = "Zubereitung";
             // 
             // RTBrezZubereitung
             // 
-            this.RTBrezZubereitung.Location = new System.Drawing.Point(6, 361);
+            resources.ApplyResources(this.RTBrezZubereitung, "RTBrezZubereitung");
             this.RTBrezZubereitung.Name = "RTBrezZubereitung";
-            this.RTBrezZubereitung.Size = new System.Drawing.Size(490, 108);
-            this.RTBrezZubereitung.TabIndex = 16;
-            this.RTBrezZubereitung.Text = "";
             // 
             // BTNzutLöschen
             // 
-            this.BTNzutLöschen.Enabled = false;
-            this.BTNzutLöschen.Location = new System.Drawing.Point(312, 322);
+            resources.ApplyResources(this.BTNzutLöschen, "BTNzutLöschen");
             this.BTNzutLöschen.Name = "BTNzutLöschen";
-            this.BTNzutLöschen.Size = new System.Drawing.Size(72, 23);
-            this.BTNzutLöschen.TabIndex = 15;
-            this.BTNzutLöschen.Text = "-";
             this.BTNzutLöschen.UseVisualStyleBackColor = true;
             this.BTNzutLöschen.Click += new System.EventHandler(this.BTNzutLöschen_Click);
             // 
             // BTNzutHinzufuegen
             // 
-            this.BTNzutHinzufuegen.Location = new System.Drawing.Point(216, 322);
+            resources.ApplyResources(this.BTNzutHinzufuegen, "BTNzutHinzufuegen");
             this.BTNzutHinzufuegen.Name = "BTNzutHinzufuegen";
-            this.BTNzutHinzufuegen.Size = new System.Drawing.Size(72, 23);
-            this.BTNzutHinzufuegen.TabIndex = 14;
-            this.BTNzutHinzufuegen.Text = "+";
             this.BTNzutHinzufuegen.UseVisualStyleBackColor = true;
             this.BTNzutHinzufuegen.Click += new System.EventHandler(this.BTNzutHinzufuegen_Click);
             // 
             // LABzutEinheit
             // 
-            this.LABzutEinheit.AutoSize = true;
-            this.LABzutEinheit.Location = new System.Drawing.Point(213, 268);
+            resources.ApplyResources(this.LABzutEinheit, "LABzutEinheit");
             this.LABzutEinheit.Name = "LABzutEinheit";
-            this.LABzutEinheit.Size = new System.Drawing.Size(51, 17);
-            this.LABzutEinheit.TabIndex = 13;
-            this.LABzutEinheit.Text = "Einheit";
             // 
             // TBzutEinheit
             // 
-            this.TBzutEinheit.Location = new System.Drawing.Point(215, 288);
+            resources.ApplyResources(this.TBzutEinheit, "TBzutEinheit");
             this.TBzutEinheit.Name = "TBzutEinheit";
-            this.TBzutEinheit.Size = new System.Drawing.Size(169, 23);
-            this.TBzutEinheit.TabIndex = 12;
             // 
             // LABzutMenge
             // 
-            this.LABzutMenge.AutoSize = true;
-            this.LABzutMenge.Location = new System.Drawing.Point(212, 216);
+            resources.ApplyResources(this.LABzutMenge, "LABzutMenge");
             this.LABzutMenge.Name = "LABzutMenge";
-            this.LABzutMenge.Size = new System.Drawing.Size(51, 17);
-            this.LABzutMenge.TabIndex = 11;
-            this.LABzutMenge.Text = "Menge";
             // 
             // TBzutMenge
             // 
-            this.TBzutMenge.Location = new System.Drawing.Point(215, 236);
+            resources.ApplyResources(this.TBzutMenge, "TBzutMenge");
             this.TBzutMenge.Name = "TBzutMenge";
-            this.TBzutMenge.Size = new System.Drawing.Size(169, 23);
-            this.TBzutMenge.TabIndex = 10;
             // 
             // LABzutName
             // 
-            this.LABzutName.AutoSize = true;
-            this.LABzutName.Location = new System.Drawing.Point(212, 159);
+            resources.ApplyResources(this.LABzutName, "LABzutName");
             this.LABzutName.Name = "LABzutName";
-            this.LABzutName.Size = new System.Drawing.Size(45, 17);
-            this.LABzutName.TabIndex = 9;
-            this.LABzutName.Text = "Name";
             // 
             // TBzutName
             // 
-            this.TBzutName.Location = new System.Drawing.Point(215, 179);
+            resources.ApplyResources(this.TBzutName, "TBzutName");
             this.TBzutName.Name = "TBzutName";
-            this.TBzutName.Size = new System.Drawing.Size(169, 23);
-            this.TBzutName.TabIndex = 8;
             // 
             // LABrezZutaten
             // 
-            this.LABrezZutaten.AutoSize = true;
-            this.LABrezZutaten.Location = new System.Drawing.Point(6, 139);
+            resources.ApplyResources(this.LABrezZutaten, "LABrezZutaten");
             this.LABrezZutaten.Name = "LABrezZutaten";
-            this.LABrezZutaten.Size = new System.Drawing.Size(57, 17);
-            this.LABrezZutaten.TabIndex = 7;
-            this.LABrezZutaten.Text = "Zutaten";
             // 
             // LIBOrezZutaten
             // 
+            resources.ApplyResources(this.LIBOrezZutaten, "LIBOrezZutaten");
             this.LIBOrezZutaten.DisplayMember = "GetSetZName";
             this.LIBOrezZutaten.FormattingEnabled = true;
-            this.LIBOrezZutaten.ItemHeight = 16;
-            this.LIBOrezZutaten.Location = new System.Drawing.Point(7, 159);
             this.LIBOrezZutaten.Name = "LIBOrezZutaten";
-            this.LIBOrezZutaten.Size = new System.Drawing.Size(169, 164);
             this.LIBOrezZutaten.Sorted = true;
-            this.LIBOrezZutaten.TabIndex = 6;
             this.LIBOrezZutaten.SelectedIndexChanged += new System.EventHandler(this.LIBOrezZutaten_SelectedIndexChanged);
             // 
             // NMRCrezPersonen
             // 
-            this.NMRCrezPersonen.Location = new System.Drawing.Point(9, 66);
+            resources.ApplyResources(this.NMRCrezPersonen, "NMRCrezPersonen");
             this.NMRCrezPersonen.Name = "NMRCrezPersonen";
-            this.NMRCrezPersonen.Size = new System.Drawing.Size(56, 23);
-            this.NMRCrezPersonen.TabIndex = 5;
             // 
             // LABrezPersonen
             // 
-            this.LABrezPersonen.AutoSize = true;
-            this.LABrezPersonen.Location = new System.Drawing.Point(6, 49);
+            resources.ApplyResources(this.LABrezPersonen, "LABrezPersonen");
             this.LABrezPersonen.Name = "LABrezPersonen";
-            this.LABrezPersonen.Size = new System.Drawing.Size(151, 17);
-            this.LABrezPersonen.TabIndex = 4;
-            this.LABrezPersonen.Text = "Für wie viele Personen";
             // 
             // LABorezName
             // 
-            this.LABorezName.AutoSize = true;
-            this.LABorezName.Location = new System.Drawing.Point(3, 3);
+            resources.ApplyResources(this.LABorezName, "LABorezName");
             this.LABorezName.Name = "LABorezName";
-            this.LABorezName.Size = new System.Drawing.Size(45, 17);
-            this.LABorezName.TabIndex = 2;
-            this.LABorezName.Text = "Name";
             // 
             // TBrezName
             // 
-            this.TBrezName.Location = new System.Drawing.Point(6, 23);
+            resources.ApplyResources(this.TBrezName, "TBrezName");
             this.TBrezName.Name = "TBrezName";
-            this.TBrezName.Size = new System.Drawing.Size(169, 23);
-            this.TBrezName.TabIndex = 1;
             // 
             // TSHauptmenue
             // 
+            resources.ApplyResources(this.TSHauptmenue, "TSHauptmenue");
             this.TSHauptmenue.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.TSHauptmenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSBneuesRezept,
@@ -425,89 +331,72 @@
             this.TSBnamenssuche,
             this.TSBfilter,
             this.toolStripSeparator3});
-            this.TSHauptmenue.Location = new System.Drawing.Point(0, 24);
             this.TSHauptmenue.Name = "TSHauptmenue";
-            this.TSHauptmenue.Size = new System.Drawing.Size(1184, 31);
-            this.TSHauptmenue.TabIndex = 4;
-            this.TSHauptmenue.Text = "TSHauptmenue";
             // 
             // TSBneuesRezept
             // 
+            resources.ApplyResources(this.TSBneuesRezept, "TSBneuesRezept");
             this.TSBneuesRezept.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TSBneuesRezept.Image = global::Rezeptverwaltung.Properties.Resources.Dokument;
-            this.TSBneuesRezept.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBneuesRezept.Name = "TSBneuesRezept";
-            this.TSBneuesRezept.Size = new System.Drawing.Size(28, 28);
-            this.TSBneuesRezept.Text = "Neues Rezept";
             this.TSBneuesRezept.Click += new System.EventHandler(this.TSBneuesRezept_Click);
             // 
             // TSBrezeptLöschen
             // 
+            resources.ApplyResources(this.TSBrezeptLöschen, "TSBrezeptLöschen");
             this.TSBrezeptLöschen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TSBrezeptLöschen.Image = global::Rezeptverwaltung.Properties.Resources.RotesX;
-            this.TSBrezeptLöschen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBrezeptLöschen.Name = "TSBrezeptLöschen";
-            this.TSBrezeptLöschen.Size = new System.Drawing.Size(28, 28);
-            this.TSBrezeptLöschen.Text = "Rezept Löschen";
             this.TSBrezeptLöschen.Click += new System.EventHandler(this.TSBrezeptLöschen_Click);
             // 
             // toolStripSeparator1
             // 
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // TSBrezeptdateiOeffnen
             // 
+            resources.ApplyResources(this.TSBrezeptdateiOeffnen, "TSBrezeptdateiOeffnen");
             this.TSBrezeptdateiOeffnen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TSBrezeptdateiOeffnen.Image = global::Rezeptverwaltung.Properties.Resources.Öffnen;
-            this.TSBrezeptdateiOeffnen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBrezeptdateiOeffnen.Name = "TSBrezeptdateiOeffnen";
-            this.TSBrezeptdateiOeffnen.Size = new System.Drawing.Size(28, 28);
-            this.TSBrezeptdateiOeffnen.Text = "Rezeptdatei öffnen";
             this.TSBrezeptdateiOeffnen.Click += new System.EventHandler(this.TSBrezeptdateiOeffnen_Click);
             // 
             // TSBspeichern
             // 
+            resources.ApplyResources(this.TSBspeichern, "TSBspeichern");
             this.TSBspeichern.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TSBspeichern.Image = global::Rezeptverwaltung.Properties.Resources.Speichern;
-            this.TSBspeichern.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBspeichern.Name = "TSBspeichern";
-            this.TSBspeichern.Size = new System.Drawing.Size(28, 28);
-            this.TSBspeichern.Text = "Speichern";
-            this.TSBspeichern.ToolTipText = "Speichern";
             this.TSBspeichern.Click += new System.EventHandler(this.TSBspeichern_Click);
             // 
             // TSBdrucken
             // 
+            resources.ApplyResources(this.TSBdrucken, "TSBdrucken");
             this.TSBdrucken.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TSBdrucken.Image = global::Rezeptverwaltung.Properties.Resources.Drucken;
-            this.TSBdrucken.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBdrucken.Name = "TSBdrucken";
-            this.TSBdrucken.Size = new System.Drawing.Size(28, 28);
-            this.TSBdrucken.Text = "Drucken";
-            this.TSBdrucken.ToolTipText = "Drucken";
             // 
             // toolStripSeparator2
             // 
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // TSTBnamensuche
             // 
+            resources.ApplyResources(this.TSTBnamensuche, "TSTBnamensuche");
             this.TSTBnamensuche.Name = "TSTBnamensuche";
-            this.TSTBnamensuche.Size = new System.Drawing.Size(100, 31);
             // 
             // TSBnamenssuche
             // 
+            resources.ApplyResources(this.TSBnamenssuche, "TSBnamenssuche");
             this.TSBnamenssuche.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TSBnamenssuche.Image = global::Rezeptverwaltung.Properties.Resources.Lupe;
-            this.TSBnamenssuche.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBnamenssuche.Name = "TSBnamenssuche";
-            this.TSBnamenssuche.Size = new System.Drawing.Size(28, 28);
-            this.TSBnamenssuche.Text = "Suchen";
             // 
             // TSBfilter
             // 
+            resources.ApplyResources(this.TSBfilter, "TSBfilter");
             this.TSBfilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TSBfilter.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vorspeiseToolStripMenuItem,
@@ -521,177 +410,147 @@
             this.tortenToolStripMenuItem,
             this.pralienenToolStripMenuItem});
             this.TSBfilter.Image = global::Rezeptverwaltung.Properties.Resources.Filter;
-            this.TSBfilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TSBfilter.Name = "TSBfilter";
-            this.TSBfilter.Size = new System.Drawing.Size(40, 28);
-            this.TSBfilter.Text = "Filter aktivieren";
             // 
             // vorspeiseToolStripMenuItem
             // 
+            resources.ApplyResources(this.vorspeiseToolStripMenuItem, "vorspeiseToolStripMenuItem");
             this.vorspeiseToolStripMenuItem.Name = "vorspeiseToolStripMenuItem";
-            this.vorspeiseToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.vorspeiseToolStripMenuItem.Text = "Vorspeise";
             // 
             // suppeToolStripMenuItem
             // 
+            resources.ApplyResources(this.suppeToolStripMenuItem, "suppeToolStripMenuItem");
             this.suppeToolStripMenuItem.Name = "suppeToolStripMenuItem";
-            this.suppeToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.suppeToolStripMenuItem.Text = "Suppe";
             // 
             // salatToolStripMenuItem
             // 
+            resources.ApplyResources(this.salatToolStripMenuItem, "salatToolStripMenuItem");
             this.salatToolStripMenuItem.Name = "salatToolStripMenuItem";
-            this.salatToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.salatToolStripMenuItem.Text = "Salat";
             // 
             // hauptgerichtToolStripMenuItem
             // 
+            resources.ApplyResources(this.hauptgerichtToolStripMenuItem, "hauptgerichtToolStripMenuItem");
             this.hauptgerichtToolStripMenuItem.Name = "hauptgerichtToolStripMenuItem";
-            this.hauptgerichtToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.hauptgerichtToolStripMenuItem.Text = "Hauptgericht";
             // 
             // beilageToolStripMenuItem
             // 
+            resources.ApplyResources(this.beilageToolStripMenuItem, "beilageToolStripMenuItem");
             this.beilageToolStripMenuItem.Name = "beilageToolStripMenuItem";
-            this.beilageToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.beilageToolStripMenuItem.Text = "Beilage";
             // 
             // dessertToolStripMenuItem
             // 
+            resources.ApplyResources(this.dessertToolStripMenuItem, "dessertToolStripMenuItem");
             this.dessertToolStripMenuItem.Name = "dessertToolStripMenuItem";
-            this.dessertToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.dessertToolStripMenuItem.Text = "Dessert";
             // 
             // kuchenToolStripMenuItem
             // 
+            resources.ApplyResources(this.kuchenToolStripMenuItem, "kuchenToolStripMenuItem");
             this.kuchenToolStripMenuItem.Name = "kuchenToolStripMenuItem";
-            this.kuchenToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.kuchenToolStripMenuItem.Text = "Kuchen";
             // 
             // plätzchenToolStripMenuItem
             // 
+            resources.ApplyResources(this.plätzchenToolStripMenuItem, "plätzchenToolStripMenuItem");
             this.plätzchenToolStripMenuItem.Name = "plätzchenToolStripMenuItem";
-            this.plätzchenToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.plätzchenToolStripMenuItem.Text = "Plätzchen";
             // 
             // tortenToolStripMenuItem
             // 
+            resources.ApplyResources(this.tortenToolStripMenuItem, "tortenToolStripMenuItem");
             this.tortenToolStripMenuItem.Name = "tortenToolStripMenuItem";
-            this.tortenToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.tortenToolStripMenuItem.Text = "Torten";
             // 
             // pralienenToolStripMenuItem
             // 
+            resources.ApplyResources(this.pralienenToolStripMenuItem, "pralienenToolStripMenuItem");
             this.pralienenToolStripMenuItem.Name = "pralienenToolStripMenuItem";
-            this.pralienenToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.pralienenToolStripMenuItem.Text = "Pralienen";
             // 
             // toolStripSeparator3
             // 
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // dateiToolStripMenuItem
             // 
+            resources.ApplyResources(this.dateiToolStripMenuItem, "dateiToolStripMenuItem");
             this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.speichernToolStripMenuItem,
             this.öffnenToolStripMenuItem});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.dateiToolStripMenuItem.Text = "Datei";
             // 
             // speichernToolStripMenuItem
             // 
+            resources.ApplyResources(this.speichernToolStripMenuItem, "speichernToolStripMenuItem");
             this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
-            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.speichernToolStripMenuItem.Text = "Speichern";
             this.speichernToolStripMenuItem.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click);
             // 
             // öffnenToolStripMenuItem
             // 
+            resources.ApplyResources(this.öffnenToolStripMenuItem, "öffnenToolStripMenuItem");
             this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
-            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.öffnenToolStripMenuItem.Text = "Öffnen";
             this.öffnenToolStripMenuItem.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
             // 
             // rezeptToolStripMenuItem
             // 
+            resources.ApplyResources(this.rezeptToolStripMenuItem, "rezeptToolStripMenuItem");
             this.rezeptToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.erstellenToolStripMenuItem,
             this.löschenToolStripMenuItem,
             this.druckenToolStripMenuItem});
             this.rezeptToolStripMenuItem.Name = "rezeptToolStripMenuItem";
-            this.rezeptToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.rezeptToolStripMenuItem.Text = "Rezept";
             // 
             // erstellenToolStripMenuItem
             // 
+            resources.ApplyResources(this.erstellenToolStripMenuItem, "erstellenToolStripMenuItem");
             this.erstellenToolStripMenuItem.Name = "erstellenToolStripMenuItem";
-            this.erstellenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.erstellenToolStripMenuItem.Text = "Erstellen";
             this.erstellenToolStripMenuItem.Click += new System.EventHandler(this.erstellenToolStripMenuItem_Click);
             // 
             // löschenToolStripMenuItem
             // 
+            resources.ApplyResources(this.löschenToolStripMenuItem, "löschenToolStripMenuItem");
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.löschenToolStripMenuItem.Text = "Löschen";
             this.löschenToolStripMenuItem.Click += new System.EventHandler(this.löschenToolStripMenuItem_Click);
             // 
             // druckenToolStripMenuItem
             // 
+            resources.ApplyResources(this.druckenToolStripMenuItem, "druckenToolStripMenuItem");
             this.druckenToolStripMenuItem.Name = "druckenToolStripMenuItem";
-            this.druckenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.druckenToolStripMenuItem.Text = "Drucken";
             // 
             // sucheToolStripMenuItem
             // 
+            resources.ApplyResources(this.sucheToolStripMenuItem, "sucheToolStripMenuItem");
             this.sucheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.filternToolStripMenuItem,
             this.filterAufhebenToolStripMenuItem});
             this.sucheToolStripMenuItem.Name = "sucheToolStripMenuItem";
-            this.sucheToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.sucheToolStripMenuItem.Text = "Filter";
             // 
             // filternToolStripMenuItem
             // 
+            resources.ApplyResources(this.filternToolStripMenuItem, "filternToolStripMenuItem");
             this.filternToolStripMenuItem.Name = "filternToolStripMenuItem";
-            this.filternToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.filternToolStripMenuItem.Text = "Filter aktivieren";
             // 
             // filterAufhebenToolStripMenuItem
             // 
+            resources.ApplyResources(this.filterAufhebenToolStripMenuItem, "filterAufhebenToolStripMenuItem");
             this.filterAufhebenToolStripMenuItem.Name = "filterAufhebenToolStripMenuItem";
-            this.filterAufhebenToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.filterAufhebenToolStripMenuItem.Text = "Filter aufheben";
             // 
             // MSHauptmenue
             // 
+            resources.ApplyResources(this.MSHauptmenue, "MSHauptmenue");
             this.MSHauptmenue.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MSHauptmenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
             this.rezeptToolStripMenuItem,
             this.sucheToolStripMenuItem});
-            this.MSHauptmenue.Location = new System.Drawing.Point(0, 0);
             this.MSHauptmenue.Name = "MSHauptmenue";
-            this.MSHauptmenue.Size = new System.Drawing.Size(1184, 24);
-            this.MSHauptmenue.TabIndex = 3;
-            this.MSHauptmenue.Text = "Hauptmenue";
             // 
             // MasterDetailForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 752);
             this.Controls.Add(this.TSHauptmenue);
             this.Controls.Add(this.GBDetails);
             this.Controls.Add(this.LIBORezepte);
             this.Controls.Add(this.MSHauptmenue);
             this.MainMenuStrip = this.MSHauptmenue;
-            this.MaximumSize = new System.Drawing.Size(1200, 790);
-            this.MinimumSize = new System.Drawing.Size(1200, 790);
             this.Name = "MasterDetailForm";
-            this.Text = "Rezeptverwaltung";
             this.DoubleClick += new System.EventHandler(this.MasterDetailForm_DoubleClick);
             this.GBDetails.ResumeLayout(false);
             this.PNLDetails.ResumeLayout(false);
