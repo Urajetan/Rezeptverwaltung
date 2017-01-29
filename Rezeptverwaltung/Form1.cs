@@ -16,12 +16,14 @@ namespace Rezeptverwaltung
         public MasterDetailForm()
         {
             InitializeComponent();
+            #region Glückwünsche an meine Oma
             DateTime birthday = new DateTime(2000,3,12);
             DateTime dt = System.DateTime.Now;
             if (dt.Month == birthday.Month && dt.Day == birthday.Day)
             {
-                this.Text = "Herzlichen Glückwunsch zum Geburtstag!";
+                this.Text = "Herzlichen Glückwunsch zum Geburtstag Oma!";
             }
+            #endregion
         }
 
         // Um Änderungen überprüfen zu können auch wenn sich der Index der LIBORezepte schon geändert hat
