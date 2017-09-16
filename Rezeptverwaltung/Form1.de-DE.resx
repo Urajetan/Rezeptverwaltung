@@ -118,20 +118,93 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LIBORezepte.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LIBORezepte.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="LIBORezepte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 664</value>
+  </data>
+  <data name="GBDetails.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="TSHauptmenue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="TSBdrucken.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="vorspeiseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="suppeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="salatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="hauptgerichtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="beilageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="dessertToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="kuchenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="plätzchenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="tortenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="pralienenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 24</value>
+  </data>
+  <data name="TSHauptmenue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
   <data name="speichernToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>150, 24</value>
   </data>
   <data name="öffnenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+    <value>150, 24</value>
+  </data>
+  <data name="dateiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 24</value>
   </data>
   <data name="erstellenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+    <value>140, 24</value>
   </data>
   <data name="löschenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+    <value>140, 24</value>
   </data>
   <data name="druckenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+    <value>140, 24</value>
+  </data>
+  <data name="rezeptToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 24</value>
+  </data>
+  <data name="filternToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 24</value>
+  </data>
+  <data name="filterAufhebenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 24</value>
+  </data>
+  <data name="sucheToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 24</value>
+  </data>
+  <data name="MSHauptmenue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="MSHauptmenue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 28</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">

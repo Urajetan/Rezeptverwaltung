@@ -44,6 +44,11 @@
       <Zutatmenge>22</Zutatmenge>
       <Zutateinheit>222</Zutateinheit>
     </Zutat>
+    <Zutat>
+      <Zutatname>3</Zutatname>
+      <Zutatmenge>3</Zutatmenge>
+      <Zutateinheit>3</Zutateinheit>
+    </Zutat>
     <Rezeptzubereitung>121212</Rezeptzubereitung>
     <Rezeptdauer>10</Rezeptdauer>
     <Kategorie>

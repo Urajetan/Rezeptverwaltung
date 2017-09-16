@@ -64,10 +64,13 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.TSBrezeptdateiOeffnen = new System.Windows.Forms.ToolStripButton();
             this.TSBspeichern = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.TSBdrucken = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.TSTBnamensuche = new System.Windows.Forms.ToolStripTextBox();
             this.TSBnamenssuche = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.TSBfilter = new System.Windows.Forms.ToolStripSplitButton();
             this.vorspeiseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suppeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,6 +106,7 @@
             // LIBORezepte
             // 
             resources.ApplyResources(this.LIBORezepte, "LIBORezepte");
+            this.LIBORezepte.BackColor = System.Drawing.Color.White;
             this.LIBORezepte.DisplayMember = "GetSetRName";
             this.LIBORezepte.FormattingEnabled = true;
             this.LIBORezepte.Name = "LIBORezepte";
@@ -112,6 +116,7 @@
             // GBDetails
             // 
             resources.ApplyResources(this.GBDetails, "GBDetails");
+            this.GBDetails.BackColor = System.Drawing.Color.White;
             this.GBDetails.Controls.Add(this.PNLDetails);
             this.GBDetails.Name = "GBDetails";
             this.GBDetails.TabStop = false;
@@ -318,6 +323,7 @@
             // TSHauptmenue
             // 
             resources.ApplyResources(this.TSHauptmenue, "TSHauptmenue");
+            this.TSHauptmenue.BackColor = System.Drawing.Color.Transparent;
             this.TSHauptmenue.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.TSHauptmenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSBneuesRezept,
@@ -325,10 +331,13 @@
             this.toolStripSeparator1,
             this.TSBrezeptdateiOeffnen,
             this.TSBspeichern,
+            this.toolStripSeparator4,
             this.TSBdrucken,
+            this.toolStripSeparator5,
             this.toolStripSeparator2,
             this.TSTBnamensuche,
             this.TSBnamenssuche,
+            this.toolStripSeparator6,
             this.TSBfilter,
             this.toolStripSeparator3});
             this.TSHauptmenue.Name = "TSHauptmenue";
@@ -370,12 +379,23 @@
             this.TSBspeichern.Name = "TSBspeichern";
             this.TSBspeichern.Click += new System.EventHandler(this.TSBspeichern_Click);
             // 
+            // toolStripSeparator4
+            // 
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            // 
             // TSBdrucken
             // 
             resources.ApplyResources(this.TSBdrucken, "TSBdrucken");
             this.TSBdrucken.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TSBdrucken.Image = global::Rezeptverwaltung.Properties.Resources.Drucken;
             this.TSBdrucken.Name = "TSBdrucken";
+            this.TSBdrucken.Click += new System.EventHandler(this.TSBdrucken_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
             // 
             // toolStripSeparator2
             // 
@@ -385,6 +405,7 @@
             // TSTBnamensuche
             // 
             resources.ApplyResources(this.TSTBnamensuche, "TSTBnamensuche");
+            this.TSTBnamensuche.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TSTBnamensuche.Name = "TSTBnamensuche";
             // 
             // TSBnamenssuche
@@ -393,6 +414,11 @@
             this.TSBnamenssuche.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.TSBnamenssuche.Image = global::Rezeptverwaltung.Properties.Resources.Lupe;
             this.TSBnamenssuche.Name = "TSBnamenssuche";
+            // 
+            // toolStripSeparator6
+            // 
+            resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
             // 
             // TSBfilter
             // 
@@ -534,6 +560,7 @@
             // MSHauptmenue
             // 
             resources.ApplyResources(this.MSHauptmenue, "MSHauptmenue");
+            this.MSHauptmenue.BackColor = System.Drawing.Color.White;
             this.MSHauptmenue.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MSHauptmenue.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
@@ -631,6 +658,9 @@
         private System.Windows.Forms.ToolStripMenuItem filterAufhebenToolStripMenuItem;
         private System.Windows.Forms.MenuStrip MSHauptmenue;
         private System.Windows.Forms.PictureBox PBrezBild;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
     }
 }
 

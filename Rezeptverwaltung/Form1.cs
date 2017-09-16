@@ -27,9 +27,15 @@ namespace Rezeptverwaltung
         }
 
         // Um Änderungen überprüfen zu können auch wenn sich der Index der LIBORezepte schon geändert hat
+        //Wenn Index 1 asugewählt ist und etwas geändert wurde aber noch nicht gespeichert ist.
+        //Dann wird auf Index 2 geklickt
+        //null ist es nur wenn keine Item ausgewählt ist
+        //während ein Rezept ausgewählt ist wird es gespeichert 
         Rezept PreChangeItem = null;
 
         #region EVENST
+
+
         /// <summary>
         /// Setzt den Selected Index der RezeptListbox = -1 wenn keine Änderungen vorgenommen werden
         /// </summary>
@@ -182,6 +188,7 @@ namespace Rezeptverwaltung
             else if (PreChangeItem == LIBORezepte.SelectedItem)
             {
                 //passiert nichts da das nur passiert wenn der Benutzer auf Abbrechen gedrückt hat
+                //oder er das ausgewählte Item erneut anklickt
             }
             //wenn ein Rezept ausgewählt war
             else
@@ -325,16 +332,15 @@ namespace Rezeptverwaltung
         {
             if (PNLDetails.Enabled == true)
             {
-                TSHauptmenue.Enabled = false;
+                TSH_EnableChange(false);
                 MSHauptmenue.Enabled = false;
             }
             else if (PNLDetails.Enabled == false)
             {
-                TSHauptmenue.Enabled = true;
+                TSH_EnableChange(true);
                 MSHauptmenue.Enabled = true;
             }
         }
-
 
 
         #endregion
@@ -825,15 +831,34 @@ namespace Rezeptverwaltung
             return false;
         }
 
+        /// <summary>
+        /// aendert die Werte der Enabled eigenschaft der Elemente im TS-menue auf den Übergabewert
+        /// außer TSBdrucken dieser wird auf den negierten Wert gesetzt
+        /// </summary>
+        /// <param name="value">diesen Wert nehmen die TS-menue Elemente an (außer drucken)</param>
+        public void TSH_EnableChange(bool value)
+        {
+            TSBdrucken.Enabled = !value;
+            TSBneuesRezept.Enabled = value;
+            TSBrezeptLöschen.Enabled = value;
+            TSBrezeptdateiOeffnen.Enabled = value;
+            TSBspeichern.Enabled = value;
+            TSTBnamensuche.Enabled = value;
+            TSBnamenssuche.Enabled = value;
+            TSBfilter.Enabled = value;
+        }
+
+
+
+
+
 
 
         #endregion
 
+        private void TSBdrucken_Click(object sender, EventArgs e)
+        {
 
-
-
-
-
-
+        }
     }
 }
